@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="PRD" jobType="Standard" xmi:version="2.0">
+  <context confirmationNeeded="false" name="PRD">
+    <contextParameter comment="" name="MySQL_MSU_DatalakeM3_AdditionalParams" prompt="MySQL_MSU_DatalakeM3_AdditionalParams?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="noDatetimeStringSync=true&amp;low_priority_updates=true"/>
+    <contextParameter comment="" name="MySQL_MSU_DatalakeM3_Database" prompt="MySQL_MSU_DatalakeM3_Database?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="DatalakeM3PRD"/>
+    <contextParameter comment="" name="MySQL_MSU_DatalakeM3_Login" prompt="MySQL_MSU_DatalakeM3_Login?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="service.talend"/>
+    <contextParameter comment="" name="MySQL_MSU_DatalakeM3_Password" prompt="MySQL_MSU_DatalakeM3_Password?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_Password" value="enc:system.encryption.key.v1:a7gHMi+ueSBJ/TedXIIspf08fMcS/DZnq/gF7qAKt3vPlSb4bBY="/>
+    <contextParameter comment="" name="MySQL_MSU_DatalakeM3_Port" prompt="MySQL_MSU_DatalakeM3_Port?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="3306"/>
+    <contextParameter comment="" name="MySQL_MSU_DatalakeM3_Server" prompt="MySQL_MSU_DatalakeM3_Server?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="mysql-02.tanguy.local"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" show="false" value=""/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" show="false" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:pSCF9QmXPBJcWbr+CU3Ng37qQU9i9nP+afKKQldu"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Talend/workspace/.metadata&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" show="false" value="JDBCOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_12"/>
+    <elementParameter field="TEXT" name="URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DATASOURCE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:QMMWBrf5PNxQ5WMF3vp3P3acgiR/GeuXssh46GeD"/>
+    <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
+    <routinesParameter id="_Dp8wUDQTEe2GHYtYb7AUfg" name="TalendDate"/>
+    <routinesParameter id="_Dlcq0DQTEe2GHYtYb7AUfg" name="Mathematical"/>
+    <routinesParameter id="_DmXQ0DQTEe2GHYtYb7AUfg" name="Numeric"/>
+    <routinesParameter id="_DsH6kDQTEe2GHYtYb7AUfg" name="TalendStringUtil"/>
+    <routinesParameter id="_DjuzkDQTEe2GHYtYb7AUfg" name="DataOperation"/>
+    <routinesParameter id="_DnQosDQTEe2GHYtYb7AUfg" name="Relational"/>
+    <routinesParameter id="_DpBjQDQTEe2GHYtYb7AUfg" name="TalendDataGenerator"/>
+    <routinesParameter id="_DoJZgDQTEe2GHYtYb7AUfg" name="StringHandling"/>
+    <routinesParameter id="_DtAEUDQTEe2GHYtYb7AUfg" name="SQLike"/>
+    <routinesParameter id="_Dq_SIDQTEe2GHYtYb7AUfg" name="TalendString"/>
+  </parameters>
+  <node componentName="JDBCConnection" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="64" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_1"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_TEu7kH97Ee2Qp81ccF8m-Q"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="LABEL" value="JDBC-M3"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="bmV3amRiYyNKREJDI0lucHV0Connection"/>
+    <elementParameter field="TEXT" name="configuration.jdbcUrl" value="&quot;jdbc:infordatalake://TANGUY_PRD&quot;"/>
+    <elementParameter field="TABLE" name="configuration.jdbcDriver">
+      <elementValue elementRef="configuration.jdbcDriver[].path" value="&quot;mvn:org.talend.libraries/infor-compass-jdbc-prd/6.0.0-SNAPSHOT/jar&quot;"/>
+    </elementParameter>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.jdbcClass" value="&quot;com.infor.idl.jdbc.Driver&quot;"/>
+    <elementParameter field="TEXT" name="configuration.userId" value="&quot;talendusr@tanguy.fr &quot;"/>
+    <elementParameter field="PASSWORD" name="configuration.password" value="enc:system.encryption.key.v1:jxtBZsksKGqjIjijQbNMqZpurGr4kTllgR7E426I5/bVkSFfEyaX5xGtP6Defw=="/>
+    <elementParameter field="CHECK" name="configuration.useSharedDBConnection" value="false"/>
+    <elementParameter field="TEXT" name="configuration.sharedDBConnectionName" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="configuration.useDataSource" value="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSourceAlias" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="configuration.useAutoCommit" value="true"/>
+    <elementParameter field="CHECK" name="configuration.autoCommit" value="false"/>
+    <elementParameter field="TECHNICAL" name="configuration.__version" value="-1"/>
+  </node>
+  <node componentName="JDBCClose" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="64" posY="512">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBClose_1"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="bmV3amRiYyNKREJDI0lucHV0Close"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+  </node>
+  <node componentName="JDBCInput" componentVersion="1" offsetLabelX="50" offsetLabelY="0" posX="64" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="LABEL" value="    controle doublons"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="bmV3amRiYyNKREJDI0lucHV0"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrl" value="&quot;jdbc:&quot;"/>
+    <elementParameter field="TABLE" name="configuration.dataSet.dataStore.jdbcDriver"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.dataStore.jdbcClass" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.userId" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="configuration.dataSet.dataStore.password" value="enc:system.encryption.key.v1:xGiaK6evyPGA8pN/lnEqmPzVEUCeR77iCMtSvdbA"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.useDataSource" value="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dataSourceAlias" value="&quot;&quot;"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="&quot;cbanac&quot;"/>
+    <elementParameter field="MEMO_SQL" name="configuration.dataSet.sqlQuery" value="&quot;              select  'CBANAC', count(*) from (select `CONO`, `DIVI`,`BKID`, `BKTP`,`ACHO`, count(*) as NB_DOUBLONS from CBANAC group by `CONO`, `DIVI`,`BKID`, `BKTP`,`ACHO` having count(*) &gt;1 order by `CONO`, `DIVI`,`BKID`, `BKTP`,`ACHO`)&#13;&#10;UNION select  'CBANMA', count(*) from (select `CONO`, `DIVI`, `BKNO` , count(*) as NB_DOUBLONS from CBANMA group by `CONO`, `DIVI`, `BKNO`  having count(*) &gt; 1 order by `CONO`, `DIVI`, `BKNO` )&#13;&#10;UNION select  'CCUCON', count(*) from (select `CONO`, `CNPE` , count(*) as NB_DOUBLONS from CCUCON group by `CONO`, `CNPE` having count(*) &gt; 1 order by `CONO`, `CNPE`)&#13;&#10;UNION select  'CCUCRL', count(*) from (select `CONO`, `DIVI`, `PYNO` , count(*) as NB_DOUBLONS from CCUCRL group by `CONO`, `DIVI`, `PYNO` having count(*) &gt; 1 order by `CONO`, `DIVI`, `PYNO`)&#13;&#10;UNION select  'CCUDIV', count(*) from (select `CONO`, `CUNO`, `DIVI` , count(*) as NB_DOUBLONS from CCUDIV group by `CONO`, `CUNO`, `DIVI` having count(*) &gt; 1 order by `CONO`, `CUNO`, `DIVI`)&#13;&#10;UNION select  'CFACIL', count(*) from (select `CONO`, `FACI` , count(*) as NB_DOUBLONS from CFACIL group by `CONO`, `FACI` having count(*) &gt; 1 order by `CONO`, `FACI`)&#13;&#10;UNION select  'CIDMAS', count(*) from (select `CONO`, `SUNO` , count(*) as NB_DOUBLONS from CIDMAS group by `CONO`, `SUNO` having count(*) &gt; 1 order by `CONO`, `SUNO`)&#13;&#10;UNION select  'CIDVEN', count(*) from (select `CONO`, `SUNO` , count(*) as NB_DOUBLONS from CIDVEN group by `CONO`, `SUNO` having count(*) &gt; 1 order by `CONO`, `SUNO`)&#13;&#10;UNION select  'CINACC', count(*) from (select `CONO`, `DIVI`, `ANBR`, `SENO` , count(*) as NB_DOUBLONS from CINACC group by `CONO`, `DIVI`, `ANBR`, `SENO` having count(*) &gt; 1 order by `CONO`, `DIVI`, `ANBR`, `SENO`)&#13;&#10;UNION select  'CMNCMP', count(*) from (select `CONO` , count(*) as NB_DOUBLONS from CMNCMP group by `CONO` having count(*) &gt; 1 order by `CONO`)&#13;&#10;UNION select  'CMNDIV', count(*) from (select `CONO`, `DIVI` , count(*) as NB_DOUBLONS from CMNDIV group by `CONO`, `DIVI` having count(*) &gt; 1 order by `CONO`, `DIVI`)&#13;&#10;UNION select  'CMNUSR', count(*) from (select `CONO`, `DIVI`, `USID` , count(*) as NB_DOUBLONS from CMNUSR group by `CONO`, `DIVI`, `USID` having count(*) &gt; 1 order by `CONO`, `DIVI`, `USID`)&#13;&#10;&#13;&#10;UNION select  'CMUFTR', count(*) from (select `CONO`, `RORC`, `RIDN` ,  `RIDL`, `RIDX`, `RIDI`,  `MRGD`, `MRGT`, `TMSX`,  `WHLO`, count(*) as NB_DOUBLONS from CMUFTR group by `CONO`, `RORC`, `RIDN` ,  `RIDL`, `RIDX`, `RIDI`,  `MRGD`, `MRGT`, `TMSX`,  `WHLO` having count(*) &gt; 1 order by `CONO`, `RORC`, `RIDN` ,  `RIDL`, `RIDX`, `RIDI`,  `MRGD`, `MRGT`, `TMSX`,  `WHLO` )&#13;&#10;&#13;&#10;UNION select  'CSYCAL', count(*) from (select `CONO`, `DIVI`, `YMD8` , count(*) as NB_DOUBLONS from CSYCAL group by `CONO`, `DIVI`, `YMD8` having count(*) &gt; 1 order by `CONO`, `DIVI`, `YMD8`)&#13;&#10;UNION select  'CSYPRT', count(*) from (select `CONO`, `PRIT`, count(*) as NB_DOUBLONS from CSYPRT group by `CONO`, `PRIT` having count(*) &gt; 1 order by `CONO`, `PRIT`)&#13;&#10;UNION select  'CSYTAB', count(*) from (select `CONO`, `DIVI`, `STCO`, `STKY`, `LNCD` , count(*) as NB_DOUBLONS from CSYTAB group by `CONO`, `DIVI`, `STCO`, `STKY`, `LNCD` having count(*) &gt; 1 order by `CONO`, `DIVI`, `STCO`, `STKY`, `LNCD`)&#13;&#10;UNION select  'CUGEX1', count(*) from (select `CONO`, `FILE`, `PK01`, `PK02`, `PK03`, `PK04`, `PK05`, `PK06`, `PK07`, `PK08` , count(*) as NB_DOUBLONS from CUGEX1 group by `CONO`, `FILE`, `PK01`, `PK02`, `PK03`, `PK04`, `PK05`, `PK06`, `PK07`, `PK08` having count(*) &gt; 1 order by `CONO`, `FILE`, `PK01`, `PK02`, `PK03`, `PK04`, `PK05`, `PK06`, `PK07`, `PK08`)&#13;&#10;UNION select  'DCONSI', count(*) from (select `CONO`, `CONN` , count(*) as NB_DOUBLONS from DCONSI group by `CONO`, `CONN` having count(*) &gt; 1 order by `CONO`, `CONN`)&#13;&#10;UNION select  'FARRED', count(*) from (select `CONO`, `DIVI`, `JBNO`, `JBDT`, `JBTM`, `YEA4`, `JRNO`, `JSNO`, `PYNO`, `CKNO` , `BKID` , count(*) as NB_DOUBLONS from FARRED group by `CONO`, `DIVI`, `JBNO`, `JBDT`, `JBTM`, `YEA4`, `JRNO`, `JSNO`, `PYNO`, `CKNO` , `BKID` having count(*) &gt; 1 order by `CONO`, `DIVI`, `JBNO`, `JBDT`, `JBTM`, `YEA4`, `JRNO`, `JSNO`, `PYNO`, `CKNO` , `BKID`)&#13;&#10;UNION select  'FBAKEY', count(*) from (select `CONO`, `DIVI`, `BAKY`, `BIT1`, `BIT2`, `BIT3`, `BIT4`, `BIT5`, `BIT6`, `BIT7` , count(*) as NB_DOUBLONS from FBAKEY group by `CONO`, `DIVI`, `BAKY`, `BIT1`, `BIT2`, `BIT3`, `BIT4`, `BIT5`, `BIT6`, `BIT7` having count(*) &gt; 1 order by `CONO`, `DIVI`, `BAKY`, `BIT1`, `BIT2`, `BIT3`, `BIT4`, `BIT5`, `BIT6`, `BIT7`)&#13;&#10;UNION select  'FBAVAL', count(*) from (select `CONO`, `PTID`, `VTYP`, `BUNO`, `BVER`, `YEA4`, `PERI` , count(*) as NB_DOUBLONS from FBAVAL group by `CONO`, `PTID`, `VTYP`, `BUNO`, `BVER`, `YEA4`, `PERI` having count(*) &gt; 1 order by `CONO`, `PTID`, `VTYP`, `BUNO`, `BVER`, `YEA4`, `PERI`)&#13;&#10;UNION select  'FCAAVP', count(*) from (select `CONO`, `FACI`, `ITNO`, `CANB` , `RGDT`, `RGTM`, `TMSX`,  count(*) as NB_DOUBLONS from FCAAVP group by  `CONO`, `FACI`, `ITNO`, `CANB` , `RGDT`, `RGTM`, `TMSX` having count(*) &gt; 1 order by  `CONO`, `FACI`, `ITNO`, `CANB` , `RGDT`, `RGTM`, `TMSX`)&#13;&#10;UNION select  'FCHACC', count(*) from (select `CONO`, `DIVI`, `AITP`, `AITM` , count(*) as NB_DOUBLONS from FCHACC group by `CONO`, `DIVI`, `AITP`, `AITM` having count(*) &gt; 1 order by `CONO`, `DIVI`, `AITP`, `AITM`)&#13;&#10;UNION select  'FGINAE', count(*) from (select `CONO`, `DIVI`, `SUNO`, `SINO`, `INYR`, `INIT`, `PUNO`, `PNLI`, `PNLS`, `REPN`, `RELP`, `INLP`, `CDSE` , count(*) as NB_DOUBLONS from FGINAE group by `CONO`, `DIVI`, `SUNO`, `SINO`, `INYR`, `INIT`, `PUNO`, `PNLI`, `PNLS`, `REPN`, `RELP`, `INLP`, `CDSE` having count(*) &gt; 1 order by `CONO`, `DIVI`, `SUNO`, `SINO`, `INYR`, `INIT`, `PUNO`, `PNLI`, `PNLS`, `REPN`, `RELP`, `INLP`, `CDSE`)&#13;&#10;UNION select  'FGINLI', count(*) from (select `CONO`, `DIVI`, `SUNO`, `SINO`, `INYR`, `PUNO`, `PNLI`, `PNLS`, `REPN`, `RELP`, `INLP` , count(*) as NB_DOUBLONS from FGINLI group by `CONO`, `DIVI`, `SUNO`, `SINO`, `INYR`, `PUNO`, `PNLI`, `PNLS`, `REPN`, `RELP`, `INLP` having count(*) &gt; 1 order by `CONO`, `DIVI`, `SUNO`, `SINO`, `INYR`, `PUNO`, `PNLI`, `PNLS`, `REPN`, `RELP`, `INLP`)&#13;&#10;UNION select  'FGLEDG', count(*) from (select `CONO`, `DIVI`, `YEA4`, `JRNO`, `JSNO` , count(*) as NB_DOUBLONS from FGLEDG group by `CONO`, `DIVI`, `YEA4`, `JRNO`, `JSNO` having count(*) &gt; 1 order by `CONO`, `DIVI`, `YEA4`, `JRNO`, `JSNO`)&#13;&#10;UNION select  'FGLEDX', count(*) from (select `CONO`, `DIVI`, `YEA4`, `JRNO`, `JSNO`, `GEXN`, `GEXI`, `GEXS` , count(*) as NB_DOUBLONS from FGLEDX group by `CONO`, `DIVI`, `YEA4`, `JRNO`, `JSNO`, `GEXN`, `GEXI`, `GEXS` having count(*) &gt; 1 order by `CONO`, `DIVI`, `YEA4`, `JRNO`, `JSNO`, `GEXN`, `GEXI`, `GEXS`)&#13;&#10;UNION select  'FGRECL', count(*) from (select `CONO`, `DIVI`, `PUNO`, `PNLI`, `PNLS`, `REPN`, `RELP` , count(*) as NB_DOUBLONS from FGRECL group by `CONO`, `DIVI`, `PUNO`, `PNLI`, `PNLS`, `REPN`, `RELP` having count(*) &gt; 1 order by `CONO`, `DIVI`, `PUNO`, `PNLI`, `PNLS`, `REPN`, `RELP`)&#13;&#10;UNION select  'FPLBAL', count(*) from (select `CONO`, `DIVI`, `SPYN`, `ACYP`, `SUNO`, `CUCD` , count(*) as NB_DOUBLONS from FPLBAL group by `CONO`, `DIVI`, `SPYN`, `ACYP`, `SUNO`, `CUCD` having count(*) &gt; 1 order by `CONO`, `DIVI`, `SPYN`, `ACYP`, `SUNO`, `CUCD`)&#13;&#10;UNION select  'FPLEDG', count(*) from (select `CONO`, `DIVI`, `YEA4`, `JRNO`, `JSNO` , count(*) as NB_DOUBLONS from FPLEDG group by `CONO`, `DIVI`, `YEA4`, `JRNO`, `JSNO` having count(*) &gt; 1 order by `CONO`, `DIVI`, `YEA4`, `JRNO`, `JSNO`)&#13;&#10;UNION select  'FPLEDX', count(*) from (select `CONO`, `DIVI`, `YEA4`, `JRNO`, `JSNO`, `PEXN`, `PEXI`, `PEXS` , count(*) as NB_DOUBLONS from FPLEDX group by `CONO`, `DIVI`, `YEA4`, `JRNO`, `JSNO`, `PEXN`, `PEXI`, `PEXS` having count(*) &gt; 1 order by `CONO`, `DIVI`, `YEA4`, `JRNO`, `JSNO`, `PEXN`, `PEXI`, `PEXS`)&#13;&#10;UNION select  'FSLBAL', count(*) from (select `CONO`, `DIVI`, `PYNO`, `CUNO`, `ACYP`, `CUCD` , count(*) as NB_DOUBLONS from FSLBAL group by `CONO`, `DIVI`, `PYNO`, `CUNO`, `ACYP`, `CUCD` having count(*) &gt; 1 order by `CONO`, `DIVI`, `PYNO`, `CUNO`, `ACYP`, `CUCD`)&#13;&#10;UNION select  'FSLEDG', count(*) from (select `CONO`, `DIVI`, `YEA4`, `JRNO`, `JSNO` , count(*) as NB_DOUBLONS from FSLEDG group by `CONO`, `DIVI`, `YEA4`, `JRNO`, `JSNO` having count(*) &gt; 1 order by `CONO`, `DIVI`, `YEA4`, `JRNO`, `JSNO`)&#13;&#10;UNION select  'FSLEDX', count(*) from (select `CONO`, `DIVI`, `YEA4`, `JRNO`, `JSNO`, `SEXN`, `SEXI`, `SEXS` , count(*) as NB_DOUBLONS from FSLEDX group by `CONO`, `DIVI`, `YEA4`, `JRNO`, `JSNO`, `SEXN`, `SEXI`, `SEXS` having count(*) &gt; 1 order by `CONO`, `DIVI`, `YEA4`, `JRNO`, `JSNO`, `SEXN`, `SEXI`, `SEXS`)&#13;&#10;UNION select  'MCHEAD', count(*) from (select `CONO`, `FACI`, `ITNO`, `STRT`, `VASE`, `CROC` ,`RORN`, `RORL`, `RORX`, `ECVS`, `SMFN`, `PCTP`,`PCDT`, count(*) as NB_DOUBLONS from MCHEAD group by `CONO`, `FACI`, `ITNO`, `STRT`, `VASE`, `CROC` ,`RORN`, `RORL`, `RORX`, `ECVS`, `SMFN`, `PCTP`,`PCDT` having count(*) &gt; 1 order by `CONO`, `FACI`, `ITNO`, `STRT`, `VASE`, `CROC` ,`RORN`, `RORL`, `RORX`, `ECVS`, `SMFN`, `PCTP`,`PCDT`)&#13;&#10;UNION select  'MDOPLP', count(*) from (select `CONO`, `PLPN` , `PLPS` , count(*) as NB_DOUBLONS from MDOPLP group by `CONO`, `PLPN` , `PLPS` having count(*) &gt; 1 order by `CONO`, `PLPN` , `PLPS` )&#13;&#10;UNION select  'MGHEAD', count(*) from (select `CONO`, `TRNR` , count(*) as NB_DOUBLONS from MGHEAD group by `CONO`, `TRNR` having count(*) &gt; 1 order by `CONO`, `TRNR`)&#13;&#10;UNION select  'MGLINE', count(*) from (select `CONO`, `TRNR`, `PONR`, `POSX` , count(*) as NB_DOUBLONS from MGLINE group by `CONO`, `TRNR`, `PONR`, `POSX` having count(*) &gt; 1 order by `CONO`, `TRNR`, `PONR`, `POSX`)&#13;&#10;UNION select  'MHDISH', count(*) from (select `CONO`, `INOU`, `DLIX` , count(*) as NB_DOUBLONS from MHDISH group by `CONO`, `INOU`, `DLIX` having count(*) &gt; 1 order by `CONO`, `INOU`, `DLIX`)&#13;&#10;UNION select  'MHDISL', count(*) from (select `CONO`, `DLIX`, `RORC`, `RIDN`, `RIDL`, `RIDX` , count(*) as NB_DOUBLONS from MHDISL group by `CONO`, `DLIX`, `RORC`, `RIDN`, `RIDL`, `RIDX` having count(*) &gt; 1 order by `CONO`, `DLIX`, `RORC`, `RIDN`, `RIDL`, `RIDX`)&#13;&#10;UNION select  'MHIBAL', count(*) from (select `CONO`, `E0PA`, `E065`, `WHLO`, `IFIN` , count(*) as NB_DOUBLONS from MHIBAL group by `CONO`, `E0PA`, `E065`, `WHLO`, `IFIN` having count(*) &gt; 1 order by `CONO`, `E0PA`, `E065`, `WHLO`, `IFIN`)&#13;&#10;UNION select  'MHIMAH', count(*) from (select `CONO`, `E0PA`, `E065`, `IFIN` , count(*) as NB_DOUBLONS from MHIMAH group by `CONO`, `E0PA`, `E065`, `IFIN` having count(*) &gt; 1 order by `CONO`, `E0PA`, `E065`, `IFIN`)&#13;&#10;UNION select  'MHPICH', count(*) from (select `CONO`, `DLIX`, `PLSX`, count(*) as NB_DOUBLONS from MHPICH group by `CONO`, `DLIX`, `PLSX` having count(*) &gt; 1 order by `CONO`, `DLIX`, `PLSX`)&#13;&#10;UNION select  'MITALO', count(*) from (select `CONO`, `WHLO`, `ITNO`, `WHSL`, `BANO`, `CAMU` ,`TTYP`, `RIDN`, `RIDO`, `RIDL`, `RIDX`, `RIDI`,`PLSX`,`SOFT`, count(*) as NB_DOUBLONS from MITALO group by `CONO`, `WHLO`, `ITNO`, `WHSL`, `BANO`, `CAMU` ,`TTYP`, `RIDN`, `RIDO`, `RIDL`, `RIDX`, `RIDI`,`PLSX`,`SOFT` having count(*) &gt; 1 order by `CONO`, `WHLO`, `ITNO`, `WHSL`, `BANO`, `CAMU` ,`TTYP`, `RIDN`, `RIDO`, `RIDL`, `RIDX`, `RIDI`,`PLSX`,`SOFT`)&#13;&#10;UNION select  'MITARE', count(*) from (select `CONO`, `WHLO`, `SLTP`, count(*) as NB_DOUBLONS from MITARE group by `CONO`, `WHLO`, `SLTP` having count(*) &gt; 1 order by `CONO`, `WHLO`, `SLTP`)&#13;&#10;UNION select  'MITAUN', count(*) from (select `CONO`, `ITNO`, `AUTP`, `ALUN` , count(*) as NB_DOUBLONS from MITAUN group by `CONO`, `ITNO`, `AUTP`, `ALUN` having count(*) &gt; 1 order by `CONO`, `ITNO`, `AUTP`, `ALUN`)&#13;&#10;UNION select  'MITBAL', count(*) from (select `CONO`, `WHLO`, `ITNO` , count(*) as NB_DOUBLONS from MITBAL group by `CONO`, `WHLO`, `ITNO` having count(*) &gt; 1 order by `CONO`, `WHLO`, `ITNO`)&#13;&#10;UNION select  'MITFAC', count(*) from (select `CONO`, `FACI`, `ITNO` , count(*) as NB_DOUBLONS from MITFAC group by `CONO`, `FACI`, `ITNO` having count(*) &gt; 1 order by `CONO`, `FACI`, `ITNO`)&#13;&#10;UNION select  'MITLOC', count(*) from (select `CONO`, `WHLO`, `ITNO` ,`WHSL`, `BANO`, `CAMU` ,`REPN` , count(*) as NB_DOUBLONS from MITLOC group by `CONO`, `WHLO`, `ITNO` ,`WHSL`, `BANO`, `CAMU` ,`REPN` having count(*) &gt; 1 order by `CONO`, `WHLO`, `ITNO` ,`WHSL`, `BANO`, `CAMU` ,`REPN`)&#13;&#10;UNION select  'MITMAS', count(*) from (select `CONO`, `ITNO` , count(*) as NB_DOUBLONS from MITMAS group by `CONO`, `ITNO` having count(*) &gt; 1 order by `CONO`, `ITNO`)&#13;&#10;UNION select  'MITPCE', count(*) from (select `CONO`, `WHLO`, `WHSL` , count(*) as NB_DOUBLONS from MITPCE group by `CONO`, `WHLO`, `WHSL` having count(*) &gt; 1 order by `CONO`, `WHLO`, `WHSL`)&#13;&#10;UNION select  'MITPOP', count(*) from (select `CONO`, `ALWT`, `ALWQ`, `ITNO`, `POPN`, `E0PA`, `SEA1`, `VFDT` , count(*) as NB_DOUBLONS from MITPOP group by `CONO`, `ALWT`, `ALWQ`, `ITNO`, `POPN`, `E0PA`, `SEA1`, `VFDT` having count(*) &gt; 1 order by `CONO`, `ALWT`, `ALWQ`, `ITNO`, `POPN`, `E0PA`, `SEA1`, `VFDT`)&#13;&#10;&quot;"/>
+    <elementParameter field="CHECK" name="configuration.config.useCursor" value="false"/>
+    <elementParameter field="TEXT" name="configuration.config.cursorSize" value="1000"/>
+    <elementParameter field="CHECK" name="configuration.config.trimAllStringOrCharColumns" value="false"/>
+    <elementParameter field="CHECK" name="configuration.config.allowSpecialName" value="false"/>
+    <elementParameter field="TABLE" name="configuration.config.columnTrims">
+      <elementValue elementRef="configuration.config.columnTrims[].column" value="Table"/>
+      <elementValue elementRef="configuration.config.columnTrims[].trim" value="false"/>
+      <elementValue elementRef="configuration.config.columnTrims[].column" value="NB_doublons"/>
+      <elementValue elementRef="configuration.config.columnTrims[].trim" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="configuration.config.enableMapping" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.config.mapping" value="MYSQL"/>
+    <elementParameter field="CHECK" name="configuration.config.usePreparedStatement" value="false"/>
+    <elementParameter field="TABLE" name="configuration.config.preparedStatementParameters"/>
+    <elementParameter field="CHECK" name="configuration.config.useQueryTimeout" value="false"/>
+    <elementParameter field="TEXT" name="configuration.config.queryTimeout"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1"/>
+    <metadata connector="FLOW" name="tDBInput_2">
+      <column comment="" key="false" length="6" name="Table" nullable="false" originalDbColumnName="" originalLength="6" pattern="" precision="-1" sourceType="BIGINT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CBANAC"/>
+      </column>
+      <column comment="" key="false" length="-1" name="NB_doublons" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_1"/>
+    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+    <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;Doublons_Datalake_PRD.csv&quot;"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" show="false" value="true"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="CHECK" name="APPEND" value="false"/>
+    <elementParameter field="CHECK" name="INCLUDEHEADER" value="true"/>
+    <elementParameter field="CHECK" name="COMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="SPLIT" value="false"/>
+    <elementParameter field="TEXT" name="SPLIT_EVERY" show="false" value="1000"/>
+    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+    <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="1"/>
+    <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
+    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="MAIN" name="tFileOutputDelimited_1">
+      <column comment="" key="false" length="6" name="Table" nullable="false" originalLength="6" pattern="" precision="-1" sourceType="BIGINT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="Table"/>
+      </column>
+      <column comment="" key="false" length="-1" name="NB_doublons" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="NB_doublons"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSendMail_1"/>
+    <elementParameter field="TEXT" name="TO" value="&quot;sylvain.morvan@tanguy.fr; ludovic.gontier@tanguy.fr; olivier.lannuzel@tanguy.fr&quot;"/>
+    <elementParameter field="TEXT" name="FROM" value="&quot;talenduser@tanguy.fr&quot;"/>
+    <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="true"/>
+    <elementParameter field="TEXT" name="PERSONAL_NAME" value="&quot;Système Talend&quot;"/>
+    <elementParameter field="TEXT" name="CC" value=""/>
+    <elementParameter field="TEXT" name="BCC" value=""/>
+    <elementParameter field="TEXT" name="SUBJECT" value="&quot;Doublons Datalake PRD v3&quot;"/>
+    <elementParameter field="MEMO_MESSAGE" name="MESSAGE" value="&quot;Hello Fichier joint &#13;&#10;&#13;&#10;Mail automatique envoyé par Talend !&quot;"/>
+    <elementParameter field="CHECK" name="CHECK_ATTACHMENT" value="true"/>
+    <elementParameter field="TABLE" name="ATTACHMENTS">
+      <elementValue elementRef="FILE" value="&quot;Doublons_Datalake_PRD.csv&quot;"/>
+      <elementValue elementRef="CONTENT_TRANSFER_ENCODING" value="DEFAULT"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="HEADERS"/>
+    <elementParameter field="TEXT" name="SMTP_HOST" value="&quot;ex.exchange.local&quot;"/>
+    <elementParameter field="TEXT" name="SMTP_PORT" value="25"/>
+    <elementParameter field="CHECK" name="SSL" value="false"/>
+    <elementParameter field="CHECK" name="STARTTLS" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="IMPORTANCE" value="Normal"/>
+    <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
+    <elementParameter field="TEXT" name="AUTH_USERNAME" show="false" value="&quot;username&quot;"/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="enc:system.encryption.key.v1:OY2KvtvXCLigzf3AuJg+68XI9s6H4BcL01JZkoRDyrrCij4TgSU="/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="TEXT_SUBTYPE" value="plain"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+    <elementParameter field="CHECK" name="SET_LOCALHOST" value="false"/>
+    <elementParameter field="TEXT" name="LOCALHOST" show="false" value="&quot;localhost&quot;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CLOSED_LIST" name="AUTH_MODE" value="NO_AUTH"/>
+    <metadata connector="FLOW" name="tSendMail_1"/>
+  </node>
+  <node componentName="JDBCInput" componentVersion="1" offsetLabelX="50" offsetLabelY="0" posX="64" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="LABEL" value="    controle doublons 2"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="bmV3amRiYyNKREJDI0lucHV0"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrl" value="&quot;jdbc:&quot;"/>
+    <elementParameter field="TABLE" name="configuration.dataSet.dataStore.jdbcDriver"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.dataStore.jdbcClass" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.userId" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="configuration.dataSet.dataStore.password" value="enc:system.encryption.key.v1:aelEbLbqTEjjTxLFIlLGzqkEaWliF3fvn426NrCd"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.useDataSource" value="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dataSourceAlias" value="&quot;&quot;"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="&quot;cbanac&quot;"/>
+    <elementParameter field="MEMO_SQL" name="configuration.dataSet.sqlQuery" value="&quot;              select  'MITSTA', count(*) from (select `CONO`, `WHLO`, `ITNO`, `CYP6` , count(*) as NB_DOUBLONS from MITSTA group by `CONO`, `WHLO`, `ITNO`, `CYP6` having count(*) &gt; 1 order by `CONO`, `WHLO`, `ITNO`, `CYP6`)&#13;&#10;UNION select  'MITTEM', count(*) from (select `CONO`, `WHLO`, `TEAM`, count(*) as NB_DOUBLONS from MITTEM group by `CONO`, `WHLO`, `TEAM` having count(*) &gt; 1 order by `CONO`, `WHLO`, `TEAM`)&#13;&#10;UNION select  'MITTKD', count(*) from (select `CONO`, `STNB`, `STRN`, `RENU`, count(*) as NB_DOUBLONS from MITTKD group by `CONO`, `STNB`, `STRN`, `RENU` having count(*) &gt; 1 order by `CONO`, `STNB`, `STRN`, `RENU`)&#13;&#10;UNION select  'MITTKH', count(*) from (select `CONO`, `STNB`, count(*) as NB_DOUBLONS from MITTKH group by `CONO`, `STNB` having count(*) &gt; 1 order by `CONO`, `STNB`)&#13;&#10;UNION select  'MITTKV', count(*) from (select `CONO`, `STNB`, `STRN`, `RENU`, count(*) as NB_DOUBLONS from MITTKV group by `CONO`, `STNB`, `STRN`, `RENU` having count(*) &gt; 1 order by `CONO`, `STNB`, `STRN`, `RENU`)&#13;&#10;UNION select  'MITTRA', count(*) from (select `CONO`, `WHLO`, `ITNO`, `RGDT`, `RGTM`, `TMSX` , count(*) as NB_DOUBLONS from MITTRA group by `CONO`, `WHLO`, `ITNO`, `RGDT`, `RGTM`, `TMSX` having count(*) &gt; 1 order by `CONO`, `WHLO`, `ITNO`, `RGDT`, `RGTM`, `TMSX`)&#13;&#10;UNION select  'MITVEN', count(*) from (select `CONO`, `ITNO`, `PRCS`, `SUFI`, `SUNO` , count(*) as NB_DOUBLONS from MITVEN group by `CONO`, `ITNO`, `PRCS`, `SUFI`, `SUNO` having count(*) &gt; 1 order by `CONO`, `ITNO`, `PRCS`, `SUFI`, `SUNO`)&#13;&#10;UNION select  'MITWHG', count(*) from (select `CONO`, `WHGR`, `WHLO` , count(*) as NB_DOUBLONS from MITWHG group by `CONO`, `WHGR`, `WHLO` having count(*) &gt; 1 order by `CONO`, `WHGR`, `WHLO`)&#13;&#10;UNION select  'MITWHL', count(*) from (select `CONO`, `WHLO` , count(*) as NB_DOUBLONS from MITWHL group by `CONO`, `WHLO` having count(*) &gt; 1 order by `CONO`, `WHLO`)&#13;&#10;UNION select  'MMODFE', count(*) from (select `CONO`, `STYN` ,`SQNU`, `FTID` , count(*) as NB_DOUBLONS from MMODFE group by `CONO`, `STYN` ,`SQNU`, `FTID` having count(*) &gt; 1 order by `CONO`, `STYN` ,`SQNU`, `FTID`)&#13;&#10;UNION select  'MMODMA', count(*) from (select `CONO`, `STYN` , count(*) as NB_DOUBLONS from MMODMA group by `CONO`, `STYN` having count(*) &gt; 1 order by `CONO`, `STYN`)&#13;&#10;UNION select  'MPAGRL', count(*) from (select `CONO`, `SUNO` ,`AGNB`, `GRPI` ,`OBV1`, `OBV2` ,`OBV3`, `OBV4` ,`FVDT` , count(*) as NB_DOUBLONS from MPAGRL group by `CONO`, `SUNO` ,`AGNB`, `GRPI` ,`OBV1`, `OBV2` ,`OBV3`, `OBV4` ,`FVDT` having count(*) &gt; 1 order by `CONO`, `SUNO` ,`AGNB`, `GRPI` ,`OBV1`, `OBV2` ,`OBV3`, `OBV4` ,`FVDT`)&#13;&#10;UNION select  'MPAGRP', count(*) from (select `CONO`, `SUNO` ,`AGNB`, `GRPI` ,`OBV1`, `OBV2` ,`OBV3`, `OBV4` ,`FVDT` , `FRQT` , count(*) as NB_DOUBLONS from MPAGRP group by `CONO`, `SUNO` ,`AGNB`, `GRPI` ,`OBV1`, `OBV2` ,`OBV3`, `OBV4` ,`FVDT`, `FRQT`  having count(*) &gt; 1 order by `CONO`, `SUNO` ,`AGNB`, `GRPI` ,`OBV1`, `OBV2` ,`OBV3`, `OBV4` ,`FVDT`, `FRQT`)&#13;&#10;UNION select  'MPCLAH', count(*) from (select `CONO`, `CLAN` , count(*) as NB_DOUBLONS from MPCLAH group by `CONO`, `CLAN` having count(*) &gt; 1 order by `CONO`, `CLAN`)&#13;&#10;UNION select  'MPCLAL', count(*) from (select `CONO`, `CLAN`, `CLLN` , count(*) as NB_DOUBLONS from MPCLAL group by `CONO`, `CLAN`, `CLLN` having count(*) &gt; 1 order by `CONO`, `CLAN`, `CLLN`)&#13;&#10;UNION select  'MPDCDF', count(*) from (select `CONO`, `CFIN`, `ECVS`, `FTID` , count(*) as NB_DOUBLONS from MPDCDF group by `CONO`, `CFIN`, `ECVS`, `FTID` having count(*) &gt; 1 order by `CONO`, `CFIN`, `ECVS`, `FTID`)&#13;&#10;UNION select  'MPDFHE', count(*) from (select `CONO`, `FTID` , count(*) as NB_DOUBLONS from MPDFHE group by `CONO`, `FTID` having count(*) &gt; 1 order by `CONO`, `FTID`)&#13;&#10;UNION select  'MPDIID', count(*) from (select `CONO`, `INSI` ,`STRT`, `SUFI`, count(*) as NB_DOUBLONS from MPDIID group by `CONO`, `INSI` ,`STRT`, `SUFI` having count(*) &gt; 1 order by `CONO`, `INSI` ,`STRT`, `SUFI`)&#13;&#10;UNION select  'MPDOPT', count(*) from (select `CONO`, `OPTN` , count(*) as NB_DOUBLONS from MPDOPT group by `CONO`, `OPTN` having count(*) &gt; 1 order by `CONO`, `OPTN`)&#13;&#10;UNION select  'MPDVAN', count(*) from (select `CONO`, `FACI`,`PRNO`, `STRT`,`VANO` , count(*) as NB_DOUBLONS from MPDVAN group by `CONO`, `FACI`,`PRNO`, `STRT`,`VANO` having count(*) &gt; 1 order by `CONO`, `FACI`,`PRNO`, `STRT`,`VANO`)&#13;&#10;UNION select  'MPDVOF', count(*) from (select `CONO`, `FTID`,`SQNU`, `OPTN` , count(*) as NB_DOUBLONS from MPDVOF group by `CONO`, `FTID`,`SQNU`, `OPTN` having count(*) &gt; 1 order by `CONO`, `FTID`,`SQNU`, `OPTN`)&#13;&#10;UNION select  'MPHEAD', count(*) from (select `CONO`, `PUNO` , count(*) as NB_DOUBLONS from MPHEAD group by `CONO`, `PUNO` having count(*) &gt; 1 order by `CONO`, `PUNO`)&#13;&#10;UNION select  'MPLIND', count(*) from (select `CONO`, `PUNO`, `PNLI`, `PNLS`, `PNLX` , count(*) as NB_DOUBLONS from MPLIND group by `CONO`, `PUNO`, `PNLI`, `PNLS`, `PNLX` having count(*) &gt; 1 order by `CONO`, `PUNO`, `PNLI`, `PNLS`, `PNLX`)&#13;&#10;UNION select  'MPLINE', count(*) from (select `CONO`, `PUNO`, `PNLI`, `PNLS` , count(*) as NB_DOUBLONS from MPLINE group by `CONO`, `PUNO`, `PNLI`, `PNLS` having count(*) &gt; 1 order by `CONO`, `PUNO`, `PNLI`, `PNLS`)&#13;&#10;UNION select  'MPURST', count(*) from (select `CONO`, `PUNO`, `PNLI`, `PNLS` , count(*) as NB_DOUBLONS from MPURST group by `CONO`, `PUNO`, `PNLI`, `PNLS` having count(*) &gt; 1 order by `CONO`, `PUNO`, `PNLI`, `PNLS`)&#13;&#10;UNION select  'MWHTAB', count(*) from (select `CONO`, `DIVI`, `WHTA`, `SQNR` , count(*) as NB_DOUBLONS from MWHTAB group by `CONO`, `DIVI`, `WHTA`, `SQNR`  having count(*) &gt; 1 order by `CONO`, `DIVI`, `WHTA`, `SQNR`)&#13;&#10;UNION select  'MWOHED', count(*) from (select `CONO`, `FACI`, `PRNO`, `MFNO` , count(*) as NB_DOUBLONS from MWOHED group by `CONO`, `FACI`, `PRNO`, `MFNO` having count(*) &gt; 1 order by `CONO`, `FACI`, `PRNO`, `MFNO`)&#13;&#10;UNION select  'MWOMAT', count(*) from (select `CONO`, `FACI`, `PRNO`, `MFNO`, `MSEQ` , count(*) as NB_DOUBLONS from MWOMAT group by `CONO`, `FACI`, `PRNO`, `MFNO`, `MSEQ` having count(*) &gt; 1 order by `CONO`, `FACI`, `PRNO`, `MFNO`, `MSEQ`)&#13;&#10;UNION select  'MWOOPE', count(*) from (select `CONO`, `FACI`, `PRNO`, `MFNO`, `OPNO` , count(*) as NB_DOUBLONS from MWOOPE group by `CONO`, `FACI`, `PRNO`, `MFNO`, `OPNO` having count(*) &gt; 1 order by `CONO`, `FACI`, `PRNO`, `MFNO`, `OPNO`)&#13;&#10;UNION select  'OAGRHE', count(*) from (select `CONO`, `CUNO`, `AGNO`, `STDT` , count(*) as NB_DOUBLONS from OAGRHE group by `CONO`, `CUNO`, `AGNO`, `STDT` having count(*) &gt; 1 order by `CONO`, `CUNO`, `AGNO`, `STDT`)&#13;&#10;UNION select  'OAGRLN', count(*) from (select `CONO`, `CUNO`, `AGNO`, `FDAT` ,`STDT`, `PREX`, `OBV1`, `OBV2` , `OBV3`, `OBV4` , count(*) as NB_DOUBLONS from OAGRLN group by `CONO`, `CUNO`, `AGNO`, `FDAT` ,`STDT`, `PREX`, `OBV1`, `OBV2` , `OBV3`, `OBV4`  having count(*) &gt; 1 order by `CONO`, `CUNO`, `AGNO`, `FDAT` ,`STDT`, `PREX`, `OBV1`, `OBV2` , `OBV3`, `OBV4` )&#13;&#10;UNION select  'OAGRPR', count(*) from (select `CONO`, `CUNO`, `AGNO`, `FDAT` ,`STDT`, `PREX`, `OBV1`, `OBV2` , `OBV3`, `OBV4` ,`QTYL` , count(*) as NB_DOUBLONS from OAGRPR group by `CONO`, `CUNO`, `AGNO`, `FDAT` ,`STDT`, `PREX`, `OBV1`, `OBV2` , `OBV3`, `OBV4` ,`QTYL` having count(*) &gt; 1 order by `CONO`, `CUNO`, `AGNO`, `FDAT` ,`STDT`, `PREX`, `OBV1`, `OBV2` , `OBV3`, `OBV4`,`QTYL` )&#13;&#10;UNION select  'OAGRTP', count(*) from (select `CONO`, `AGTP` , count(*) as NB_DOUBLONS from OAGRTP group by `CONO`, `AGTP`   having count(*) &gt; 1 order by `CONO`, `AGTP`  )&#13;&#10;UNION select  'OCHCUS', count(*) from (select `CONO`, `CHCT`, `CUNO`, `FVDT` , count(*) as NB_DOUBLONS from OCHCUS group by `CONO`, `CHCT`, `CUNO`, `FVDT` having count(*) &gt; 1 order by `CONO`, `CHCT`, `CUNO`, `FVDT`)&#13;&#10;UNION select  'OCUSAD', count(*) from (select `CONO`, `CUNO`, `ADRT`, `ADID` , count(*) as NB_DOUBLONS from OCUSAD group by `CONO`, `CUNO`, `ADRT`, `ADID` having count(*) &gt; 1 order by `CONO`, `CUNO`, `ADRT`, `ADID`)&#13;&#10;UNION select  'OCUSCO', count(*) from (select `CONO`, `CUNO`, `ADRT`, `ADID`, `RFTP`, `CNPE` , count(*) as NB_DOUBLONS from OCUSCO group by `CONO`, `CUNO`, `ADRT`, `ADID`, `RFTP`, `CNPE` having count(*) &gt; 1 order by `CONO`, `CUNO`, `ADRT`, `ADID`, `RFTP`, `CNPE`)&#13;&#10;UNION select  'OCUSMA', count(*) from (select `CONO`, `CUNO` , count(*) as NB_DOUBLONS from OCUSMA group by `CONO`, `CUNO` having count(*) &gt; 1 order by `CONO`, `CUNO`)&#13;&#10;UNION select  'ODCHRG', count(*) from (select `CONO`, `CRID`, count(*) as NB_DOUBLONS from ODCHRG group by  `CONO`, `CRID` having count(*) &gt; 1 order by `CONO`, `CRID`)&#13;&#10;UNION select  'ODHEAD', count(*) from (select `CONO`, `ORNO`, `WHLO`, `DLIX`, `TEPY` , count(*) as NB_DOUBLONS from ODHEAD group by `CONO`, `ORNO`, `WHLO`, `DLIX`, `TEPY` having count(*) &gt; 1 order by `CONO`, `ORNO`, `WHLO`, `DLIX`, `TEPY`)&#13;&#10;UNION select  'ODLINE', count(*) from (select `CONO`, `ORNO`, `PONR`, `POSX`, `DLIX`, `WHLO`, `TEPY` , count(*) as NB_DOUBLONS from ODLINE group by `CONO`, `ORNO`, `PONR`, `POSX`, `DLIX`, `WHLO`, `TEPY` having count(*) &gt; 1 order by `CONO`, `ORNO`, `PONR`, `POSX`, `DLIX`, `WHLO`, `TEPY`)&#13;&#10;UNION select  'OINVOH', count(*) from (select `CONO`, `DIVI` ,`YEA4`, `INPX` ,`IVNO`, count(*) as NB_DOUBLONS from OINVOH group by `CONO`, `DIVI` ,`YEA4`, `INPX` ,`IVNO` having count(*) &gt; 1 order by `CONO`, `DIVI` ,`YEA4`, `INPX` ,`IVNO`)&#13;&#10;UNION select  'OINVOL', count(*) from (select `CONO`, `DIVI` ,`YEA4`, `INPX` ,`IVNO`,`IVTP`, `IVSQ` ,`ORNO`, `DLIX`, `WHLO`, `IVRF`, count(*) as NB_DOUBLONS from OINVOL group by `CONO`, `DIVI` ,`YEA4`, `INPX` ,`IVNO`,`IVTP`, `IVSQ` ,`ORNO`, `DLIX`, `WHLO`, `IVRF` having count(*) &gt; 1 order by `CONO`, `DIVI` ,`YEA4`, `INPX` ,`IVNO`,`IVTP`, `IVSQ` ,`ORNO`, `DLIX`, `WHLO`, `IVRF`)&#13;&#10;UNION select  'OOCHRG', count(*) from (select `CONO`, `ORNO` ,`CRID`, `DLIX` ,`WHLO`,  count(*) as NB_DOUBLONS from OOCHRG group by `CONO`, `ORNO` ,`CRID`, `DLIX` ,`WHLO` having count(*) &gt; 1 order by `CONO`, `ORNO` ,`CRID`, `DLIX` ,`WHLO`)&#13;&#10;UNION select  'OOHEAD', count(*) from (select `CONO`, `ORNO` , count(*) as NB_DOUBLONS from OOHEAD group by `CONO`, `ORNO` having count(*) &gt; 1 order by `CONO`, `ORNO`)&#13;&#10;UNION select  'OOLICH', count(*) from (select `CONO`, `ORNO`, `PONR`, `POSX`, `CRID` ,count(*) as NB_DOUBLONS from OOLICH group by `CONO`, `ORNO`, `PONR`, `POSX`, `CRID` having count(*) &gt; 1 order by `CONO`, `ORNO`, `PONR`, `POSX`, `CRID`)&#13;&#10;UNION select  'OOLICT', count(*) from (select `CONO`, `ORNO`, `PONR`, `POSX`, `CRID` ,count(*) as NB_DOUBLONS from OOLICT group by `CONO`, `ORNO`, `PONR`, `POSX`, `CRID` having count(*) &gt; 1 order by `CONO`, `ORNO`, `PONR`, `POSX`, `CRID`)&#13;&#10;UNION select  'OOLINE', count(*) from (select `CONO`, `ORNO`, `PONR`, `POSX` , count(*) as NB_DOUBLONS from OOLINE group by `CONO`, `ORNO`, `PONR`, `POSX` having count(*) &gt; 1 order by `CONO`, `ORNO`, `PONR`, `POSX`)&#13;&#10;UNION select  'OOQUOH', count(*) from (select `CONO`, `ORNO`, `CUNO`, `STAT`, `ORCD` , count(*) as NB_DOUBLONS from OOQUOH group by `CONO`, `ORNO`, `CUNO`, `STAT`, `ORCD` having count(*) &gt; 1 order by`CONO`, `ORNO`, `CUNO`, `STAT`, `ORCD`)&#13;&#10;UNION select  'OPLTMA', count(*) from (select `CONO`, `PLTB`, count(*) as NB_DOUBLONS from OPLTMA group by `CONO`, `PLTB` having count(*) &gt; 1 order by `CONO`, `PLTB`)&#13;&#10;UNION select  'OPRBAS', count(*) from (select `CONO`, `PRRF`, `CUNO`, `CUCD`, `FVDT`,`ITNO`, `OBV1`, `OBV2`, `OBV3`, `OBV4`,`OBV5`, `VFDT`,  count(*) as NB_DOUBLONS from OPRBAS group by `CONO`, `PRRF`, `CUNO`, `CUCD`, `FVDT`,`ITNO`, `OBV1`, `OBV2`, `OBV3`, `OBV4`,`OBV5`, `VFDT`  having count(*) &gt; 1 order by `CONO`, `PRRF`, `CUNO`, `CUCD`, `FVDT`,`ITNO`, `OBV1`, `OBV2`, `OBV3`, `OBV4`,`OBV5`, `VFDT`)&#13;&#10;UNION select  'OPRICH', count(*) from (select `CONO`, `PRRF`, `CUNO`, `CUCD`, `FVDT`,  count(*) as NB_DOUBLONS from OPRICH group by `CONO`, `PRRF`, `CUNO`, `CUCD`, `FVDT`  having count(*) &gt; 1 order by `CONO`, `PRRF`, `CUNO`, `CUCD`, `FVDT`)&#13;&#10;UNION select  'OPRICL', count(*) from (select `CONO`, `PRRF`, `CUNO`, `CUCD`, `FVDT`,`ITNO`, `OBV1`, `OBV2`, `OBV3`, `OBV4`,`OBV5`, `VFDT`, `QTYL`,  count(*) as NB_DOUBLONS from OPRICL group by `CONO`, `PRRF`, `CUNO`, `CUCD`, `FVDT`,`ITNO`, `OBV1`, `OBV2`, `OBV3`, `OBV4`,`OBV5`, `VFDT`, `QTYL`  having count(*) &gt; 1 order by `CONO`, `PRRF`, `CUNO`, `CUCD`, `FVDT`,`ITNO`, `OBV1`, `OBV2`, `OBV3`, `OBV4`,`OBV5`, `VFDT`, `QTYL`)&#13;&#10;UNION select  'OPRMTX', count(*) from (select `CONO`, `PLTB`, `PREX`, `OBV1`, `OBV2`, `OBV3`, `OBV4`, `OBV5`, count(*) as NB_DOUBLONS from OPRMTX group by  `CONO`, `PLTB`, `PREX`, `OBV1`, `OBV2`, `OBV3`, `OBV4`, `OBV5` having count(*) &gt; 1 order by  `CONO`, `PLTB`, `PREX`, `OBV1`, `OBV2`, `OBV3`, `OBV4`, `OBV5`)&#13;&#10;UNION select  'OPROMH', count(*) from (select `CONO`, `DIVI`, `PIDE`, `FVDT`, `CUNO`, count(*) as NB_DOUBLONS from OPROMH group by `CONO`, `DIVI`, `PIDE`, `FVDT`, `CUNO` having count(*) &gt; 1 order by `CONO`, `DIVI`, `PIDE`, `FVDT`, `CUNO`)&#13;&#10;UNION select  'OPROML', count(*) from (select `CONO`, `DIVI`, `PIDE`, `ITNO`, count(*) as NB_DOUBLONS from OPROML group by `CONO`, `DIVI`, `PIDE`, `ITNO` having count(*) &gt; 1 order by `CONO`, `DIVI`, `PIDE`, `ITNO`)&#13;&#10;UNION select  'OSBSTD', count(*) from (select `CONO`, `DIVI`, `ORNO`, `DLIX`, `WHLO`, `PONR`, `POSX`, `ORIG` , count(*) as NB_DOUBLONS from OSBSTD group by `CONO`, `DIVI`, `ORNO`, `DLIX`, `WHLO`, `PONR`, `POSX`, `ORIG` having count(*) &gt; 1 order by `CONO`, `DIVI`, `ORNO`, `DLIX`, `WHLO`, `PONR`, `POSX`, `ORIG`)&#13;&#10;UNION select  'SAAGPR', count(*) from (select `CONO`, `CTNO`, `CUPL`, `ADID`, `PONR`, `POSX`, `SVID` , count(*) as NB_DOUBLONS from SAAGPR group by `CONO`, `CTNO`, `CUPL`, `ADID`, `PONR`, `POSX`, `SVID`  having count(*) &gt; 1 order by `CONO`, `CTNO`, `CUPL`, `ADID`, `PONR`, `POSX`, `SVID` )&#13;&#10;&#13;&#10;&quot;"/>
+    <elementParameter field="CHECK" name="configuration.config.useCursor" value="false"/>
+    <elementParameter field="TEXT" name="configuration.config.cursorSize" value="1000"/>
+    <elementParameter field="CHECK" name="configuration.config.trimAllStringOrCharColumns" value="false"/>
+    <elementParameter field="CHECK" name="configuration.config.allowSpecialName" value="false"/>
+    <elementParameter field="TABLE" name="configuration.config.columnTrims">
+      <elementValue elementRef="configuration.config.columnTrims[].column" value="Table"/>
+      <elementValue elementRef="configuration.config.columnTrims[].trim" value="false"/>
+      <elementValue elementRef="configuration.config.columnTrims[].column" value="NB_doublons"/>
+      <elementValue elementRef="configuration.config.columnTrims[].trim" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="configuration.config.enableMapping" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.config.mapping" value="MYSQL"/>
+    <elementParameter field="CHECK" name="configuration.config.usePreparedStatement" value="false"/>
+    <elementParameter field="TABLE" name="configuration.config.preparedStatementParameters"/>
+    <elementParameter field="CHECK" name="configuration.config.useQueryTimeout" value="false"/>
+    <elementParameter field="TEXT" name="configuration.config.queryTimeout"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" value="-1"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" value="-1"/>
+    <metadata connector="FLOW" name="tDBInput_1">
+      <column comment="" key="false" length="6" name="Table" nullable="false" originalDbColumnName="" originalLength="6" pattern="" precision="-1" sourceType="BIGINT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="CBANAC"/>
+      </column>
+      <column comment="" key="false" length="-1" name="NB_doublons" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_2"/>
+    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+    <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;Doublons_Datalake_PRD.csv&quot;"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" show="false" value="true"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="CHECK" name="APPEND" value="true"/>
+    <elementParameter field="CHECK" name="INCLUDEHEADER" value="false"/>
+    <elementParameter field="CHECK" name="COMPRESS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="SPLIT" value="false"/>
+    <elementParameter field="TEXT" name="SPLIT_EVERY" show="false" value="1000"/>
+    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+    <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="1"/>
+    <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
+    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" show="false" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="MAIN" name="tFileOutputDelimited_2">
+      <column comment="" key="false" length="6" name="Table" nullable="false" originalLength="6" pattern="" precision="-1" sourceType="BIGINT" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="Table"/>
+      </column>
+      <column comment="" key="false" length="-1" name="NB_doublons" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="NB_doublons"/>
+      </column>
+    </metadata>
+  </node>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tDBInput_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tFileOutputDelimited_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tDBInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSendMail_1" offsetLabelX="0" offsetLabelY="0" source="tSendMail_1" target="tDBClose_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tFileOutputDelimited_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tSendMail_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk4"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBClose_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSendMail_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1b17a4cf-7b4a-4f4d-9b05-e65928ea9510"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pL8rLTqqBworC0E+o3CKmniFjbijcJk1xa8iy43m8mCnnedjo9OJi2EuWoNa2f1K4wr0TX/b8Q5r&#13;
+iGwx0Kxkhw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_519260c9-bcc7-45a7-bfd3-9c126e044fad"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>L7a4+oxnxSDE274bF9T76DEtNPNg2lCiF3o/Uahu4FhLtgin+4s5X2TpY1+MBA7nfwvdMHMxTZ1f&#13;
+jzEBHElLRw==</DigestValue></Reference></SignedInfo><SignatureValue>Z3VKv2TYuxDHWMP0qCl4q1sJbxxuckzjlXWH70JH1WzxIyKqri4ogFYe5T4gpZvJG9TRSa08XcJ4&#13;
+2rAGsueE+ZYyMTPJsAyZzak9mN77DffUR3JjdFYwmSPrquIePYFS70PSPixtgZzBcjK9vMoGQ2ep&#13;
+qgkvr2tuTJEHx38UyNvh6A2TosE48KCywmW9q5TWkuwicB1udSgVQiREmLVNyWJIihDurXLfCXbE&#13;
+LDC2JPDgbuJjWkytXbZKoEh9Z2AirEUUwSFp414hLwVnKQ8tBrCdH9y/lxk/rvNlTsr3KJfo0FLG&#13;
+UK3VJXDCpm+fXMdMuU7i61vVshuO5S820CuMTQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh&#13;
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB&#13;
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2&#13;
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl&#13;
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx&#13;
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B&#13;
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ&#13;
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF&#13;
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG&#13;
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM&#13;
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA&#13;
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw&#13;
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/&#13;
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG&#13;
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13;
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_519260c9-bcc7-45a7-bfd3-9c126e044fad" Target="#_1b17a4cf-7b4a-4f4d-9b05-e65928ea9510"><Timestamp>2024-05-13 08:31:10</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
