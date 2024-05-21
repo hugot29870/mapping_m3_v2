@@ -1,11 +1,69 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="PRD" jobType="Standard" xmi:version="2.0">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="DEV_TST" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" hide="false" name="PRD">
-    <contextParameter comment="" internalId="_z2CCoMm7Ee6sC_Kyn9gLCg" name="MySQL_MSU_DatalakeM3_AdditionalParams" prompt="MySQL_MSU_DatalakeM3_AdditionalParams?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="noDatetimeStringSync=true&amp;low_priority_updates=true"/>
-    <contextParameter comment="" internalId="_z2CCocm7Ee6sC_Kyn9gLCg" name="MySQL_MSU_DatalakeM3_Database" prompt="MySQL_MSU_DatalakeM3_Database?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="DatalakeM3PRD"/>
-    <contextParameter comment="" internalId="_z2CCosm7Ee6sC_Kyn9gLCg" name="MySQL_MSU_DatalakeM3_Login" prompt="MySQL_MSU_DatalakeM3_Login?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="service.talend"/>
-    <contextParameter comment="" internalId="_z2CCo8m7Ee6sC_Kyn9gLCg" name="MySQL_MSU_DatalakeM3_Password" prompt="MySQL_MSU_DatalakeM3_Password?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_Password" value="enc:system.encryption.key.v1:3Av7mMsnvHpHVEtIh50yvDmexLrwemlQVGs8OtEtVtvFCErX614="/>
-    <contextParameter comment="" internalId="_z2CCpMm7Ee6sC_Kyn9gLCg" name="MySQL_MSU_DatalakeM3_Port" prompt="MySQL_MSU_DatalakeM3_Port?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="3306"/>
-    <contextParameter comment="" internalId="_z2CCpcm7Ee6sC_Kyn9gLCg" name="MySQL_MSU_DatalakeM3_Server" prompt="MySQL_MSU_DatalakeM3_Server?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="mysql-02.tanguy.local"/>
+    <contextParameter comment="" internalId="_3Q-9wBOBEe-Ej5geiJcQcQ" name="JDBC_DriverClass" prompt="JDBC_DriverClass?" promptNeeded="false" repositoryContextId="_7zV6YBErEe-Qro_05-BoDg" type="id_String" value="&quot;com.infor.idl.jdbc.Driver&quot;"/>
+    <contextParameter comment="" internalId="_3Q-9wROBEe-Ej5geiJcQcQ" name="JDBC_Token" prompt="JDBC_Token?" promptNeeded="false" repositoryContextId="_7zV6YBErEe-Qro_05-BoDg" type="id_String" value="&quot;{\&quot;ti\&quot;:\&quot;TANGUY_TST\&quot;,\&quot;cn\&quot;:\&quot;InforCompassJDBCDriver240507\&quot;,\&quot;dt\&quot;:\&quot;12\&quot;,\&quot;ci\&quot;:\&quot;TANGUY_TST~FYIdLAF7xKygEfqnTg-JEIr4xHbG2zmSitoaKq480QQ\&quot;,\&quot;cs\&quot;:\&quot;KoIVlGOvVUpvnZJquMV1WWcXfZinDgMxJv_Ay6HyvvT0taB_U-wHkTc8tMz_9JmimYSYxcceAb8eJY4mW2iynQ\&quot;,\&quot;iu\&quot;:\&quot;https://mingle-ionapi.eu1.inforcloudsuite.com\&quot;,\&quot;pu\&quot;:\&quot;https://mingle-sso.eu1.inforcloudsuite.com:443/TANGUY_TST/as/\&quot;,\&quot;oa\&quot;:\&quot;authorization.oauth2\&quot;,\&quot;ot\&quot;:\&quot;token.oauth2\&quot;,\&quot;or\&quot;:\&quot;revoke_token.oauth2\&quot;,\&quot;ev\&quot;:\&quot;V1480769020\&quot;,\&quot;v\&quot;:\&quot;1.0\&quot;,\&quot;saak\&quot;:\&quot;TANGUY_TST#Ah3naqbmcNg_4QPMB7zHjCHraE3oMLIjyWr3j2kjSmwClJqkP_Pwk-I13E37c_qzry69uEpiuFOgxiR5wwFe8A\&quot;,\&quot;sask\&quot;:\&quot;wRz98X3VKZ89hG7GLwIQm7AeYZl8Fa-CntiN9nVWK6SEIsVfpHnjcykgpf-gX1CIenMYI7xz3UY1xswUdraM-g\&quot;}&quot;"/>
+    <contextParameter comment="" internalId="_3Q-9whOBEe-Ej5geiJcQcQ" name="JDBC_Url" prompt="JDBC_Url?" promptNeeded="false" repositoryContextId="_7zV6YBErEe-Qro_05-BoDg" type="id_String" value="&quot;jdbc:infordatalake://TANGUY_TSTTENANT_TST?ionApiCredentials=&quot;"/>
+    <contextParameter comment="" internalId="_3Q-9wxOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_AdditionalParams" prompt="MySQL_MSU_DatalakeM3_AdditionalParams?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="noDatetimeStringSync=true&amp;low_priority_updates=true"/>
+    <contextParameter comment="" internalId="_3Q-9xBOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Database" prompt="MySQL_MSU_DatalakeM3_Database?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="DatalakeM3PRD"/>
+    <contextParameter comment="" internalId="_3Q-9xROBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Login" prompt="MySQL_MSU_DatalakeM3_Login?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="service.talend"/>
+    <contextParameter comment="" internalId="_3Q_k0BOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Password" prompt="MySQL_MSU_DatalakeM3_Password?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_Password" value="enc:system.encryption.key.v1:6A950mLUPw3NL1Hi8btD8gr1lcS8e4Apr2wDXAR5Bh/cqashs9g="/>
+    <contextParameter comment="" internalId="_3Q_k0ROBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Port" prompt="MySQL_MSU_DatalakeM3_Port?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="3306"/>
+    <contextParameter comment="" internalId="_3Q_k0hOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Server" prompt="MySQL_MSU_DatalakeM3_Server?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="mysql-02.tanguy.local"/>
+  </context>
+  <context confirmationNeeded="false" hide="false" name="MAIN_TRN">
+    <contextParameter comment="" internalId="_3Q_k0xOBEe-Ej5geiJcQcQ" name="JDBC_DriverClass" prompt="JDBC_DriverClass?" promptNeeded="false" repositoryContextId="_7zV6YBErEe-Qro_05-BoDg" type="id_String" value="&quot;com.infor.idl.jdbc.Driver&quot;"/>
+    <contextParameter comment="" internalId="_3Q_k1BOBEe-Ej5geiJcQcQ" name="JDBC_Token" prompt="JDBC_Token?" promptNeeded="false" repositoryContextId="_7zV6YBErEe-Qro_05-BoDg" type="id_String" value="&quot;{\&quot;ti\&quot;:\&quot;TANGUY_TRN\&quot;,\&quot;cn\&quot;:\&quot;TALEND_API\&quot;,\&quot;dt\&quot;:\&quot;12\&quot;,\&quot;ci\&quot;:\&quot;TANGUY_TRN~v09pGuDPQKP6CVSGn_QUmL1snRKp7njJBWeHAFw33s8\&quot;,\&quot;cs\&quot;:\&quot;WeRVvHEXgr7tDEyifDoTrw_xkwXrax6HYqdVxHNm8PVNyC2EWbka-ol5V_4RUKxSAHjHfApeG_OCLA3k2UWwSA\&quot;,\&quot;iu\&quot;:\&quot;https://mingle-ionapi.eu1.inforcloudsuite.com\&quot;,\&quot;pu\&quot;:\&quot;https://mingle-sso.eu1.inforcloudsuite.com:443/TANGUY_TRN/as/\&quot;,\&quot;oa\&quot;:\&quot;authorization.oauth2\&quot;,\&quot;ot\&quot;:\&quot;token.oauth2\&quot;,\&quot;or\&quot;:\&quot;revoke_token.oauth2\&quot;,\&quot;ev\&quot;:\&quot;V1480769020\&quot;,\&quot;v\&quot;:\&quot;1.0\&quot;,\&quot;saak\&quot;:\&quot;TANGUY_TRN#mL62d6CwGsrW0voQ5fZZLmjcetwym1j87fHbigUMnVORHRQt-CPOTl-JgykoQ1PWZC_8Tr9AEHfj7Opooez0wA\&quot;,\&quot;sask\&quot;:\&quot;4Y2PB9XLDCPGmkHL-d4oOKV3tzEHjx-UAGPdJVoJaQCgE3oVTZT_ntWI8rDRzXJNM81MZ98PSuULcVDRKYEcIA\&quot;}&quot;"/>
+    <contextParameter comment="" internalId="_3Q_k1ROBEe-Ej5geiJcQcQ" name="JDBC_Url" prompt="JDBC_Url?" promptNeeded="false" repositoryContextId="_7zV6YBErEe-Qro_05-BoDg" type="id_String" value="&quot;jdbc:infordatalake://TANGUY_TRNTENANT_TRN?ionApiCredentials=&quot;"/>
+    <contextParameter comment="" internalId="_3Q_k1hOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_AdditionalParams" prompt="MySQL_MSU_DatalakeM3_AdditionalParams?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="noDatetimeStringSync=true&amp;low_priority_updates=true"/>
+    <contextParameter comment="" internalId="_3Q_k1xOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Database" prompt="MySQL_MSU_DatalakeM3_Database?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="DatalakeM3TRN"/>
+    <contextParameter comment="" internalId="_3Q_k2BOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Login" prompt="MySQL_MSU_DatalakeM3_Login?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="service.talend"/>
+    <contextParameter comment="" internalId="_3Q_k2ROBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Password" prompt="MySQL_MSU_DatalakeM3_Password?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_Password" value="enc:system.encryption.key.v1:OyiQimLw2VhDEvmwBBWlhGT6mvPa8bHL0RAtRLfirLlsVnFprfs="/>
+    <contextParameter comment="" internalId="_3Q_k2hOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Port" prompt="MySQL_MSU_DatalakeM3_Port?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="3306"/>
+    <contextParameter comment="" internalId="_3Q_k2xOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Server" prompt="MySQL_MSU_DatalakeM3_Server?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="mysql-02.tanguy.local"/>
+  </context>
+  <context confirmationNeeded="false" hide="false" name="MAIN_PRD">
+    <contextParameter comment="" internalId="_3Q_k3BOBEe-Ej5geiJcQcQ" name="JDBC_DriverClass" prompt="JDBC_DriverClass?" promptNeeded="false" repositoryContextId="_7zV6YBErEe-Qro_05-BoDg" type="id_String" value="&quot;com.infor.idl.jdbc.Driver&quot;"/>
+    <contextParameter comment="" internalId="_3Q_k3ROBEe-Ej5geiJcQcQ" name="JDBC_Token" prompt="JDBC_Token?" promptNeeded="false" repositoryContextId="_7zV6YBErEe-Qro_05-BoDg" type="id_String" value="&quot;{\&quot;ti\&quot;:\&quot;TANGUY_PRD\&quot;,\&quot;cn\&quot;:\&quot;TALEND_API\&quot;,\&quot;dt\&quot;:\&quot;12\&quot;,\&quot;ci\&quot;:\&quot;TANGUY_PRD~WNn5Ng9Ovm5uTnhXoQKW4t3WuWTm7J9W74ugFJxootI\&quot;,\&quot;cs\&quot;:\&quot;_ZUiV_0sQ4WON5kpcX2R0RXBiq-Kwt-tFLTSrt0DrZTXQy7PCNnHN9cCS5TyUAJt71LDUzhE0bikWPQuCheE6w\&quot;,\&quot;iu\&quot;:\&quot;https://mingle-ionapi.eu1.inforcloudsuite.com\&quot;,\&quot;pu\&quot;:\&quot;https://mingle-sso.eu1.inforcloudsuite.com:443/TANGUY_PRD/as/\&quot;,\&quot;oa\&quot;:\&quot;authorization.oauth2\&quot;,\&quot;ot\&quot;:\&quot;token.oauth2\&quot;,\&quot;or\&quot;:\&quot;revoke_token.oauth2\&quot;,\&quot;ev\&quot;:\&quot;V1480769020\&quot;,\&quot;v\&quot;:\&quot;1.0\&quot;,\&quot;saak\&quot;:\&quot;TANGUY_PRD#j115RAqIo0LIKqEQbw9__EBvXzwV5dgpvI5t4hq9vxk-PWPl0GdfaJdXgEq2EmGgbZqKw6iUiicAIEjqobcOBA\&quot;,\&quot;sask\&quot;:\&quot;bAbhUQWtbcvjdubBtDhPvRWr7JGp1yFvl4wWgnvYE_vNJK7A499196Js3PQuhrJE31oiRArxMdVsWH3quf87NQ\&quot;}&quot;"/>
+    <contextParameter comment="" internalId="_3Q_k3hOBEe-Ej5geiJcQcQ" name="JDBC_Url" prompt="JDBC_Url?" promptNeeded="false" repositoryContextId="_7zV6YBErEe-Qro_05-BoDg" type="id_String" value="&quot;jdbc:infordatalake://TANGUY_PRDTENANT_PRD?ionApiCredentials=&quot;"/>
+    <contextParameter comment="" internalId="_3Q_k3xOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_AdditionalParams" prompt="MySQL_MSU_DatalakeM3_AdditionalParams?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="noDatetimeStringSync=true&amp;low_priority_updates=true"/>
+    <contextParameter comment="" internalId="_3Q_k4BOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Database" prompt="MySQL_MSU_DatalakeM3_Database?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="DatalakeM3PRD"/>
+    <contextParameter comment="" internalId="_3Q_k4ROBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Login" prompt="MySQL_MSU_DatalakeM3_Login?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="service.talend"/>
+    <contextParameter comment="" internalId="_3Q_k4hOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Password" prompt="MySQL_MSU_DatalakeM3_Password?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_Password" value="enc:system.encryption.key.v1:Kdifu6G2o/mun5+KANAeXhVVAd2n2TZ6aKje3DPx689VNIcA3/M="/>
+    <contextParameter comment="" internalId="_3Q_k4xOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Port" prompt="MySQL_MSU_DatalakeM3_Port?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="3306"/>
+    <contextParameter comment="" internalId="_3Q_k5BOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Server" prompt="MySQL_MSU_DatalakeM3_Server?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="mysql-02.tanguy.local"/>
+  </context>
+  <context confirmationNeeded="false" hide="false" name="DEV_TST">
+    <contextParameter comment="" internalId="_3Q_k5ROBEe-Ej5geiJcQcQ" name="JDBC_DriverClass" prompt="JDBC_DriverClass?" promptNeeded="false" repositoryContextId="_7zV6YBErEe-Qro_05-BoDg" type="id_String" value="&quot;com.infor.idl.jdbc.Driver&quot;"/>
+    <contextParameter comment="" internalId="_3Q_k5hOBEe-Ej5geiJcQcQ" name="JDBC_Token" prompt="JDBC_Token?" promptNeeded="false" repositoryContextId="_7zV6YBErEe-Qro_05-BoDg" type="id_String" value="&quot;{\&quot;ti\&quot;:\&quot;TANGUY_TST\&quot;,\&quot;cn\&quot;:\&quot;InforCompassJDBCDriver240507\&quot;,\&quot;dt\&quot;:\&quot;12\&quot;,\&quot;ci\&quot;:\&quot;TANGUY_TST~FYIdLAF7xKygEfqnTg-JEIr4xHbG2zmSitoaKq480QQ\&quot;,\&quot;cs\&quot;:\&quot;KoIVlGOvVUpvnZJquMV1WWcXfZinDgMxJv_Ay6HyvvT0taB_U-wHkTc8tMz_9JmimYSYxcceAb8eJY4mW2iynQ\&quot;,\&quot;iu\&quot;:\&quot;https://mingle-ionapi.eu1.inforcloudsuite.com\&quot;,\&quot;pu\&quot;:\&quot;https://mingle-sso.eu1.inforcloudsuite.com:443/TANGUY_TST/as/\&quot;,\&quot;oa\&quot;:\&quot;authorization.oauth2\&quot;,\&quot;ot\&quot;:\&quot;token.oauth2\&quot;,\&quot;or\&quot;:\&quot;revoke_token.oauth2\&quot;,\&quot;ev\&quot;:\&quot;V1480769020\&quot;,\&quot;v\&quot;:\&quot;1.0\&quot;,\&quot;saak\&quot;:\&quot;TANGUY_TST#Ah3naqbmcNg_4QPMB7zHjCHraE3oMLIjyWr3j2kjSmwClJqkP_Pwk-I13E37c_qzry69uEpiuFOgxiR5wwFe8A\&quot;,\&quot;sask\&quot;:\&quot;wRz98X3VKZ89hG7GLwIQm7AeYZl8Fa-CntiN9nVWK6SEIsVfpHnjcykgpf-gX1CIenMYI7xz3UY1xswUdraM-g\&quot;}&quot;"/>
+    <contextParameter comment="" internalId="_3Q_k5xOBEe-Ej5geiJcQcQ" name="JDBC_Url" prompt="JDBC_Url?" promptNeeded="false" repositoryContextId="_7zV6YBErEe-Qro_05-BoDg" type="id_String" value="&quot;jdbc:infordatalake://TANGUY_TSTTENANT_TST?ionApiCredentials=&quot;"/>
+    <contextParameter comment="" internalId="_3Q_k6BOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_AdditionalParams" prompt="MySQL_MSU_DatalakeM3_AdditionalParams?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="noDatetimeStringSync=true&amp;low_priority_updates=true"/>
+    <contextParameter comment="" internalId="_3Q_k6ROBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Database" prompt="MySQL_MSU_DatalakeM3_Database?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="DatalakeM3TST"/>
+    <contextParameter comment="" internalId="_3Q_k6hOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Login" prompt="MySQL_MSU_DatalakeM3_Login?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="service.talend"/>
+    <contextParameter comment="" internalId="_3Q_k6xOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Password" prompt="MySQL_MSU_DatalakeM3_Password?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_Password" value="enc:system.encryption.key.v1:z/8b0LRpa+KBfr30H6X4BHJuKpKmen30wkdac6jp4IIDyDqBv68="/>
+    <contextParameter comment="" internalId="_3Q_k7BOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Port" prompt="MySQL_MSU_DatalakeM3_Port?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="3306"/>
+    <contextParameter comment="" internalId="_3Q_k7ROBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Server" prompt="MySQL_MSU_DatalakeM3_Server?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="mysql-web-dev.tanguy.local"/>
+  </context>
+  <context confirmationNeeded="false" hide="false" name="DEV_PRD">
+    <contextParameter comment="" internalId="_3Q_k7hOBEe-Ej5geiJcQcQ" name="JDBC_DriverClass" prompt="JDBC_DriverClass?" promptNeeded="false" repositoryContextId="_7zV6YBErEe-Qro_05-BoDg" type="id_String" value="&quot;com.infor.idl.jdbc.Driver&quot;"/>
+    <contextParameter comment="" internalId="_3Q_k7xOBEe-Ej5geiJcQcQ" name="JDBC_Token" prompt="JDBC_Token?" promptNeeded="false" repositoryContextId="_7zV6YBErEe-Qro_05-BoDg" type="id_String" value="&quot;{\&quot;ti\&quot;:\&quot;TANGUY_PRD\&quot;,\&quot;cn\&quot;:\&quot;TALEND_API\&quot;,\&quot;dt\&quot;:\&quot;12\&quot;,\&quot;ci\&quot;:\&quot;TANGUY_PRD~WNn5Ng9Ovm5uTnhXoQKW4t3WuWTm7J9W74ugFJxootI\&quot;,\&quot;cs\&quot;:\&quot;_ZUiV_0sQ4WON5kpcX2R0RXBiq-Kwt-tFLTSrt0DrZTXQy7PCNnHN9cCS5TyUAJt71LDUzhE0bikWPQuCheE6w\&quot;,\&quot;iu\&quot;:\&quot;https://mingle-ionapi.eu1.inforcloudsuite.com\&quot;,\&quot;pu\&quot;:\&quot;https://mingle-sso.eu1.inforcloudsuite.com:443/TANGUY_PRD/as/\&quot;,\&quot;oa\&quot;:\&quot;authorization.oauth2\&quot;,\&quot;ot\&quot;:\&quot;token.oauth2\&quot;,\&quot;or\&quot;:\&quot;revoke_token.oauth2\&quot;,\&quot;ev\&quot;:\&quot;V1480769020\&quot;,\&quot;v\&quot;:\&quot;1.0\&quot;,\&quot;saak\&quot;:\&quot;TANGUY_PRD#j115RAqIo0LIKqEQbw9__EBvXzwV5dgpvI5t4hq9vxk-PWPl0GdfaJdXgEq2EmGgbZqKw6iUiicAIEjqobcOBA\&quot;,\&quot;sask\&quot;:\&quot;bAbhUQWtbcvjdubBtDhPvRWr7JGp1yFvl4wWgnvYE_vNJK7A499196Js3PQuhrJE31oiRArxMdVsWH3quf87NQ\&quot;}&quot;"/>
+    <contextParameter comment="" internalId="_3Q_k8BOBEe-Ej5geiJcQcQ" name="JDBC_Url" prompt="JDBC_Url?" promptNeeded="false" repositoryContextId="_7zV6YBErEe-Qro_05-BoDg" type="id_String" value="&quot;jdbc:infordatalake://TANGUY_PRDTENANT_PRD?ionApiCredentials=&quot;"/>
+    <contextParameter comment="" internalId="_3Q_k8ROBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_AdditionalParams" prompt="MySQL_MSU_DatalakeM3_AdditionalParams?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="noDatetimeStringSync=true&amp;low_priority_updates=true"/>
+    <contextParameter comment="" internalId="_3Q_k8hOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Database" prompt="MySQL_MSU_DatalakeM3_Database?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="DatalakeM3PRD"/>
+    <contextParameter comment="" internalId="_3Q_k8xOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Login" prompt="MySQL_MSU_DatalakeM3_Login?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="service.talend"/>
+    <contextParameter comment="" internalId="_3Q_k9BOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Password" prompt="MySQL_MSU_DatalakeM3_Password?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_Password" value="enc:system.encryption.key.v1:vfEy+mNw1SO9Nj3vIp+mpkQZe/DND6v+up4Qpi9YBXroy2Bzvfw="/>
+    <contextParameter comment="" internalId="_3Q_k9ROBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Port" prompt="MySQL_MSU_DatalakeM3_Port?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="3306"/>
+    <contextParameter comment="" internalId="_3Q_k9hOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Server" prompt="MySQL_MSU_DatalakeM3_Server?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="mysql-web-dev.tanguy.local"/>
+  </context>
+  <context confirmationNeeded="false" hide="false" name="MAIN_TST">
+    <contextParameter comment="" internalId="_3Q_k9xOBEe-Ej5geiJcQcQ" name="JDBC_DriverClass" prompt="JDBC_DriverClass?" promptNeeded="false" repositoryContextId="_7zV6YBErEe-Qro_05-BoDg" type="id_String" value="&quot;com.infor.idl.jdbc.Driver&quot;"/>
+    <contextParameter comment="" internalId="_3Q_k-BOBEe-Ej5geiJcQcQ" name="JDBC_Token" prompt="JDBC_Token?" promptNeeded="false" repositoryContextId="_7zV6YBErEe-Qro_05-BoDg" type="id_String" value="&quot;{\&quot;ti\&quot;:\&quot;TANGUY_TST\&quot;,\&quot;cn\&quot;:\&quot;InforCompassJDBCDriver240507\&quot;,\&quot;dt\&quot;:\&quot;12\&quot;,\&quot;ci\&quot;:\&quot;TANGUY_TST~FYIdLAF7xKygEfqnTg-JEIr4xHbG2zmSitoaKq480QQ\&quot;,\&quot;cs\&quot;:\&quot;KoIVlGOvVUpvnZJquMV1WWcXfZinDgMxJv_Ay6HyvvT0taB_U-wHkTc8tMz_9JmimYSYxcceAb8eJY4mW2iynQ\&quot;,\&quot;iu\&quot;:\&quot;https://mingle-ionapi.eu1.inforcloudsuite.com\&quot;,\&quot;pu\&quot;:\&quot;https://mingle-sso.eu1.inforcloudsuite.com:443/TANGUY_TST/as/\&quot;,\&quot;oa\&quot;:\&quot;authorization.oauth2\&quot;,\&quot;ot\&quot;:\&quot;token.oauth2\&quot;,\&quot;or\&quot;:\&quot;revoke_token.oauth2\&quot;,\&quot;ev\&quot;:\&quot;V1480769020\&quot;,\&quot;v\&quot;:\&quot;1.0\&quot;,\&quot;saak\&quot;:\&quot;TANGUY_TST#Ah3naqbmcNg_4QPMB7zHjCHraE3oMLIjyWr3j2kjSmwClJqkP_Pwk-I13E37c_qzry69uEpiuFOgxiR5wwFe8A\&quot;,\&quot;sask\&quot;:\&quot;wRz98X3VKZ89hG7GLwIQm7AeYZl8Fa-CntiN9nVWK6SEIsVfpHnjcykgpf-gX1CIenMYI7xz3UY1xswUdraM-g\&quot;}&quot;"/>
+    <contextParameter comment="" internalId="_3Q_k-ROBEe-Ej5geiJcQcQ" name="JDBC_Url" prompt="JDBC_Url?" promptNeeded="false" repositoryContextId="_7zV6YBErEe-Qro_05-BoDg" type="id_String" value="&quot;jdbc:infordatalake://TANGUY_TSTTENANT_TST?ionApiCredentials=&quot;"/>
+    <contextParameter comment="" internalId="_3Q_k-hOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_AdditionalParams" prompt="MySQL_MSU_DatalakeM3_AdditionalParams?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="noDatetimeStringSync=true&amp;low_priority_updates=true"/>
+    <contextParameter comment="" internalId="_3Q_k-xOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Database" prompt="MySQL_MSU_DatalakeM3_Database?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="DatalakeM3"/>
+    <contextParameter comment="" internalId="_3Q_k_BOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Login" prompt="MySQL_MSU_DatalakeM3_Login?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="service.talend"/>
+    <contextParameter comment="" internalId="_3Q_k_ROBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Password" prompt="MySQL_MSU_DatalakeM3_Password?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_Password" value="enc:system.encryption.key.v1:FEJlusIiX14UkvaauWbOs92z9HL4aG1ZHjSTl7j/tognee5CzWA="/>
+    <contextParameter comment="" internalId="_3Q_k_hOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Port" prompt="MySQL_MSU_DatalakeM3_Port?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="3306"/>
+    <contextParameter comment="" internalId="_3Q_k_xOBEe-Ej5geiJcQcQ" name="MySQL_MSU_DatalakeM3_Server" prompt="MySQL_MSU_DatalakeM3_Server?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="mysql-02.tanguy.local"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
@@ -50,7 +108,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:4qL1hGHVZ9ykL7FJaTq0sG37xUIZciKFOdr3AMu0"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:lBroQR6eLr+nZOZafGsCaxmR7nIuSeBvPsT41PA5"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -65,7 +123,7 @@
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Talend-Studio-20221003_1400-V8.0.1/workspace/.metadata&quot;"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Users/hugo.trebaul/workspacenew/.metadata&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
@@ -85,7 +143,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:u0b42V7tnRGfTfeXBhZWcPF2l3CT52Lug7PcSIK0"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:RBMHE0Tcz/VUr4q0WWY5RDkpl8nObadoVwuO9ypT"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -104,61 +162,12 @@
     <elementParameter field="TEXT" name="FOOTER_LIBRARY" show="false" value=""/>
     <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
     <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
-    <routinesParameter id="_DjuzkDQTEe2GHYtYb7AUfg" name="DataOperation"/>
-    <routinesParameter id="_DnQosDQTEe2GHYtYb7AUfg" name="Relational"/>
-    <routinesParameter id="_Dp8wUDQTEe2GHYtYb7AUfg" name="TalendDate"/>
-    <routinesParameter id="_DpBjQDQTEe2GHYtYb7AUfg" name="TalendDataGenerator"/>
-    <routinesParameter id="_DtAEUDQTEe2GHYtYb7AUfg" name="SQLike"/>
-    <routinesParameter id="_DoJZgDQTEe2GHYtYb7AUfg" name="StringHandling"/>
-    <routinesParameter id="_Dlcq0DQTEe2GHYtYb7AUfg" name="Mathematical"/>
-    <routinesParameter id="_Dq_SIDQTEe2GHYtYb7AUfg" name="TalendString"/>
-    <routinesParameter id="_DsH6kDQTEe2GHYtYb7AUfg" name="TalendStringUtil"/>
-    <routinesParameter id="_DmXQ0DQTEe2GHYtYb7AUfg" name="Numeric"/>
+    <routinesParameter id="_nlcZUA6cEe-q05fB1TapOA" name="UrlEncode"/>
   </parameters>
-  <node componentName="JDBCConnection" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="128" posY="64">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_1"/>
-    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" show="false" value="bmV3amRiYyNKREJDI0lucHV0Connection"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_TEu7kH97Ee2Qp81ccF8m-Q"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="TEXT" name="LABEL" value="JDBC-M3"/>
-    <elementParameter field="CHECK" name="configuration.enableDBType" show="false" value="false"/>
-    <elementParameter field="CHECK" name="configuration.setRawUrl" show="false" value="true"/>
-    <elementParameter field="TEXT" name="configuration.jdbcUrl" value="&quot;jdbc:infordatalake://TANGUY_PRD&quot;"/>
-    <elementParameter field="TEXT" name="configuration.port" show="false" value="80"/>
-    <elementParameter field="TABLE" name="configuration.parameters" show="false"/>
-    <elementParameter field="TABLE" name="configuration.jdbcDriver">
-      <elementValue elementRef="configuration.jdbcDriver[].path" value="mvn:com.amazonaws/aws-java-sdk-core/1.12.147/jar"/>
-    </elementParameter>
-    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.jdbcClass" value="&quot;com.infor.idl.jdbc.Driver&quot;"/>
-    <elementParameter field="TEXT" name="configuration.userId" value="&quot;talendusr@tanguy.fr &quot;"/>
-    <elementParameter field="PASSWORD" name="configuration.password" value="enc:system.encryption.key.v1:rMmkoLAr2srUFKiQC54KS8JH3bRq9wXolDUo+348IQWpA+lMWVyQseVbBlmZeQ=="/>
-    <elementParameter field="CHECK" name="configuration.useSharedDBConnection" value="false"/>
-    <elementParameter field="TEXT" name="configuration.sharedDBConnectionName" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="configuration.useDataSource" value="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSourceAlias" show="false" value="&quot;&quot;"/>
-    <elementParameter field="MAPPING_TYPE" name="configuration.dbMapping" show="false" value="mysql_id"/>
-    <elementParameter field="CLOSED_LIST" name="configuration.authenticationType" show="false" value="BASIC"/>
-    <elementParameter field="CLOSED_LIST" name="configuration.grantType" show="false" value="CLIENT_CREDENTIALS"/>
-    <elementParameter field="CHECK" name="configuration.useAutoCommit" value="true"/>
-    <elementParameter field="CHECK" name="configuration.autoCommit" value="false"/>
-    <elementParameter field="CHECK" name="configuration.defineProtocol" show="false" value="false"/>
-    <elementParameter field="TEXT" name="configuration.connectionTimeOut" show="false" value="30"/>
-    <elementParameter field="TEXT" name="configuration.connectionValidationTimeOut" show="false" value="10"/>
-    <elementParameter field="TECHNICAL" name="configuration.__version" show="false" value="-1"/>
-    <metadata connector="FLOW" name="tDBConnection_1"/>
-    <metadata connector="LOOKUP" name="LOOKUP"/>
-    <metadata connector="MERGE" name="MERGE"/>
-    <metadata connector="REJECT" name="REJECT"/>
-  </node>
-  <node componentName="JDBCInput" componentVersion="1" offsetLabelX="43" offsetLabelY="0" posX="128" posY="224">
+  <node componentName="JDBCInput" componentVersion="2" offsetLabelX="43" offsetLabelY="0" posX="128" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" show="false" value="bmV3amRiYyNKREJDI0lucHV0"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_rR7aIShtEe2WZY7YoPAwyA"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="TEXT" name="LABEL" value="MWOHED"/>
@@ -180,7 +189,7 @@
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.authenticationType" show="false" value="BASIC"/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.grantType" show="false" value="CLIENT_CREDENTIALS"/>
     <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="&quot;mwohed&quot;"/>
-    <elementParameter field="MEMO_SQL" name="configuration.dataSet.sqlQuery" value="&quot;SELECT &#10;  \&quot;mwohed\&quot;.\&quot;CONO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;FACI\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PRNO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MFNO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ITNO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;VANO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;DIVI\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PRIO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ORTY\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;GETP\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;WHST\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;SLDT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;WHHS\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;HSDT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;WMST\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;WHLO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;WHSL\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;BANO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;WOSQ\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;DWNO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PLPR\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RESP\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;TXT1\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;TXT2\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;FSTD\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;FFID\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NURP\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;STDT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;FIDT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RSDT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;REFD\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RPDT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;WODP\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;OROQ\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;OROA\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ORQT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ORQA\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NUBA\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MAUN\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RVQT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RVQA\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;CAQA\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MAQT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MAQA\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;REND\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;COFA\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;DMCF\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NUC1\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NUC2\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NUC3\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NUC4\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NUC5\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NUC6\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NUC7\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;BDCD\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;BAQT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;LEAL\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;LTRE\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;WLDE\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;SDTB\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;SCEX\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PLGR\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PRDY\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;LEVL\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PRHL\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MFHL\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PRLO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MFLO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MSLO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;LVSQ\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ASPC\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;COTD\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RORN\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RORL\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RORC\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;TXID\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ECVE\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PCDO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;AOID\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;STRT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;CFIN\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ECVS\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PROJ\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ELNO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MSTI\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MFTI\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;SCOM\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;WCLN\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NUOP\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NUFO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ACTP\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NNDT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;SCHN\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;HDPR\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PCCO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;COSH\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RIFD\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ROFD\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;TSDA\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;TSTE\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PULD\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PULN\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;SUBN\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PRAP\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;VEOC\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;SUBD\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;CLGP\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NTWP\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ACHD\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ACHT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MOHS\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ATNR\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PPMG\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NUC8\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PGTP\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ALMA\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RPCH\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RGDT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RGTM\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;LMDT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;CHNO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;CHID\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RORX\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;LMTS\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;EXPI\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MEXP\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MFPC\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NBEQ\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;FRED\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;SQNY\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;SQNX\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;SQNZ\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;COLO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;SIZE\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;CHCS\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;SLRO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MREC\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MRCT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;EXRN\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;EXD2\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ICOE\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;AGBF\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;accountingEntity\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;deleted\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;timestamp\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;variationNumber\&quot;&#10;FROM \&quot;mwohed\&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="configuration.dataSet.sqlQuery" value="&quot;SELECT &#10;  \&quot;mwohed\&quot;.\&quot;CONO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;FACI\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PRNO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MFNO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ITNO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;VANO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;DIVI\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PRIO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ORTY\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;GETP\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;WHST\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;SLDT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;WHHS\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;HSDT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;WMST\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;WHLO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;WHSL\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;BANO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;WOSQ\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;DWNO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PLPR\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RESP\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;TXT1\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;TXT2\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;FSTD\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;FFID\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NURP\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;STDT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;FIDT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RSDT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;REFD\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RPDT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;WODP\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;OROQ\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;OROA\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ORQT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ORQA\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NUBA\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MAUN\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RVQT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RVQA\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;CAQA\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MAQT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MAQA\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;REND\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;COFA\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;DMCF\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NUC1\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NUC2\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NUC3\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NUC4\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NUC5\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NUC6\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NUC7\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;BDCD\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;BAQT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;LEAL\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;LTRE\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;WLDE\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;SDTB\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;SCEX\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PLGR\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PRDY\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;LEVL\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PRHL\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MFHL\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PRLO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MFLO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MSLO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;LVSQ\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ASPC\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;COTD\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RORN\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RORL\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RORC\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;TXID\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ECVE\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PCDO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;AOID\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;STRT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;CFIN\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ECVS\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PROJ\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ELNO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MSTI\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MFTI\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;SCOM\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;WCLN\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NUOP\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NUFO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ACTP\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NNDT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;SCHN\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;HDPR\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PCCO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;COSH\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RIFD\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ROFD\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;TSDA\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;TSTE\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PULD\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PULN\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;SUBN\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PRAP\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;VEOC\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;SUBD\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;CLGP\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NTWP\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ACHD\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ACHT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MOHS\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ATNR\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PPMG\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NUC8\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;PGTP\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ALMA\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RPCH\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RGDT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RGTM\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;LMDT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;CHNO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;CHID\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;RORX\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;LMTS\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;EXPI\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MEXP\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MFPC\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;NBEQ\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;FRED\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;SQNY\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;SQNX\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;SQNZ\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;COLO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;SIZE\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;CHCS\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;SLRO\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MREC\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;MRCT\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;EXRN\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;EXD2\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;ICOE\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;AGBF\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;accountingEntity\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;deleted\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;timestamp\&quot;, &#10;  \&quot;mwohed\&quot;.\&quot;variationNumber\&quot;&#10;FROM \&quot;mwohed\&quot;  &quot;"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.useAutoCommit" show="false" value="true"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" show="false" value="false"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.defineProtocol" show="false" value="false"/>
@@ -489,8 +498,9 @@
     <elementParameter field="CHECK" name="configuration.config.usePreparedStatement" value="false"/>
     <elementParameter field="TABLE" name="configuration.config.preparedStatementParameters" show="false"/>
     <elementParameter field="CHECK" name="configuration.config.useQueryTimeout" value="false"/>
+    <elementParameter field="TEXT" name="configuration.config.queryTimeout" show="false" value="30"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
     <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" show="false" value="-1"/>
     <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" show="false" value="-1"/>
     <metadata connector="FLOW" name="tDBInput_1">
@@ -941,8 +951,6 @@
   </node>
   <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_MaOj8CHDEeybpvPbGwjgSQ"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MARIADB"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value="tDBConnection_1"/>
@@ -2598,23 +2606,54 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="JDBCClose" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="128" posY="384">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBClose_1"/>
-    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" show="false" value="bmV3amRiYyNKREJDI0lucHV0Close"/>
+  <node componentName="JDBCConnection" componentVersion="2" offsetLabelX="0" offsetLabelY="0" posX="256" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_2"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" show="false" value="bmV3amRiYyNKREJDI0lucHV0Connection"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="TEXT" name="LABEL" value="JDBC CLOSE"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="JDBCM3_Generic"/>
+    <elementParameter field="CHECK" name="configuration.enableDBType" show="false" value="false"/>
+    <elementParameter field="CHECK" name="configuration.setRawUrl" show="false" value="true"/>
+    <elementParameter field="TEXT" name="configuration.jdbcUrl" value="context.JDBC_Url + UrlEncode.Encoding(context.JDBC_Token)"/>
+    <elementParameter field="TEXT" name="configuration.port" show="false" value="80"/>
+    <elementParameter field="TABLE" name="configuration.parameters" show="false"/>
+    <elementParameter field="TABLE" name="configuration.jdbcDriver">
+      <elementValue elementRef="configuration.jdbcDriver[].path" value="mvn:com.opencsv/opencsv/5.7.0/jar"/>
+    </elementParameter>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.jdbcClass" value="context.JDBC_DriverClass"/>
+    <elementParameter field="TEXT" name="configuration.userId" value=""/>
+    <elementParameter field="PASSWORD" name="configuration.password" value=""/>
+    <elementParameter field="CHECK" name="configuration.useSharedDBConnection" value="false"/>
+    <elementParameter field="TEXT" name="configuration.sharedDBConnectionName" show="false" value="TestShare"/>
+    <elementParameter field="CHECK" name="configuration.useDataSource" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="configuration.dbMapping" show="false" value="mysql_id"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.authenticationType" show="false" value="BASIC"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.grantType" show="false" value="CLIENT_CREDENTIALS"/>
+    <elementParameter field="CHECK" name="configuration.useAutoCommit" value="true"/>
+    <elementParameter field="CHECK" name="configuration.autoCommit" value="false"/>
+    <elementParameter field="CHECK" name="configuration.defineProtocol" show="false" value="false"/>
+    <elementParameter field="TEXT" name="configuration.connectionTimeOut" show="false" value="30"/>
+    <elementParameter field="TEXT" name="configuration.connectionValidationTimeOut" show="false" value="10"/>
     <elementParameter field="TECHNICAL" name="configuration.__version" show="false" value="-1"/>
-    <metadata connector="FLOW" name="tDBClose_1"/>
+    <metadata connector="FLOW" name="tDBConnection_2"/>
     <metadata connector="LOOKUP" name="LOOKUP"/>
     <metadata connector="MERGE" name="MERGE"/>
     <metadata connector="REJECT" name="REJECT"/>
   </node>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tDBInput_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
-  </connection>
+  <node componentName="JDBCClose" componentVersion="2" offsetLabelX="0" offsetLabelY="0" posX="256" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBClose_2"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" show="false" value="bmV3amRiYyNKREJDI0lucHV0Close"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="TECHNICAL" name="configuration.__version" show="false" value="-1"/>
+    <metadata connector="FLOW" name="tDBClose_2"/>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="REJECT" name="REJECT"/>
+  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBOutput_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="MXRM"/>
@@ -3224,31 +3263,34 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBClose_1">
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBClose_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
   </connection>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBConnection_2" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_2" target="tDBInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
+  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBClose_1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_2"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ef8168a5-777a-4265-89f2-b2f14e67b589"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>6b9NXJPlkU9ECNDJdB9+onpi3OZ0w6Zj1fW5PYz22Wxo48qWTz5dNw7kShNApA+P/YJBtXnFEOkY&#13;
-eZpjAbeGiw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_eca83f60-3124-4a8a-9083-ee357b37eb4e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ID6E7qu/4d0Nm7KG6u3kDsAsvOR5JtHmMGgb+KDkotuSKZTrks7WkvZRFjNPNrMp1tAZ4c8DgPmE&#13;
-CLcumpqZZw==</DigestValue></Reference></SignedInfo><SignatureValue>fVL9Q1wVdzU6nNsve+ZXID8HpgzPMZU1s3jB7Zi67xeWQSGPgyfuKCM9Ox6JHXLRBZ+tQ4Mm/hKw&#13;
-NPTZ2o3bAc3XBhQSF4xsOXFcZPdwSCIMrMYhujA+VmqE+UzugqtJhP6ZjeUx7j4jWSNyA/bnqYKh&#13;
-Xw85TU9dPd7Y5yVAGTrgZ1HY31KiSqeF3eOxkurJdxcntWUgGDy8mUmm9hTyQzCxKOxbD6V5rwR/&#13;
-QCaUmFpkqRAEnVVocDoRoGmy032WHEwF7Tkh4hjfP4b1FhwFZTbb2zwrbl5eYLcezIKRz1F+Jacj&#13;
-Hs/6/f1Pxi2dGw/KQr/h2rX49xcsMuDn9nZcTA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBClose_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b8b1e313-2602-4730-9b51-b99bc744b75c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>h4Psy99xYg11baY1sVi1keHGLW/Oci1vP65Ouund+1iMM6ME0yx2+AUhvMq6FKy9D8i+Zb/7PoEQ&#13;
+YGcJPw/shw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_42c1ae51-b02f-4957-99fd-4dfff72c3400"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>QH6WyUXIUXbmXq5TQA3z6nrFTb1T5KgkjNkEXlkLFFtyWB8k1yhcMerAj5EIoo5FsPEtRyLO2Feb&#13;
+lMrmJt60Pg==</DigestValue></Reference></SignedInfo><SignatureValue>obS1gIKSVI+6uoHHH2m4kwrqSTNuawLM617CziTXZL/1BhHLxXCVwpMAVD+EtUa2RXytSf66aH/2&#13;
+mDR+pspjzHimTN8hCyJawLyrKLWPPzvA5WtCVbh7//V26GzvOV3JJ3GnbluaXAOt2/BID6SOPB6Q&#13;
+fzBxlLLnnAMUdcJnHiE9xc7VYIGUgiTUVJ6nzVcG3fAa0ivme72rO9YHchB+iECWsVhuqIEjjYx9&#13;
+6iyyye79SQxH1g+reQLSyzN23NMxfQZSvCSCuK86HEbOxdPgDYflfvNg1umIff+THTkYM3zmGyln&#13;
+OLiccHLTBNGhwSP8JtBtCvnYwlrr4jdCwt0ZQA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -3270,4 +3312,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_eca83f60-3124-4a8a-9083-ee357b37eb4e" Target="#_ef8168a5-777a-4265-89f2-b2f14e67b589"><Timestamp>2024-05-13 08:31:21</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_42c1ae51-b02f-4957-99fd-4dfff72c3400" Target="#_b8b1e313-2602-4730-9b51-b99bc744b75c"><Timestamp>2024-05-16 12:50:57</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
