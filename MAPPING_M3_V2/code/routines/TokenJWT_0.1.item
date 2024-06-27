@@ -1,0 +1,83 @@
+package routines;
+
+import java.util.Date;
+
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.algorithms.Algorithm;
+import com.auth0.jwt.exceptions.JWTCreationException;
+
+
+//import io.jsonwebtoken.SignatureAlgorithm;
+
+/*
+ * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
+ * it must be before the "{talendTypes}" key.
+ * 
+ * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
+ * long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
+ * Short
+ * 
+ * 3. {Category} define a category for the Function. it is required. its value is user-defined .
+ * 
+ * 4. {param} 's format is: {param} <t	ype>[(<default value or closed list values>)] <name>[ : <comment>]
+ * 
+ * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
+ * Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
+ * added. you can have many parameters for the Function.
+ * 
+ * 5. {example} gives a example for the Function. it is optional.
+ */
+public class TokenJWT {
+
+    /**
+     * helloExample: not return value, only print "hello" + message.
+     * 
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string("world") input: The string need to be printed.
+     * 
+     * {example} helloExemple("world") # hello world !.
+     */
+    public static String generateToken(String secretKey ,String issuer ,String username ,String clientId) {
+    	
+    	// String secretKey = "007b65f179dd3bc37347dd422ce96d26|9cb4bbd19a8cdc7a9d18c0226a67f731";//test
+       //  String issuer = "simpliciti";
+        // String username = "huesocodaapi";
+        // String clientId = "HUE SOCODA";
+         
+    	// String secretKey = "007b65f179dd3bc37347dd422ce96d26|9cb4bbd19a8cdc7a9d18c0226a67f731";//"cde1e08d221067d45ba44e8f69faf1e1|924ff244abfd5d4d365550e167e5e7d5";//Prod
+        // String issuer = "simpliciti";
+        // String username = "huesocodaapi";
+         //String clientId = "HUE SOCODA";
+         
+         String token="";
+         try {
+             Algorithm algorithm = Algorithm.HMAC512(secretKey);
+  
+             token = JWT.create()
+                     .withIssuer(issuer)
+                     .withClaim("user", username)
+                     .withClaim("client", clientId)
+                     .withIssuedAt(new Date())
+                     .withExpiresAt(new Date(System.currentTimeMillis() + 13600000)) // 1 heure d'expiration
+                     .sign(algorithm);
+             Long MyDate =System.currentTimeMillis() + 13600000;
+             //MyDate.toString();
+             System.out.println("TimeStamp Utilisé : " +MyDate.toString());
+             System.out.println("Token généré : " + token);
+
+         } catch (JWTCreationException exception) {
+             // Gestion des erreurs liées à la création du token
+             exception.printStackTrace();
+         }
+         return token;
+        
+    	  
+    }
+    
+
+    
+}

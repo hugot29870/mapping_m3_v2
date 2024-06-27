@@ -1,0 +1,19 @@
+package routines;
+
+public class Token {
+
+	public static String accessToken (String tk ) {
+		String token = "";
+		int i = 0;
+		while (tk.charAt(i) != '\"') {
+			token = token+tk.charAt(i);
+			i++;			
+		}
+		return token;
+	}
+	
+	/*public static void main(String[] args) {
+		String token = accessToken("eyJhbGciOiJSUzI1NiIsImtpZCI6IkluZm9yQWNjZXNzVG9rZW5TaWduaW5nQ2VydGlmaWNhdGUtMTU3NjM2MzI3NyJ9.eyJzY29wZSI6IiIsImNsaWVudF9pZCI6IlRBTkdVWV9UU1R-bkVyMHlaUHNSSFAwZGVhWUNudC1LcXhQVHRXQTNKbXRiNVhzM2RJS2QwdyIsImdyYW50X2lkIjoiRFdWYkxDaWF2QWNRelhYeGpESk9kaTRzNVlVM3VHSDgiLCJpc3MiOiJodHRwczovL21pbmdsZS1zc28uZXUxLmluZm9yY2xvdWRzdWl0ZS5jb20iLCJhdWQiOiJodHRwczovL21pbmdsZS1pb25hcGkuZXUxLmluZm9yY2xvdWRzdWl0ZS5jb20iLCJqdGkiOiJjMVNMTGdPcUhhYktDTkUyWmRYTEpPYU5FZjFUUVBZa2llZm0iLCJTZXJ2aWNlQWNjb3VudCI6IlRBTkdVWV9UU1Qjd3dYa24zRWN0TGtkMDFEbnUxQUpsdUNRN1FaNjFmU2QwN0RiVDRQemtIR1FjUVJMeFloRFFVSlU4MFFEVzJlV21LNzFVZGVZU3FqSFd6aktOMWd2YVEiLCJJZGVudGl0eTIiOiIzMTc1MGYwZi1kMjVjLTQ2YzgtYjcxOC1kYjM5YjBiNjQ0YmEiLCJUZW5hbnQiOiJUQU5HVVlfVFNUIiwiRW5mb3JjZVNjb3Blc0ZvckNsaWVudCI6IjAiLCJleHAiOjE2NDQzNDA1MzV9.Fz6T1F_W4rtv5gWcRTct981uK-DOYHjRcjk_P4GsWtiBXds6jTewXonzjZuPOrQ5ZONVeLEJ0n0_4e2oDja8UAFknPVBLVeQLgkuMccj2CMmwNhYbFsj0gqspX5xOHugZfQISUGmFGCb34wBQAbUJ9jPtF0s--nLYoPJEirMfwX1smYxUmj6HEWlIdIQbou6m6n7EzZAtX_iaxMkd6R1AorQS3n0aGBtLji1_-stcQbKFyw2CGprEq0ImH7OJZ05eQSczEGLErkfpfzUUT5Wddnpmym1zZ9FBIEK55Enb1ToxEJBORBp36PcXr65Q2QPbvOprMHWVHNxwwW2J7kjnQ\",\"refresh_token\":\"9hhC4Gyo2Eg8Lueud0r2TrDWu3wIKLWzzs8wINeXAu\",\"token_type\":\"Bearer\",\"expires_in\":7199}");
+		System.out.println(token);
+	}*/
+}
