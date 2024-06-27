@@ -151,59 +151,42 @@
     <elementParameter field="TEXT" name="FOOTER_LIBRARY" show="false" value=""/>
     <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
     <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
-    <routinesParameter id="_DoJZgDQTEe2GHYtYb7AUfg" name="StringHandling"/>
-    <routinesParameter id="_DnQosDQTEe2GHYtYb7AUfg" name="Relational"/>
-    <routinesParameter id="_Dq_SIDQTEe2GHYtYb7AUfg" name="TalendString"/>
-    <routinesParameter id="_DsH6kDQTEe2GHYtYb7AUfg" name="TalendStringUtil"/>
-    <routinesParameter id="_Dlcq0DQTEe2GHYtYb7AUfg" name="Mathematical"/>
-    <routinesParameter id="_Dp8wUDQTEe2GHYtYb7AUfg" name="TalendDate"/>
-    <routinesParameter id="_DmXQ0DQTEe2GHYtYb7AUfg" name="Numeric"/>
-    <routinesParameter id="_DtAEUDQTEe2GHYtYb7AUfg" name="SQLike"/>
-    <routinesParameter id="_DjuzkDQTEe2GHYtYb7AUfg" name="DataOperation"/>
-    <routinesParameter id="_DpBjQDQTEe2GHYtYb7AUfg" name="TalendDataGenerator"/>
     <routinesParameter id="_nlcZUA6cEe-q05fB1TapOA" name="UrlEncode"/>
   </parameters>
   <node componentName="JDBCInput" componentVersion="2" offsetLabelX="37" offsetLabelY="0" posX="128" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" show="false" value="bmV3amRiYyNKREJDI0lucHV0"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="TEXT" name="LABEL" value="CUGEX1"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
-    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.authenticationType" value="BASIC"/>
-    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.defineProtocol" value="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.connectionTimeOut" value="30"/>
-    <elementParameter field="PASSWORD" name="configuration.dataSet.dataStore.password" value="enc:system.encryption.key.v1:GS1WHObIWvx8xGfMn0+2ycpfSU8Khs8q2L53o9JsOpU+0j1wxT4="/>
-    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.dataStore.jdbcClass" value="&quot;com.infor.idl.jdbc.Driver&quot;"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.userId" value="&quot;ludovic.gontier@tanguy.fr&quot;"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dbMapping" value="mysql_id"/>
-    <elementParameter field="CHECK" name="configuration.config.useQueryTimeout" value="false"/>
-    <elementParameter field="TEXT" name="configuration.config.cursorSize" value="1000"/>
-    <elementParameter field="TEXT" name="configuration.config.queryTimeout" value="30"/>
-    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.useAutoCommit" value="true"/>
-    <elementParameter field="CHECK" name="configuration.config.allowSpecialName" value="false"/>
-    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.setRawUrl" value="true"/>
-    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.useDataSource" value="false"/>
-    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.enableDBType" value="false"/>
-    <elementParameter field="MEMO_SQL" name="configuration.dataSet.sqlQuery" value="&quot;SELECT &#10;  \&quot;cugex1\&quot;.\&quot;A030\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;A121\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;A122\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;A130\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;A230\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;A256\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;A330\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;A430\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;A530\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;A630\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;A730\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;A830\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;A930\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;accountingEntity\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;CHB1\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;CHB2\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;CHB3\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;CHB4\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;CHB5\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;CHB6\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;CHB7\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;CHB8\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;CHB9\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;CHID\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;CHNO\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;CONO\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;DAT1\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;DAT2\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;DAT3\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;DAT4\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;DAT5\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;DAT6\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;DAT7\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;DAT8\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;DAT9\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;deleted\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;DTID\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;FILE\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;LMDT\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;LMTS\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;MIGR\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;N096\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;N196\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;N296\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;N396\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;N496\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;N596\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;N696\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;N796\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;N896\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;N996\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;PK01\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;PK02\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;PK03\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;PK04\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;PK05\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;PK06\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;PK07\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;PK08\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;RGDT\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;RGTM\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;timestamp\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;TXID\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;variationNumber\&quot;&#10;FROM \&quot;cugex1\&quot;  WHERE  \&quot;cugex1\&quot;.\&quot;timestamp\&quot; &gt; DATE_SUB(CURRENT_DATE() , 2)&#13;&#10;; &quot;"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrl" value="&quot;jdbc:infordatalake://TANGUY_TRN&quot;"/>
-    <elementParameter field="CHECK" name="configuration.config.usePreparedStatement" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.grantType" value="CLIENT_CREDENTIALS"/>
-    <elementParameter field="CLOSED_LIST" name="configuration.config.mapping" value="MYSQL"/>
-    <elementParameter field="CHECK" name="configuration.config.enableMapping" value="false"/>
-    <elementParameter field="CHECK" name="configuration.config.useCursor" value="false"/>
-    <elementParameter field="CHECK" name="configuration.config.trimAllStringOrCharColumns" value="false"/>
-    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" value="false"/>
-    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.useSharedDBConnection" value="false"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.connectionValidationTimeOut" value="10"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dataSourceAlias" value="&quot;&quot;"/>
-    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="&quot;cugex1&quot;"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.port" value="80"/>
-    <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" show="false" value="-1"/>
-    <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" show="false" value="-1"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.enableDBType" show="false" value="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.setRawUrl" show="false" value="true"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrl" show="false" value="&quot;jdbc:infordatalake://TANGUY_TRN&quot;"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.port" show="false" value="80"/>
     <elementParameter field="TABLE" name="configuration.dataSet.dataStore.parameters" show="false"/>
     <elementParameter field="TABLE" name="configuration.dataSet.dataStore.jdbcDriver" show="false">
       <elementValue elementRef="configuration.dataSet.dataStore.jdbcDriver[].path" value="&quot;mvn:org.talend.libraries/infor-compass-jdbc/6.0.0-SNAPSHOT/jar&quot;"/>
     </elementParameter>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.dataStore.jdbcClass" show="false" value="&quot;com.infor.idl.jdbc.Driver&quot;"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.userId" show="false" value="&quot;ludovic.gontier@tanguy.fr&quot;"/>
+    <elementParameter field="PASSWORD" name="configuration.dataSet.dataStore.password" show="false" value="enc:system.encryption.key.v1:GS1WHObIWvx8xGfMn0+2ycpfSU8Khs8q2L53o9JsOpU+0j1wxT4="/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.useSharedDBConnection" show="false" value="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.useDataSource" show="false" value="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.dataSourceAlias" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="configuration.dataSet.dataStore.dbMapping" show="false" value="mysql_id"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.authenticationType" show="false" value="BASIC"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.grantType" show="false" value="CLIENT_CREDENTIALS"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="&quot;cugex1&quot;"/>
+    <elementParameter field="MEMO_SQL" name="configuration.dataSet.sqlQuery" value="&quot;SELECT &#10;  \&quot;cugex1\&quot;.\&quot;A030\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;A121\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;A122\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;A130\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;A230\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;A256\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;A330\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;A430\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;A530\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;A630\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;A730\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;A830\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;A930\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;accountingEntity\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;CHB1\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;CHB2\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;CHB3\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;CHB4\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;CHB5\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;CHB6\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;CHB7\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;CHB8\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;CHB9\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;CHID\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;CHNO\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;CONO\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;DAT1\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;DAT2\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;DAT3\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;DAT4\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;DAT5\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;DAT6\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;DAT7\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;DAT8\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;DAT9\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;deleted\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;DTID\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;FILE\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;LMDT\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;LMTS\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;MIGR\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;N096\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;N196\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;N296\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;N396\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;N496\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;N596\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;N696\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;N796\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;N896\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;N996\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;PK01\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;PK02\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;PK03\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;PK04\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;PK05\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;PK06\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;PK07\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;PK08\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;RGDT\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;RGTM\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;timestamp\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;TXID\&quot;, &#10;  \&quot;cugex1\&quot;.\&quot;variationNumber\&quot;&#10;FROM \&quot;cugex1\&quot;  WHERE  \&quot;cugex1\&quot;.\&quot;timestamp\&quot; &gt; DATE_SUB(CURRENT_DATE() , 2)&#13;&#10;; &quot;"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.useAutoCommit" show="false" value="true"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" show="false" value="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.defineProtocol" show="false" value="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.connectionTimeOut" show="false" value="30"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.connectionValidationTimeOut" show="false" value="10"/>
+    <elementParameter field="CHECK" name="configuration.config.useCursor" value="false"/>
+    <elementParameter field="TEXT" name="configuration.config.cursorSize" show="false" value="1000"/>
+    <elementParameter field="CHECK" name="configuration.config.trimAllStringOrCharColumns" value="false"/>
     <elementParameter field="TABLE" name="configuration.config.columnTrims">
       <elementValue elementRef="configuration.config.columnTrims[].column" value="A030"/>
       <elementValue elementRef="configuration.config.columnTrims[].trim" value="false"/>
@@ -334,7 +317,17 @@
       <elementValue elementRef="configuration.config.columnTrims[].column" value="variationNumber"/>
       <elementValue elementRef="configuration.config.columnTrims[].trim" value=""/>
     </elementParameter>
+    <elementParameter field="CHECK" name="configuration.config.enableMapping" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.config.mapping" show="false" value="MYSQL"/>
+    <elementParameter field="CHECK" name="configuration.config.allowSpecialName" value="false"/>
+    <elementParameter field="CHECK" name="configuration.config.usePreparedStatement" value="false"/>
     <elementParameter field="TABLE" name="configuration.config.preparedStatementParameters" show="false"/>
+    <elementParameter field="CHECK" name="configuration.config.useQueryTimeout" value="false"/>
+    <elementParameter field="TEXT" name="configuration.config.queryTimeout" show="false" value="30"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" show="false" value="-1"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" show="false" value="-1"/>
     <metadata connector="FLOW" name="tDBInput_1">
       <column comment="" key="false" length="30" name="A030" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="A030"/>
@@ -1290,7 +1283,41 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="JDBCClose" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="128" posY="384">
+  <node componentName="tFilterColumns" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="680" posY="200">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFilterColumns_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFilterColumns_1">
+      <column key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="920" posY="200">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="//Code généré selon les schémas d'entrée et de sortie&#13;&#10;output_row.errorCode =jobName +' '+ input_row.errorCode;&#13;&#10;output_row.errorMessage = input_row.errorMessage;&#13;&#10;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_1">
+      <column key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1160" posY="200">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashOutput_1"/>
+    <elementParameter field="CHECK" name="LINK_WITH" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="LIST" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DATA_WRITE_MODEL" value="MEMORY"/>
+    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Users/hugo.trebaul/workspace/in.hash&quot;"/>
+    <elementParameter field="TEXT" name="MEMORY_HEAP_MAX_SIZE" show="false" value="2"/>
+    <elementParameter field="CLOSED_LIST" name="KEYS_MANAGEMENT" value="KEEP_ALL"/>
+    <elementParameter field="CHECK" name="APPEND" value="true"/>
+    <elementParameter field="CHECK" name="HASH_KEY_FROM_INPUT_CONNECTOR" show="false" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tHashOutput_1">
+      <column key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="JDBCClose" componentVersion="2" offsetLabelX="0" offsetLabelY="0" posX="128" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBClose_1"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" show="false" value="bmV3amRiYyNKREJDI0lucHV0Close"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
@@ -1306,34 +1333,62 @@
   <node componentName="JDBCConnection" componentVersion="2" offsetLabelX="0" offsetLabelY="0" posX="128" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_2"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" show="false" value="bmV3amRiYyNKREJDI0lucHV0Connection"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="TEXT" name="LABEL" value="JDBCM3_Generic"/>
-    <elementParameter field="CHECK" name="configuration.defineProtocol" value="false"/>
-    <elementParameter field="TEXT" name="configuration.port" value="80"/>
-    <elementParameter field="TEXT" name="configuration.dbMapping" value="mysql_id"/>
-    <elementParameter field="PASSWORD" name="configuration.password" value=""/>
-    <elementParameter field="TEXT" name="configuration.connectionTimeOut" value="30"/>
-    <elementParameter field="TEXT" name="configuration.sharedDBConnectionName" value="TestShare"/>
-    <elementParameter field="CHECK" name="configuration.useDataSource" value="false"/>
-    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.jdbcClass" value="context.JDBC_DriverClass"/>
-    <elementParameter field="CHECK" name="configuration.useSharedDBConnection" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="configuration.grantType" value="CLIENT_CREDENTIALS"/>
-    <elementParameter field="CHECK" name="configuration.enableDBType" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="configuration.authenticationType" value="BASIC"/>
-    <elementParameter field="TEXT" name="configuration.userId" value=""/>
-    <elementParameter field="CHECK" name="configuration.useAutoCommit" value="true"/>
+    <elementParameter field="CHECK" name="configuration.enableDBType" show="false" value="false"/>
+    <elementParameter field="CHECK" name="configuration.setRawUrl" show="false" value="true"/>
     <elementParameter field="TEXT" name="configuration.jdbcUrl" value="context.JDBC_Url + UrlEncode.Encoding(context.JDBC_Token)"/>
-    <elementParameter field="CHECK" name="configuration.setRawUrl" value="true"/>
-    <elementParameter field="CHECK" name="configuration.autoCommit" value="false"/>
-    <elementParameter field="TEXT" name="configuration.connectionValidationTimeOut" value="10"/>
-    <elementParameter field="TECHNICAL" name="configuration.__version" show="false" value="-1"/>
+    <elementParameter field="TEXT" name="configuration.port" show="false" value="80"/>
     <elementParameter field="TABLE" name="configuration.parameters" show="false"/>
     <elementParameter field="TABLE" name="configuration.jdbcDriver">
       <elementValue elementRef="configuration.jdbcDriver[].path" value="mvn:com.opencsv/opencsv/5.7.0/jar"/>
     </elementParameter>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.jdbcClass" value="context.JDBC_DriverClass"/>
+    <elementParameter field="TEXT" name="configuration.userId" value=""/>
+    <elementParameter field="PASSWORD" name="configuration.password" value=""/>
+    <elementParameter field="CHECK" name="configuration.useSharedDBConnection" value="false"/>
+    <elementParameter field="TEXT" name="configuration.sharedDBConnectionName" show="false" value="TestShare"/>
+    <elementParameter field="CHECK" name="configuration.useDataSource" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="configuration.dbMapping" show="false" value="mysql_id"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.authenticationType" show="false" value="BASIC"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.grantType" show="false" value="CLIENT_CREDENTIALS"/>
+    <elementParameter field="CHECK" name="configuration.useAutoCommit" value="true"/>
+    <elementParameter field="CHECK" name="configuration.autoCommit" value="false"/>
+    <elementParameter field="CHECK" name="configuration.defineProtocol" show="false" value="false"/>
+    <elementParameter field="TEXT" name="configuration.connectionTimeOut" show="false" value="30"/>
+    <elementParameter field="TEXT" name="configuration.connectionValidationTimeOut" show="false" value="10"/>
+    <elementParameter field="TECHNICAL" name="configuration.__version" show="false" value="-1"/>
     <metadata connector="FLOW" name="tDBConnection_2"/>
     <metadata connector="LOOKUP" name="LOOKUP"/>
     <metadata connector="MERGE" name="MERGE"/>
     <metadata connector="REJECT" name="REJECT"/>
+  </node>
+  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="680" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostjob_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="920" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_1"/>
+    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_1"/>
+    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Users/hugo.trebaul/workspace/in.hash&quot;"/>
+    <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tHashInput_1">
+      <column comment="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" pattern="null" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" pattern="null" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tBufferOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1160" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tBufferOutput_1"/>
+    <elementParameter field="CHECK" name="USE_BASE64" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tBufferOutput_1">
+      <column comment="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" pattern="null" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" pattern="null" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBOutput_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -1947,31 +2002,61 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBClose_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
   </connection>
+  <connection connectorName="REJECT" label="row2" lineStyle="0" metaname="REJECT" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_1" target="tFilterColumns_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tFilterColumns_1" offsetLabelX="0" offsetLabelY="0" source="tFilterColumns_1" target="tJavaRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
+  </connection>
+  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tHashOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
+  </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBConnection_2" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_2" target="tDBInput_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tHashInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
+  </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tHashInput_1" offsetLabelX="0" offsetLabelY="0" source="tHashInput_1" target="tBufferOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
+  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBClose_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_2"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ebb82b80-0aca-435e-ad9a-9dd6554a8f06"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+8UhWk7CRyaeLQ9zDw4HmrkdErjDbyBxNyvNOp47RdtDAfJ7Us7NAdYg6yhq6iA7D5YryF9aHyd2&#13;
-qLVoppJxGw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_03a71639-e3a9-4ae4-ac6a-99b7e387ba6b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>m/PtAKOcLrN9/r4wy3GDP8i4hPO4fTiBMzOcngdL1USz3FCq2qsJg5Ut1NXPyu8Xz3NCfBPjxhVS&#13;
-QKmI2Kgm4w==</DigestValue></Reference></SignedInfo><SignatureValue>SiqFRe3JgAIw69cwxEUV/A8jjSl6yteqARD+W+2X5W12w3pqs+uMNIZ8HzkBCcs0oKxjoXH7v51L&#13;
-IMQmQpDZSjGcT42brXvZNjbw/UFgC5v689s3Cysnpfz4gBdsyggzzJ5YQKH1lFTjgW1wOr27L4yu&#13;
-kHY3bVVn+gyTnb0gxSgsUQ0NvBJpOVqCMAnhurGqtaSWl9D6xa48DrZISnRlk9zilaSKpseGaMJg&#13;
-M7If9o0TUpJ1/zXg5Eb9yLlRrQzQTKNdTyZQDYcFQy/7jCiAEbAIqA5A8jRhRKcPf44GA9rL+C6G&#13;
-JLZVVCBK5q1xn3K2Y0nLrHUMAv+2j/ufxn3N7w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostjob_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_01957ffd-f9eb-4731-84fa-cd1502f0ab90"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>k0yKj24zk2nAXGdXPyCeNm7RrN8pTnbfuuAMFglydTDVzwBEieMa/KrUcZa8Pu51rq7esJSRuoCq&#13;
+SVHYEoXClw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d3b1caaf-66f7-4b13-88c8-e929ad7fb85b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FLqXPIGRzaVm7ou+WL+uoToYFxap9M53q4hmoVo0AloR9FXZYVQR5q3b3nwaiF3QP21sySGS2WT8&#13;
+irlOgnziRA==</DigestValue></Reference></SignedInfo><SignatureValue>TzKmnuTKPaW5hFDDkCkxvnuV/rlV3af6zgYETxC0by5OUugvqpHI3NRpo0T0+6y9zusZq3hYKuWs&#13;
+awKO7S2J+/GII6eCIWZjyIe6jj52u5x9s4A7oepkeBGbrYrIJuz++Qaa+/chy0AwE90MbVkWG9eG&#13;
+uUhHxua0Fp4SBndDKYYjkOtwxZIaCtfSfpsYr/dy5tyzIpRzRo3SO4X+C8IVIGJ/3SK7JoAaF0Xp&#13;
+aPL93xSk2GxKDZyOr11JGV50aq62MhElf5OQYTaFd91b+4DkKwn1ptHStBflRaqfgmRno/NjW6gV&#13;
+wSks7eK5MIkeUBkPymPREIUA29s/t9FxAAU8og==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1993,4 +2078,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_03a71639-e3a9-4ae4-ac6a-99b7e387ba6b" Target="#_ebb82b80-0aca-435e-ad9a-9dd6554a8f06"><Timestamp>2024-05-22 06:59:57</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d3b1caaf-66f7-4b13-88c8-e929ad7fb85b" Target="#_01957ffd-f9eb-4731-84fa-cd1502f0ab90"><Timestamp>2024-06-26 14:36:55</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
