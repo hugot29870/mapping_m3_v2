@@ -68,7 +68,7 @@
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="40"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -187,7 +187,7 @@
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.authenticationType" show="false" value="BASIC"/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.grantType" show="false" value="CLIENT_CREDENTIALS"/>
     <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="&quot;oprbas&quot;"/>
-    <elementParameter field="MEMO_SQL" name="configuration.dataSet.sqlQuery" value="&quot;SELECT &#10;  \&quot;oprbas\&quot;.\&quot;CONO\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;DIVI\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;PRRF\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;CMNO\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;CUCD\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;CUNO\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;FVDT\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;ITNO\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;NTCD\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;BNCD\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;PRAC\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;SAPR\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;SPNR\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;SACD\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;SPUN\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;MXID\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;SGGU\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;LVDT\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;TINC\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;VTCD\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;PRIX\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;ACGR\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;FMID\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;RESI\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;RGDT\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;RGTM\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;LMDT\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;CHNO\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;CHID\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;LMTS\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;OBV1\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;OBV2\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;OBV3\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;OBV4\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;OBV5\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;UUID\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;VFDT\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;MIGI\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;PRLP\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;STRT\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;accountingEntity\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;deleted\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;timestamp\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;variationNumber\&quot;&#10;FROM \&quot;oprbas\&quot; &#13;&#10;   &quot;"/>
+    <elementParameter field="MEMO_SQL" name="configuration.dataSet.sqlQuery" value="&quot;SELECT &#10;  \&quot;oprbas\&quot;.\&quot;CONO\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;DIVI\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;PRRF\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;CMNO\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;CUCD\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;CUNO\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;FVDT\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;ITNO\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;NTCD\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;BNCD\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;PRAC\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;SAPR\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;SPNR\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;SACD\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;SPUN\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;MXID\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;SGGU\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;LVDT\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;TINC\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;VTCD\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;PRIX\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;ACGR\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;FMID\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;RESI\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;RGDT\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;RGTM\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;LMDT\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;CHNO\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;CHID\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;LMTS\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;OBV1\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;OBV2\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;OBV3\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;OBV4\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;OBV5\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;UUID\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;VFDT\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;MIGI\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;PRLP\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;STRT\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;accountingEntity\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;deleted\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;timestamp\&quot;, &#10;  \&quot;oprbas\&quot;.\&quot;variationNumber\&quot;&#10;FROM \&quot;oprbas\&quot; &#13;&#10; &quot;"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.useAutoCommit" show="false" value="true"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" show="false" value="false"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.defineProtocol" show="false" value="false"/>
@@ -457,9 +457,9 @@
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="mysql_id"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="context.MySQL_MSU_DatalakeM3_AdditionalParams"/>
-    <elementParameter field="CHECK" name="EXTENDINSERT" value="true"/>
+    <elementParameter field="CHECK" name="EXTENDINSERT" value="false"/>
     <elementParameter field="LABEL" name="NOTE" value="(Not compatible with reject links)"/>
-    <elementParameter field="TEXT" name="NB_ROWS_PER_INSERT" value="10000"/>
+    <elementParameter field="TEXT" name="NB_ROWS_PER_INSERT" show="false" value="10000"/>
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" show="false" value="true"/>
     <elementParameter field="TEXT" name="BATCH_SIZE" show="false" value="10000"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
@@ -972,6 +972,74 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tFilterColumns" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFilterColumns_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFilterColumns_1">
+      <column key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="880" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="//Code généré selon les schémas d'entrée et de sortie&#10;output_row.errorCode = jobName +' '+input_row.errorCode;&#10;output_row.errorMessage = input_row.errorMessage;&#10;&#13;&#10;//output_row.MaRequete =((String)globalMap.get(&quot;tDBOutput_1_QUERY&quot;));"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_1">
+      <column key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="MaRequete" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashOutput_1"/>
+    <elementParameter field="CHECK" name="LINK_WITH" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="LIST" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DATA_WRITE_MODEL" value="MEMORY"/>
+    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Users/hugo.trebaul/workspace/in.hash&quot;"/>
+    <elementParameter field="TEXT" name="MEMORY_HEAP_MAX_SIZE" show="false" value="2"/>
+    <elementParameter field="CLOSED_LIST" name="KEYS_MANAGEMENT" value="KEEP_ALL"/>
+    <elementParameter field="CHECK" name="APPEND" value="true"/>
+    <elementParameter field="CHECK" name="HASH_KEY_FROM_INPUT_CONNECTOR" show="false" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tHashOutput_1">
+      <column key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="MaRequete" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="errorCode"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="errorMessage"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MaRequete"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__zz"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__zz"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="rowzz"/>
+    <metadata connector="FLOW" name="tLogRow_1">
+      <column key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="MaRequete" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
   <node componentName="JDBCConnection" componentVersion="2" offsetLabelX="0" offsetLabelY="0" posX="288" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_2"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" show="false" value="bmV3amRiYyNKREJDI0lucHV0Connection"/>
@@ -1019,6 +1087,33 @@
     <metadata connector="LOOKUP" name="LOOKUP"/>
     <metadata connector="MERGE" name="MERGE"/>
     <metadata connector="REJECT" name="REJECT"/>
+  </node>
+  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="280">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostjob_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="880" posY="280">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_1"/>
+    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_1"/>
+    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Users/hugo.trebaul/workspace/in.hash&quot;"/>
+    <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tHashInput_1">
+      <column comment="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" pattern="null" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" pattern="null" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="MaRequete" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tBufferOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="280">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tBufferOutput_1"/>
+    <elementParameter field="CHECK" name="USE_BASE64" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tBufferOutput_1">
+      <column comment="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" pattern="null" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" pattern="null" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="MaRequete" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBOutput_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -2442,31 +2537,98 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBClose_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
   </connection>
+  <connection connectorName="REJECT" label="row2" lineStyle="0" metaname="REJECT" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_1" target="tFilterColumns_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tFilterColumns_1" offsetLabelX="0" offsetLabelY="0" source="tFilterColumns_1" target="tJavaRow_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="FVDT"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CONO"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PRRF"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CUCD"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CUNO"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ITNO"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
+  </connection>
+  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tHashOutput_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="CONO"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="MaRequete"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tHashOutput_1" offsetLabelX="0" offsetLabelY="0" source="tHashOutput_1" target="tLogRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
+  </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBConnection_2" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_2" target="tDBInput_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tHashInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
+  </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tHashInput_1" offsetLabelX="0" offsetLabelY="0" source="tHashInput_1" target="tBufferOutput_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="MaRequete"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
+  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_2"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBClose_2"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_fb1eac0b-92c2-4fe1-86c3-e62bb550f879"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>XnkufZNHOGgtGGbyDG2tSVpkVizgyCk0pIymuZZNewIhiZ3v+nexYsbS/TEJZZyfm/0vMPSc4tRg&#13;
-CR1Aub8Y7Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e15467e2-2eea-4d4f-84ce-affe627e6547"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cgG2bui2gGlSDZ7MokhrVNu8yHDmcKlcRuGp6YD/9W9LFFe4SmJ/0ZXL1iS0lv53UrfrM4Ilf07n&#13;
-sDgyIaW4Rg==</DigestValue></Reference></SignedInfo><SignatureValue>dvgfpK9zknlsJIu2DMPE7GGBrQr7qUDxsRQUSN7851OSUOzd7sHhR/DFrXS+UeoWmQfutXsyVDOR&#13;
-JIdcCSjRml2ntKCh1PmllHy0A35iJBefat9KsM4tB/4qH32xjkhwWXBT3Yf/RxpDfgynmjWMjXFg&#13;
-uV+wUeGdlQ3qirEpMFa1tfofMaIhBt8a7apA+hgmttETKwB0KKJApi2dWEknWWp6dUT+xAbNltOe&#13;
-VVf1y6qznv1HuKGrqAx2qAKy1OZsWOJHlEDnDFimvlOXoSRBzQdhJGP6i1lfRfuK2Ymy3RdSCw3C&#13;
-nDqw0s6rzo1GtCvAbKpbAWP4228EWgkZitNB5A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostjob_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b9b2034e-32a3-42d2-b506-8a7d11f2c0cc"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>HEYp7PIui/YAOxvDCf4b2JzXawNjXKBhB1eCK65FCl+WR+pP9Fk3Vs+D396ktG2XjCIofMasY8XQ&#13;
+sVvVgyns6A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_73524e00-c61b-4f01-9f04-ca48d5971f36"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LAr7IByQx9jQ21XdUc+kjLR798qZskghyzHtrborapHVddtPKIFIDPjh3I6VH1QSOVB9cFxInBU3&#13;
+FIM+rldDqw==</DigestValue></Reference></SignedInfo><SignatureValue>kyglQU0SBEFDKDEdWfoOKDicw+Rqseb6V9F4ue9hhnwLw0Y1WTZTIKs41gseX8ZvjinjoUMLfj1g&#13;
+NuoCwRTkXEnSuUwiE0ddI8MsLdkXPsleSo4+utNUICGQK2gMHFpLE58hiomOS8+ZpA/WC5yWLwrn&#13;
+xbRphLoEW6iByhQ6LInwAsf5q/pWmJkEKkwodpBg7aNQmDsCSGLa+8wwOMCQjya8iM7US+CbucGz&#13;
+K9k3UuqqvdFU6h70PxfgwoU85VFLjlnKWDfsDTVuZRPKixa4gyg/r5+fMZFmtt7u4MW4yLGEqRKY&#13;
+v673IaPKmj5aMUI5fd+dMNbE+dM6kcjhjsRnig==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2488,4 +2650,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e15467e2-2eea-4d4f-84ce-affe627e6547" Target="#_fb1eac0b-92c2-4fe1-86c3-e62bb550f879"><Timestamp>2024-05-28 11:26:54</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_73524e00-c61b-4f01-9f04-ca48d5971f36" Target="#_b9b2034e-32a3-42d2-b506-8a7d11f2c0cc"><Timestamp>2024-06-07 08:24:06</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
