@@ -68,7 +68,7 @@
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="40"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -189,7 +189,7 @@
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.authenticationType" show="false" value="BASIC"/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.grantType" show="false" value="CLIENT_CREDENTIALS"/>
     <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="&quot;mchead&quot;"/>
-    <elementParameter field="MEMO_SQL" name="configuration.dataSet.sqlQuery" value="&quot;SELECT &#10;  \&quot;mchead\&quot;.\&quot;CONO\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;FACI\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;ITNO\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;STRT\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;VASE\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CROC\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;RORN\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;RORL\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;ECVS\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;SMFN\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;PCTP\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;PCDT\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CSU1\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CSU2\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CSU3\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CSU4\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CSU5\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CSU6\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CSU7\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CSU8\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CSU9\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;ASU1\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;ASU2\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;ASU3\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;ASU4\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;ASU5\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;ASU6\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;ASU7\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;ASU8\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;ASU9\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;SSU1\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;SSU2\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;SSU3\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;COSN\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;EOQT\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;PRCM\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;STRD\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;MAUM\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;MAUP\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;BRAS\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;NUMA\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;NUOP\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;NUSC\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;AVST\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;YEQT\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;LEAL\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;SCOM\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CFI2\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;COSH\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;TXID\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;RGDT\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;RGTM\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;LMDT\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CHNO\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CHID\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;RORX\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;LMTS\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;UUID\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;MIGI\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;accountingEntity\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;deleted\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;timestamp\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;variationNumber\&quot;&#10;FROM \&quot;mchead\&quot;   WHERE  \&quot;mchead\&quot;.\&quot;timestamp\&quot; &gt; DATE_SUB(CURRENT_DATE() , 2)  &#13;&#10; ; &quot;"/>
+    <elementParameter field="MEMO_SQL" name="configuration.dataSet.sqlQuery" value="&quot;SELECT &#10;  \&quot;mchead\&quot;.\&quot;CONO\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;FACI\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;ITNO\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;STRT\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;VASE\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CROC\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;RORN\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;RORL\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;ECVS\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;SMFN\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;PCTP\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;PCDT\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CSU1\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CSU2\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CSU3\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CSU4\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CSU5\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CSU6\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CSU7\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CSU8\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CSU9\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;ASU1\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;ASU2\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;ASU3\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;ASU4\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;ASU5\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;ASU6\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;ASU7\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;ASU8\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;ASU9\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;SSU1\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;SSU2\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;SSU3\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;COSN\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;EOQT\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;PRCM\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;STRD\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;MAUM\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;MAUP\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;BRAS\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;NUMA\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;NUOP\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;NUSC\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;AVST\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;YEQT\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;LEAL\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;SCOM\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CFI2\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;COSH\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;TXID\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;RGDT\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;RGTM\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;LMDT\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CHNO\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;CHID\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;RORX\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;LMTS\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;UUID\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;MIGI\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;accountingEntity\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;deleted\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;timestamp\&quot;, &#10;  \&quot;mchead\&quot;.\&quot;variationNumber\&quot;&#10;FROM \&quot;mchead\&quot;   &#13;&#10; WHERE  \&quot;mchead\&quot;.\&quot;timestamp\&quot; &gt; DATE_SUB(CURRENT_DATE() , 2)  &#13;&#10; ; &quot;"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.useAutoCommit" show="false" value="true"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" show="false" value="false"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.defineProtocol" show="false" value="false"/>
@@ -1278,6 +1278,40 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tFilterColumns" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="200">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFilterColumns_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFilterColumns_1">
+      <column key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="880" posY="200">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="//Code généré selon les schémas d'entrée et de sortie&#13;&#10;output_row.errorCode =jobName +' '+ input_row.errorCode;&#13;&#10;output_row.errorMessage = input_row.errorMessage;&#13;&#10;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_1">
+      <column key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="200">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashOutput_1"/>
+    <elementParameter field="CHECK" name="LINK_WITH" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="LIST" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DATA_WRITE_MODEL" value="MEMORY"/>
+    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Users/hugo.trebaul/workspace/in.hash&quot;"/>
+    <elementParameter field="TEXT" name="MEMORY_HEAP_MAX_SIZE" show="false" value="2"/>
+    <elementParameter field="CLOSED_LIST" name="KEYS_MANAGEMENT" value="KEEP_ALL"/>
+    <elementParameter field="CHECK" name="APPEND" value="true"/>
+    <elementParameter field="CHECK" name="HASH_KEY_FROM_INPUT_CONNECTOR" show="false" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tHashOutput_1">
+      <column key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
   <node componentName="JDBCClose" componentVersion="2" offsetLabelX="0" offsetLabelY="0" posX="64" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBClose_1"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" show="false" value="bmV3amRiYyNKREJDI0lucHV0Close"/>
@@ -1326,6 +1360,31 @@
     <metadata connector="MERGE" name="MERGE"/>
     <metadata connector="REJECT" name="REJECT"/>
   </node>
+  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostjob_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="880" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_1"/>
+    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_1"/>
+    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Users/hugo.trebaul/workspace/in.hash&quot;"/>
+    <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tHashInput_1">
+      <column comment="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" pattern="null" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" pattern="null" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tBufferOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tBufferOutput_1"/>
+    <elementParameter field="CHECK" name="USE_BASE64" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tBufferOutput_1">
+      <column comment="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" pattern="null" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" pattern="null" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
@@ -1333,31 +1392,61 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBClose_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
   </connection>
+  <connection connectorName="REJECT" label="row2" lineStyle="0" metaname="REJECT" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_1" target="tFilterColumns_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tFilterColumns_1" offsetLabelX="0" offsetLabelY="0" source="tFilterColumns_1" target="tJavaRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
+  </connection>
+  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tHashOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
+  </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBConnection_2" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_2" target="tDBInput_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tHashInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
+  </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tHashInput_1" offsetLabelX="0" offsetLabelY="0" source="tHashInput_1" target="tBufferOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
+  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBClose_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_2"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_6206de95-92e1-45e5-a0c3-4d4b4828eb83"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3vSgXLtYh3EQpmxSForZZmdDBWntrhSNIAk6wNrdwhQR6XSO+OXnO9LTXPogAyNq5I4tppGNzA5M&#13;
-TwQKXAS/sA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7d069c8c-991c-4631-9e43-71ce61a374aa"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zAjF4P8IomNqwRxQPRpuT7M+Hij1mMqcYCj1z66IXUwdash32HYwjeocf0GXUqkDhVCAZ5/dbceB&#13;
-JTHPMy/dOA==</DigestValue></Reference></SignedInfo><SignatureValue>YYWVA8uzEywPHgLkz69azxwt83WOUBN2XSKPDIIpEV5wiCcKsEBTFM1G460u+rhLzv2CCR19tFF1&#13;
-+OgBBNNnHn0bctEsX2R4GFlD7IHoQ2J0QLmE5Cxwow+fK03aM+9uaHNi+yZvkzoVv6D5KaQiUDVj&#13;
-lOKKDjU34tinSrnoiECYJKYPr7FFeS9DqN35u5kzyIAVkdtoTzz8nrhHkdfnPOS1RCqQaayLphEo&#13;
-WXjrVEM/SF/6d72rfnkYCGahB0bP1edgGaV1u7j27f/IymBX10zQd53P7hzSudapXhR75tZq5DDd&#13;
-MLqd1x2uE9W+ZN4BxV/WJREkVY/hun/JfVW4fw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostjob_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_04f69917-8739-4c99-993b-095a7671f45d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7rWajY+yTNBCOozdw/xX1W74Hb7rTbBYCZe2LyHtfkq8c3oLtJg8yU2pobrbHktnDBTmRhK05P80&#13;
+wHdfeUVZbA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d4961e0c-393b-4f33-9fb4-6b54e084a46c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hwcclnFt8iZXf1wHx5piD8ekC3DlD5qwznbt676cqaWhCmAZyrEnbaxdzcwEwtc473hMdmBaCUda&#13;
+39ryH4TTHQ==</DigestValue></Reference></SignedInfo><SignatureValue>UNynUM2ajfqlHPli1qLFSbHXWQY38tzG5DCP7FTgC69r2/AYYh5EEga6hxwVyAMPzfAnQXgQlStE&#13;
+MXjYaiI2HRdsw7FBRgezwqxL67dcog9DEM9uGuAMmbizhoWkpmcY1kF6CnTDXViRWtI+T3f3VEZD&#13;
+eH4S8oremhHB1b8kXlUWaqiJ5fgseV8KYe6PsAHvV3a7tukU6eCCeKp2JEtoTb/MJFaGT8yXMdNp&#13;
+xpP5NENQlwe3oY0z7fORX8j5lXBoIGYPqnRt7A0fU/jX7M1cTF0NRnRjM6EuiarGFLZJ7O2n4jHq&#13;
+yx9kE3+hDrfqnrFzfrPrii/jFOIPXtEwvYyKsw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1379,4 +1468,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7d069c8c-991c-4631-9e43-71ce61a374aa" Target="#_6206de95-92e1-45e5-a0c3-4d4b4828eb83"><Timestamp>2024-05-22 07:12:38</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d4961e0c-393b-4f33-9fb4-6b54e084a46c" Target="#_04f69917-8739-4c99-993b-095a7671f45d"><Timestamp>2024-07-17 13:05:06</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
