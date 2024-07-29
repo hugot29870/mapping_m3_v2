@@ -14,7 +14,7 @@
     <contextParameter comment="" internalId="_wui5NhgbEe-_2ep0IbpPmg" name="JDBC_DriverClass" prompt="JDBC_DriverClass?" promptNeeded="false" repositoryContextId="_7zV6YBErEe-Qro_05-BoDg" type="id_String" value="&quot;com.infor.idl.jdbc.Driver&quot;"/>
     <contextParameter comment="" internalId="_wui5NxgbEe-_2ep0IbpPmg" name="JDBC_Token" prompt="JDBC_Token?" promptNeeded="false" repositoryContextId="_7zV6YBErEe-Qro_05-BoDg" type="id_String" value="&quot;{\&quot;ti\&quot;:\&quot;TANGUY_PRD\&quot;,\&quot;cn\&quot;:\&quot;TALEND_API\&quot;,\&quot;dt\&quot;:\&quot;12\&quot;,\&quot;ci\&quot;:\&quot;TANGUY_PRD~WNn5Ng9Ovm5uTnhXoQKW4t3WuWTm7J9W74ugFJxootI\&quot;,\&quot;cs\&quot;:\&quot;_ZUiV_0sQ4WON5kpcX2R0RXBiq-Kwt-tFLTSrt0DrZTXQy7PCNnHN9cCS5TyUAJt71LDUzhE0bikWPQuCheE6w\&quot;,\&quot;iu\&quot;:\&quot;https://mingle-ionapi.eu1.inforcloudsuite.com\&quot;,\&quot;pu\&quot;:\&quot;https://mingle-sso.eu1.inforcloudsuite.com:443/TANGUY_PRD/as/\&quot;,\&quot;oa\&quot;:\&quot;authorization.oauth2\&quot;,\&quot;ot\&quot;:\&quot;token.oauth2\&quot;,\&quot;or\&quot;:\&quot;revoke_token.oauth2\&quot;,\&quot;ev\&quot;:\&quot;V1480769020\&quot;,\&quot;v\&quot;:\&quot;1.0\&quot;,\&quot;saak\&quot;:\&quot;TANGUY_PRD#j115RAqIo0LIKqEQbw9__EBvXzwV5dgpvI5t4hq9vxk-PWPl0GdfaJdXgEq2EmGgbZqKw6iUiicAIEjqobcOBA\&quot;,\&quot;sask\&quot;:\&quot;bAbhUQWtbcvjdubBtDhPvRWr7JGp1yFvl4wWgnvYE_vNJK7A499196Js3PQuhrJE31oiRArxMdVsWH3quf87NQ\&quot;}&quot;"/>
     <contextParameter comment="" internalId="_wui5OBgbEe-_2ep0IbpPmg" name="JDBC_Url" prompt="JDBC_Url?" promptNeeded="false" repositoryContextId="_7zV6YBErEe-Qro_05-BoDg" type="id_String" value="&quot;jdbc:infordatalake://TANGUY_PRDTENANT_PRD?ionApiCredentials=&quot;"/>
-    <contextParameter comment="" internalId="_wui5ORgbEe-_2ep0IbpPmg" name="MySQL_MSU_DatalakeM3_AdditionalParams" prompt="MySQL_MSU_DatalakeM3_AdditionalParams?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="noDatetimeStringSync=true&amp;low_priority_updates=true"/>
+    <contextParameter comment="" internalId="_wui5ORgbEe-_2ep0IbpPmg" name="MySQL_MSU_DatalakeM3_AdditionalParams" prompt="MySQL_MSU_DatalakeM3_AdditionalParams?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="noDatetimeStringSync=true&amp;low_priority_updates=true&amp;charset=utf8mb4"/>
     <contextParameter comment="" internalId="_wui5OhgbEe-_2ep0IbpPmg" name="MySQL_MSU_DatalakeM3_Database" prompt="MySQL_MSU_DatalakeM3_Database?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="DatalakeM3PRD"/>
     <contextParameter comment="" internalId="_wui5OxgbEe-_2ep0IbpPmg" name="MySQL_MSU_DatalakeM3_Login" prompt="MySQL_MSU_DatalakeM3_Login?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="service.talend"/>
     <contextParameter comment="" internalId="_wui5PBgbEe-_2ep0IbpPmg" name="MySQL_MSU_DatalakeM3_Password" prompt="MySQL_MSU_DatalakeM3_Password?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_Password" value="enc:system.encryption.key.v1:VVJUQCXOPYJLEIGpe8P07xYtBk15cT7LWNBa7I95yTFRUKkNBWE="/>
@@ -176,9 +176,9 @@
     <elementParameter field="CHECK" name="USE_EXTRA_CLASSPATH" show="false" value="false"/>
     <elementParameter field="TEXT" name="EXTRA_CLASSPATH" show="false" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="LOAD_CONTEXT_FROM_FILE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_BASE64" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="__PROCESS__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="CHECK" name="USE_BASE64" value="false"/>
     <metadata connector="FLOW" name="tRunJob_1"/>
   </node>
   <node componentName="tParallelize" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="256">
@@ -212,9 +212,9 @@
     <elementParameter field="CHECK" name="USE_EXTRA_CLASSPATH" show="false" value="false"/>
     <elementParameter field="TEXT" name="EXTRA_CLASSPATH" show="false" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="LOAD_CONTEXT_FROM_FILE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_BASE64" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="__PROCESS__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="CHECK" name="USE_BASE64" value="false"/>
     <metadata connector="FLOW" name="tRunJob_2"/>
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="448">
@@ -241,9 +241,9 @@
     <elementParameter field="CHECK" name="USE_EXTRA_CLASSPATH" show="false" value="false"/>
     <elementParameter field="TEXT" name="EXTRA_CLASSPATH" show="false" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="LOAD_CONTEXT_FROM_FILE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_BASE64" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="__PROCESS__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="CHECK" name="USE_BASE64" value="false"/>
     <metadata connector="FLOW" name="tRunJob_3"/>
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="576">
@@ -270,9 +270,9 @@
     <elementParameter field="CHECK" name="USE_EXTRA_CLASSPATH" show="false" value="false"/>
     <elementParameter field="TEXT" name="EXTRA_CLASSPATH" show="false" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="LOAD_CONTEXT_FROM_FILE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_BASE64" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="__PROCESS__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="CHECK" name="USE_BASE64" value="false"/>
     <metadata connector="FLOW" name="tRunJob_4"/>
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="704">
@@ -299,16 +299,16 @@
     <elementParameter field="CHECK" name="USE_EXTRA_CLASSPATH" show="false" value="false"/>
     <elementParameter field="TEXT" name="EXTRA_CLASSPATH" show="false" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="LOAD_CONTEXT_FROM_FILE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_BASE64" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="__PROCESS__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="CHECK" name="USE_BASE64" value="false"/>
     <metadata connector="FLOW" name="tRunJob_5"/>
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="864">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRunJob_6"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" show="false" value=""/>
-    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="Mapping_MOATTR"/>
+    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="Mapping_MOATTR_inc"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="PRD"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="MAPPING_M3:_HwfxkAX3Ee-jzrWE7-D3pw"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
@@ -328,9 +328,9 @@
     <elementParameter field="CHECK" name="USE_EXTRA_CLASSPATH" show="false" value="false"/>
     <elementParameter field="TEXT" name="EXTRA_CLASSPATH" show="false" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="LOAD_CONTEXT_FROM_FILE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_BASE64" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="__PROCESS__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="CHECK" name="USE_BASE64" value="false"/>
     <metadata connector="FLOW" name="tRunJob_6"/>
   </node>
   <connection connectorName="PARALLELIZE" label="Parallelize" lineStyle="13" metaname="tParallelize_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tParallelize_1" target="tRunJob_1">
@@ -386,13 +386,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ada603ae-4418-443e-bc91-d46397412fc5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TJlYO4/SMOYYCUGEv3OT/nkpS0fUDhCIujA7XB+BBw5UxYUB1zioOqrGf5R8T7YOzhtV2Q5vcOl2&#13;
-gwFSoNDFaQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2e4cb193-91b4-49d9-b665-0ebc7dbd3617"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>HF4N3SAz2xexVBUkOU3LFH6OJzA5hrNEhlkLXAXecM+Ota7bjS4TFVo7yGpXXSREtRsISEYtQOLF&#13;
-sd4cgsLeHw==</DigestValue></Reference></SignedInfo><SignatureValue>aUt9buhcFvnxDMNOJc0JwjwOYVPlHSy6ak0kawc0vCAYY/yZpSx1yx8nO3vtPhi5fwESKeFBNTfd&#13;
-/tewxI7zZaMZQJgQp4jvqoBHpt2q/9HnFzCuOn3kJ6L9JFFcJNdLommKQtJx6dK65q/0r01XHpIk&#13;
-His+HrMlXLsBAfvuY9toDOI/AdGypa8htKC2Ch5LsPpb5dR2KaTxlgJj+nVjQtq9wmKFgVxga2Rh&#13;
-hiUcris7oEM6d12U87stpRwwT/dJ4S6SlR3V1uhU7XjaAcunIgNUyhZLS32nZHsVumJm59x7/XdL&#13;
-0BH5Tnq1Tf9+eA/gDARcznRs2x6VNeyvm2goVA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4a58832d-cbc1-4807-9a4a-cce488be5cb9"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>F1/QBYJUWnBFnVvMe2O95TNLbsgAk0eXFOyCV0vSP2gZN5WmE6yu8uMXu/uYRMSsc2en+bF0NDWp&#13;
+aZjwzq/Yvg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0f174ef2-22a3-4e43-8190-b2618d212147"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>eGMmtE8xEVKUy4X/gJq/BBrqNFDXMQ8nG+EniPxAm5SKvoT5YmzXfC9nlNtn+0UHJuF0sU9AJVHU&#13;
+EyNFHQNGkg==</DigestValue></Reference></SignedInfo><SignatureValue>HfKak1QZXAHMfswOWVjxbC3kbLXESZamBiLlOkHEDHzKRz03TFEOxCSLB9Rog7n5ghTgNoqEpznJ&#13;
+8PgHnXpLhxZhkx0XXAyujEARqSUofcVMzwSU/Y1h4AlP4BXHkLW+ZhSSAvKhbcVeLqfkOH5BtSlb&#13;
+BSyp/XqXxxoIq5Y8VN8Ztv8scCIlZcSiNZIKmh7VUvfmWx96ASSA/ZPAK5574hc7RKyY/nUwSaz5&#13;
+ORi2JUtUl/BxUenRjHaCRqIEGwneBiejGFTqFs6Ml3JMmz1keRQqmcn+03wWNlZ4h1HryNSkRtNV&#13;
+niFGikyjPFq4/2E9Wx5tCbF+i0PZVKadOuEDaw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -414,4 +414,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2e4cb193-91b4-49d9-b665-0ebc7dbd3617" Target="#_ada603ae-4418-443e-bc91-d46397412fc5"><Timestamp>2024-06-03 10:25:33</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0f174ef2-22a3-4e43-8190-b2618d212147" Target="#_4a58832d-cbc1-4807-9a4a-cce488be5cb9"><Timestamp>2024-07-24 13:16:11</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

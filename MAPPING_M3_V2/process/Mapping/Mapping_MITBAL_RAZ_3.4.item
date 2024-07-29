@@ -8,7 +8,7 @@
     <contextParameter comment="" internalId="_JlXDRSfqEe-dudsg_9IonQ" name="MailPort" prompt="MailPort?" promptNeeded="false" repositoryContextId="_MwPAoCfmEe-dudsg_9IonQ" type="id_String" value="25"/>
     <contextParameter comment="" internalId="_JlXDRifqEe-dudsg_9IonQ" name="MailServeur" prompt="MailServeur?" promptNeeded="false" repositoryContextId="_MwPAoCfmEe-dudsg_9IonQ" type="id_String" value="smtp.tanguy.local"/>
     <contextParameter comment="" internalId="_JlXDRyfqEe-dudsg_9IonQ" name="RepLog" prompt="RepLog?" promptNeeded="false" repositoryContextId="_MwPAoCfmEe-dudsg_9IonQ" type="id_String" value="&quot;/Work_Talend/LogMapping/DEV_TST/&quot;"/>
-    <contextParameter comment="" internalId="_JlXDSCfqEe-dudsg_9IonQ" name="MySQL_MSU_DatalakeM3_AdditionalParams" prompt="MySQL_MSU_DatalakeM3_AdditionalParams?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="noDatetimeStringSync=true&amp;low_priority_updates=true"/>
+    <contextParameter comment="" internalId="_JlXDSCfqEe-dudsg_9IonQ" name="MySQL_MSU_DatalakeM3_AdditionalParams" prompt="MySQL_MSU_DatalakeM3_AdditionalParams?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="noDatetimeStringSync=true&amp;low_priority_updates=true&amp;charset=utf8mb4"/>
     <contextParameter comment="" internalId="_JlXDSSfqEe-dudsg_9IonQ" name="MySQL_MSU_DatalakeM3_Database" prompt="MySQL_MSU_DatalakeM3_Database?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="DatalakeM3PRD"/>
     <contextParameter comment="" internalId="_JlXDSifqEe-dudsg_9IonQ" name="MySQL_MSU_DatalakeM3_Login" prompt="MySQL_MSU_DatalakeM3_Login?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="service.talend"/>
     <contextParameter comment="" internalId="_JlXDSyfqEe-dudsg_9IonQ" name="MySQL_MSU_DatalakeM3_Password" prompt="MySQL_MSU_DatalakeM3_Password?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_Password" value="enc:system.encryption.key.v1:3UdOvyytYjDPFDWfspYbN5VFGgejjJZvBUcgmwyZnQxgoqsrxpY="/>
@@ -40,7 +40,7 @@
     <contextParameter comment="" internalId="_JlXqWCfqEe-dudsg_9IonQ" name="MailPort" prompt="MailPort?" promptNeeded="false" repositoryContextId="_MwPAoCfmEe-dudsg_9IonQ" type="id_String" value="25"/>
     <contextParameter comment="" internalId="_JlXqWSfqEe-dudsg_9IonQ" name="MailServeur" prompt="MailServeur?" promptNeeded="false" repositoryContextId="_MwPAoCfmEe-dudsg_9IonQ" type="id_String" value="smtp.tanguy.local"/>
     <contextParameter comment="" internalId="_JlXqWifqEe-dudsg_9IonQ" name="RepLog" prompt="RepLog?" promptNeeded="false" repositoryContextId="_MwPAoCfmEe-dudsg_9IonQ" type="id_String" value="&quot;/Work_Talend/LogMapping/MAIN_PRD/&quot;"/>
-    <contextParameter comment="" internalId="_JlXqWyfqEe-dudsg_9IonQ" name="MySQL_MSU_DatalakeM3_AdditionalParams" prompt="MySQL_MSU_DatalakeM3_AdditionalParams?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="noDatetimeStringSync=true&amp;low_priority_updates=true"/>
+    <contextParameter comment="" internalId="_JlXqWyfqEe-dudsg_9IonQ" name="MySQL_MSU_DatalakeM3_AdditionalParams" prompt="MySQL_MSU_DatalakeM3_AdditionalParams?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="noDatetimeStringSync=true&amp;low_priority_updates=true&amp;charset=utf8mb4"/>
     <contextParameter comment="" internalId="_JlXqXCfqEe-dudsg_9IonQ" name="MySQL_MSU_DatalakeM3_Database" prompt="MySQL_MSU_DatalakeM3_Database?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="DatalakeM3PRD"/>
     <contextParameter comment="" internalId="_JlXqXSfqEe-dudsg_9IonQ" name="MySQL_MSU_DatalakeM3_Login" prompt="MySQL_MSU_DatalakeM3_Login?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="service.talend"/>
     <contextParameter comment="" internalId="_JlXqXifqEe-dudsg_9IonQ" name="MySQL_MSU_DatalakeM3_Password" prompt="MySQL_MSU_DatalakeM3_Password?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_Password" value="enc:system.encryption.key.v1:y5vRs95gHMKV1HmhIAUh+P+kmT1q7SoYqRPS1TYfaKs7NH6l3Is="/>
@@ -197,7 +197,7 @@
   <node componentName="JDBCInput" componentVersion="2" offsetLabelX="36" offsetLabelY="0" posX="120" posY="240">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" show="false" value="bmV3amRiYyNKREJDI0lucHV0"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value=""/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="TEXT" name="LABEL" value="MITBAL"/>
@@ -4067,18 +4067,18 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostjob_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d905c72e-a06a-426e-a0d5-f3e37a35fe78"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>DfLLdAhN8TiVx332PGCL1EIMVjQ3HVQ4XUX6h9WGgmHbP/WFjfGoAjor8uxUkSzgbgRjBNDttP47&#13;
-gJhi7vAViw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c5591bbc-21f3-404f-a9f0-2e3ff536776c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>aLwDZPZDWgHZ63VJuBpngchTCQSgW5CT30o+Z2+w3iLH+LmLUUVlTpMRLrysxRaKKjiNPu/lgbLM&#13;
-uXN00ppM9g==</DigestValue></Reference></SignedInfo><SignatureValue>XXc2oH/oMGcczOKFt5J6NZo2DgziroLx/xyMLB6UtcFn2od/z8T+00/J3sklA7Ie5CfW1OiGjcxE&#13;
-YSaXr4d/61HC0xx4CaQHdVVFaSd4yZfaoBb1nOYbX94zeFWVBwYHQrGxppyPGm7IsVWE/RuxJyjU&#13;
-W1UCwoyIHpO2ibOyWdYJLuvezVlCHzfh0wgzoLga1RsWk3q+oIZySg1xGb89DrNk3SkNCJ+5/NBu&#13;
-qbb/UfLAGoo6nj3o/LGrgNnZ7dXkzp22fjpXFohwgrx5t8EzPwAXC9tWEvK+8INAFRziah2H3adS&#13;
-RdQRuyu5EppUkDU+Wc15DYbO5fXAfvHSv9rwVg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_adc51024-6867-45df-af49-ab7b4cb5d2ca"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>70UGx9xgmjrJRK/bcY+gQcv/xvRCRImB6Q5XGLNclq7eruFH2Iv8jKwTq2/35Aw3E/Y1JCqQjI1E&#13;
+Dc5ctTlebA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7d9a1dc4-ca05-4c6b-9396-904d8be191e3"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>mB6jIpXo5149ZIaIAz5QXVS+hpQ+YIMRUByPxMrE7CNMaxgVDAw2RdeJou22TSGRxyefITdw29eJ&#13;
+VgtRq+toBw==</DigestValue></Reference></SignedInfo><SignatureValue>iBm158N0xrmtKA2UBb/jhqgvbBSeoxvSSOxdICPYVMPuGAfmY66oHD3qJP0MmqOUCs/upM1QaUet&#13;
+5WMfZLaeg5JwmoOuQ7aJOqoXStS/nO2LkPP8BCfO0kQ53ATJ3EH5iTXaD4T5s/g4ug8ICEdpCcV5&#13;
+1vfF6Lu1qCNAfvIQatt3jnVSkYiNNS4th2AfuO//RzDpv1JA+lF8q2lq5bOtmc1S2Y28dckx0LYB&#13;
+PXttPjyEYNV66Dbv5gv2ydLXAda/7CnpzgsiPIQE7tdQ3hOGNTYUjctzudHKCrEiwR/cuFG5RbMp&#13;
+dvETmPOGVYtQkBqKISoCxD7scm2QUTkkE6ywUw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -4100,4 +4100,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c5591bbc-21f3-404f-a9f0-2e3ff536776c" Target="#_d905c72e-a06a-426e-a0d5-f3e37a35fe78"><Timestamp>2024-06-12 07:40:15</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7d9a1dc4-ca05-4c6b-9396-904d8be191e3" Target="#_adc51024-6867-45df-af49-ab7b4cb5d2ca"><Timestamp>2024-07-24 13:15:50</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

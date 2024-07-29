@@ -8,7 +8,7 @@
     <contextParameter comment="" internalId="_O0IgJSfoEe-dudsg_9IonQ" name="MailPort" prompt="MailPort?" promptNeeded="false" repositoryContextId="_MwPAoCfmEe-dudsg_9IonQ" type="id_String" value="25"/>
     <contextParameter comment="" internalId="_O0IgJifoEe-dudsg_9IonQ" name="MailServeur" prompt="MailServeur?" promptNeeded="false" repositoryContextId="_MwPAoCfmEe-dudsg_9IonQ" type="id_String" value="smtp.tanguy.local"/>
     <contextParameter comment="" internalId="_O0IgJyfoEe-dudsg_9IonQ" name="RepLog" prompt="RepLog?" promptNeeded="false" repositoryContextId="_MwPAoCfmEe-dudsg_9IonQ" type="id_String" value="&quot;/Work_Talend/LogMapping/DEV_TST/&quot;"/>
-    <contextParameter comment="" internalId="_O0IgKCfoEe-dudsg_9IonQ" name="MySQL_MSU_DatalakeM3_AdditionalParams" prompt="MySQL_MSU_DatalakeM3_AdditionalParams?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="noDatetimeStringSync=true&amp;low_priority_updates=true"/>
+    <contextParameter comment="" internalId="_O0IgKCfoEe-dudsg_9IonQ" name="MySQL_MSU_DatalakeM3_AdditionalParams" prompt="MySQL_MSU_DatalakeM3_AdditionalParams?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="noDatetimeStringSync=true&amp;low_priority_updates=true&amp;charset=utf8mb4"/>
     <contextParameter comment="" internalId="_O0IgKSfoEe-dudsg_9IonQ" name="MySQL_MSU_DatalakeM3_Database" prompt="MySQL_MSU_DatalakeM3_Database?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="DatalakeM3PRD"/>
     <contextParameter comment="" internalId="_O0IgKifoEe-dudsg_9IonQ" name="MySQL_MSU_DatalakeM3_Login" prompt="MySQL_MSU_DatalakeM3_Login?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="service.talend"/>
     <contextParameter comment="" internalId="_O0IgKyfoEe-dudsg_9IonQ" name="MySQL_MSU_DatalakeM3_Password" prompt="MySQL_MSU_DatalakeM3_Password?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_Password" value="enc:system.encryption.key.v1:9uxKlE6jgkooZ6P1UMB0ZHT0MM2gG+6iavGIVbWgDf3+sH7i/o0="/>
@@ -40,7 +40,7 @@
     <contextParameter comment="" internalId="_O0IgQSfoEe-dudsg_9IonQ" name="MailPort" prompt="MailPort?" promptNeeded="false" repositoryContextId="_MwPAoCfmEe-dudsg_9IonQ" type="id_String" value="25"/>
     <contextParameter comment="" internalId="_O0IgQifoEe-dudsg_9IonQ" name="MailServeur" prompt="MailServeur?" promptNeeded="false" repositoryContextId="_MwPAoCfmEe-dudsg_9IonQ" type="id_String" value="smtp.tanguy.local"/>
     <contextParameter comment="" internalId="_O0IgQyfoEe-dudsg_9IonQ" name="RepLog" prompt="RepLog?" promptNeeded="false" repositoryContextId="_MwPAoCfmEe-dudsg_9IonQ" type="id_String" value="&quot;/Work_Talend/LogMapping/MAIN_PRD/&quot;"/>
-    <contextParameter comment="" internalId="_O0IgRCfoEe-dudsg_9IonQ" name="MySQL_MSU_DatalakeM3_AdditionalParams" prompt="MySQL_MSU_DatalakeM3_AdditionalParams?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="noDatetimeStringSync=true&amp;low_priority_updates=true"/>
+    <contextParameter comment="" internalId="_O0IgRCfoEe-dudsg_9IonQ" name="MySQL_MSU_DatalakeM3_AdditionalParams" prompt="MySQL_MSU_DatalakeM3_AdditionalParams?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="noDatetimeStringSync=true&amp;low_priority_updates=true&amp;charset=utf8mb4"/>
     <contextParameter comment="" internalId="_O0IgRSfoEe-dudsg_9IonQ" name="MySQL_MSU_DatalakeM3_Database" prompt="MySQL_MSU_DatalakeM3_Database?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="DatalakeM3PRD"/>
     <contextParameter comment="" internalId="_O0IgRifoEe-dudsg_9IonQ" name="MySQL_MSU_DatalakeM3_Login" prompt="MySQL_MSU_DatalakeM3_Login?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_String" value="service.talend"/>
     <contextParameter comment="" internalId="_O0IgRyfoEe-dudsg_9IonQ" name="MySQL_MSU_DatalakeM3_Password" prompt="MySQL_MSU_DatalakeM3_Password?" promptNeeded="false" repositoryContextId="_7NwsYDfFEeyPcp5oJi3sdg" type="id_Password" value="enc:system.encryption.key.v1:zrhxPvUd2HBr1ARKe8AXUBmIGxorVrchXtWTx6CwiLiJYRy5adg="/>
@@ -3977,7 +3977,7 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPostjob_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
@@ -3992,13 +3992,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_29778be3-48b5-4055-ad71-ccb0f76b7db8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>S9INkAs56jQlw5My2xm7iufqycIT8yaR2KD8k6SuIkIoRuTdQbUJDgJWa4MZOMGE7SBjN/yF1Z00&#13;
-ha39SfNPmw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_33976bba-f2c4-4284-9dc3-c900643a8ba6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cXXw+qKKRg5YmcEDdL1U9ffC2Zd+CKKQV6NbSUIueXLcBYw6eCjYxVghT11NZ4gXSrg/XncKsqtT&#13;
-rcNTLSgerQ==</DigestValue></Reference></SignedInfo><SignatureValue>LnQcIhzR7kraQ/6+4cyLgXT5ENFMCZ/3qwGm+ptvD/wW/Ll9DwZrGaA7s9eLG6LJyqLuMM8ElCrD&#13;
-98J6i1NQ5dTnABkeGcbd9cE+8M7+Bjfm9XUOwYUJiKssILC+XuR+4XX6ZynCWfGef7TGO4pWu6JQ&#13;
-oFC2E3N+q9vwvX5Ot6yGNhGwjQWKBShww5rmlLlnq2NQPgqLhAOzpPKsbadiJcJunWtMAHgorzbL&#13;
-SjwHa+Q676QfCmuP22sW4xBkXBP1+XVV/ggqCD0mPSi+IT533AGV/gCBKti+Te0+/qrbKn7N/Bbj&#13;
-T7ozLFDM4iFt/gq+QA238IisuwHwHO4UinEeAw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_33d49816-6632-43dd-b8ea-178887f31001"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cdlh7tTs6N7G6XqheSSLGLdEjJEXv40CY+92KH4DtMj1dvioUtE0UmIMdWqNcUq+Z4tkh6QpmnAx&#13;
+0+oUwEZRew==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5be22e6c-2aa3-4254-8503-65afbd220b84"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Pq+AZRfadAuVqoWnOPw0/0bE3TYtUtdZxnkEWKVpPAVG2GnMqmbx9Box+H0N4mRpUEdgMQLMRxK3&#13;
+9kTL7uq1XA==</DigestValue></Reference></SignedInfo><SignatureValue>ivy88TMX8RYQc2VAIJheuWT7lLyIx4qagsi5jFoWYowWstkYzKaCsbA7QCk+vDRtBwt3jkCWQyuU&#13;
+zB17QzxDUh3eB28bIbRHHMTCU+TBIY41qvyfdB70JHoL0ys45EeZM7gpL1o2jULSYuUJwLw9Jt+T&#13;
+DKsnyBBeXqvM8FZHvfsXffwITQURPAAmy2F3M0plXLL40GsVhUIi93lrwylzmdRqSxdBTZ9ESMyG&#13;
+IwVJEWxNsSYQMMIncqcOgcG/E3zo5Tcok/6+bJJu17OlGnGyBtOcotHna6wWT9wqPVNcoQDFHrA8&#13;
+1WPDrWgGOyGJuYTZKGTKa8fQML89oLCkVzSZvw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -4020,4 +4020,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_33976bba-f2c4-4284-9dc3-c900643a8ba6" Target="#_29778be3-48b5-4055-ad71-ccb0f76b7db8"><Timestamp>2024-06-11 14:04:10</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5be22e6c-2aa3-4254-8503-65afbd220b84" Target="#_33d49816-6632-43dd-b8ea-178887f31001"><Timestamp>2024-07-24 13:15:54</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
