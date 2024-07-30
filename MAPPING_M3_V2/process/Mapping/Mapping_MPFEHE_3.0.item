@@ -167,7 +167,7 @@
   <node componentName="JDBCInput" componentVersion="2" offsetLabelX="38" offsetLabelY="0" posX="128" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" show="false" value="bmV3amRiYyNKREJDI0lucHV0"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="TEXT" name="LABEL" value="MDFEHE"/>
@@ -189,7 +189,7 @@
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.authenticationType" show="false" value="BASIC"/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.grantType" show="false" value="CLIENT_CREDENTIALS"/>
     <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="&quot;mpfehe&quot;"/>
-    <elementParameter field="MEMO_SQL" name="configuration.dataSet.sqlQuery" value="&quot;SELECT &#10;  \&quot;mpfehe\&quot;.\&quot;CONO\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;FACI\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;PRNO\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;STRT\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;SQNU\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;FTID\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;AXIS\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;CSQN\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;TXID\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;RGDT\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;RGTM\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;LMDT\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;CHNO\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;CHID\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;LMTS\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;accountingEntity\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;archived\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;deleted\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;timestamp\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;variationNumber\&quot;&#10;FROM \&quot;mpfehe\&quot; &quot;"/>
+    <elementParameter field="MEMO_SQL" name="configuration.dataSet.sqlQuery" value="&quot;SELECT &#10;  \&quot;mpfehe\&quot;.\&quot;CONO\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;FACI\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;PRNO\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;STRT\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;SQNU\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;FTID\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;AXIS\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;CSQN\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;TXID\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;RGDT\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;RGTM\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;LMDT\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;CHNO\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;CHID\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;LMTS\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;accountingEntity\&quot;, &#10;--  \&quot;mpfehe\&quot;.\&quot;archived\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;deleted\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;timestamp\&quot;, &#10;  \&quot;mpfehe\&quot;.\&quot;variationNumber\&quot;&#10;FROM \&quot;mpfehe\&quot; &quot;"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.useAutoCommit" show="false" value="true"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" show="false" value="false"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.defineProtocol" show="false" value="false"/>
@@ -230,8 +230,6 @@
       <elementValue elementRef="configuration.config.columnTrims[].column" value="LMTS"/>
       <elementValue elementRef="configuration.config.columnTrims[].trim" value="false"/>
       <elementValue elementRef="configuration.config.columnTrims[].column" value="accountingEntity"/>
-      <elementValue elementRef="configuration.config.columnTrims[].trim" value="false"/>
-      <elementValue elementRef="configuration.config.columnTrims[].column" value="archived"/>
       <elementValue elementRef="configuration.config.columnTrims[].trim" value="false"/>
       <elementValue elementRef="configuration.config.columnTrims[].column" value="deleted"/>
       <elementValue elementRef="configuration.config.columnTrims[].trim" value="false"/>
@@ -300,9 +298,6 @@
       </column>
       <column comment="" key="false" length="7" name="accountingEntity" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="CHARACTER VARYING" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="accountingEntity"/>
-      </column>
-      <column comment="" key="false" length="5" name="archived" nullable="false" originalLength="5" pattern="" precision="-1" sourceType="BOOLEAN" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="archived"/>
       </column>
       <column comment="" key="false" length="5" name="deleted" nullable="false" originalLength="5" pattern="" precision="-1" sourceType="BOOLEAN" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="deleted"/>
@@ -430,11 +425,6 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="archived"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="deleted"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
@@ -509,9 +499,6 @@
       <column comment="" key="false" length="7" name="accountingEntity" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="accountingEntity"/>
       </column>
-      <column comment="" key="false" length="5" name="archived" nullable="false" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="archived"/>
-      </column>
       <column comment="" key="false" length="5" name="deleted" nullable="false" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="deleted"/>
       </column>
@@ -572,9 +559,6 @@
       </column>
       <column comment="" key="false" length="7" name="accountingEntity" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="accountingEntity"/>
-      </column>
-      <column comment="" key="false" length="5" name="archived" nullable="false" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="archived"/>
       </column>
       <column comment="" key="false" length="5" name="deleted" nullable="false" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="deleted"/>
@@ -1255,26 +1239,26 @@
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_2"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBClose_2"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c9411099-9a88-4cf2-9d26-fe1cca8a1065"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OoyRrJqXmCHgSDiJ33ZI6HCw8UYTtu6N2Yo3FRlKLJ7gP8rbhW0Fz5BQ4zYuI+Vx80frVhrUNLEH&#13;
-FxBLQs6bHQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8a7928c0-6ccf-4318-b698-469a7ecbc746"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>i0q01eU6eUTd3LaWDDXaaxjs0fuLc678sZ7mZNy7C/vQtS9Bx2j3A0KoyUQUanSjav/4ffSMnBa0&#13;
-tk9nSinF1Q==</DigestValue></Reference></SignedInfo><SignatureValue>Dp+kBWcERqml2yF+fK3AT344sib99A3jRCFB+asm2qz649OiLeyiXbxGDn0jfXALZmTjxUPEcyUw&#13;
-Jiq7D6itb2R9SP2P4TJx8Z5LX1x01WZ8nDDWoHQtpjeLo6uWBaWbiKoj9cqcMyPWsNgn2bQMRlXJ&#13;
-btanUW4Qjszvz7paK+OXZhOECEAogK+efpFo1qbtBokmL7bYIygrnIH2aA5vBPFcPj2Uxnw6KE++&#13;
-77and+viA2MMgqHp8o8nqS9vGK/R0PYP+2wgz987/Ujxd7YjZi0Sz7SMxBX/RWipoqJvtsPFu4eY&#13;
-fQ5FGi72lT0hQ9gDSBWMXZpZH1U8WmuyDQLF/w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c12ae8cd-eaef-4617-b355-e7c6a2e36aca"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ueFtQlpUAuNkVl8igZ/ttmuLqoOKSIGfWIrcGyGwta9KZU0SzUfXYWRoxvkDHf8+ZtuN9S7mJVI4&#13;
+l4d4jfvR4Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d6eaba15-5b68-4e22-ae43-3b5bbd51e1a6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>KUv28lJxtdwKf9ebIoLjQjFHw8FPov93akBuovByDeOsY2R3ELF9SUCR+BoIgG6FOdXJ/fEW6cjo&#13;
+/a2ZjKZj2w==</DigestValue></Reference></SignedInfo><SignatureValue>EGikFiKpxHRJHc9bf5FVjkvGaUd44al4OrxrlpcqN1eVJOmEF5gs3dLDHNoz8eBACZi9+LBN/AUy&#13;
+7InZnR54qke5Lg/967bCub5MQTx2zsDUVNavNnJW3k9VBVyrrdx4+ySU51aVJh8RaUMHAQble8zf&#13;
+unLcKdXly3qwYgA+oVZwIdsjFrDj2QNuKwDP0Y/vrF9nVJkMXsUpwlCSIOKsKhPofg27IwxG/OcP&#13;
+uDViL11/MDrcEKSctuiVreoVz5ZYXOwC8ysUk69ekAvUcLi3A4TH+ELCMV0fqbVO7Uczq5F3WJ4Y&#13;
+bodIQ63kMl7h2Y0kQz5/KihokY49QsdXWOUssg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1296,4 +1280,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8a7928c0-6ccf-4318-b698-469a7ecbc746" Target="#_c9411099-9a88-4cf2-9d26-fe1cca8a1065"><Timestamp>2024-07-24 13:15:55</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d6eaba15-5b68-4e22-ae43-3b5bbd51e1a6" Target="#_c12ae8cd-eaef-4617-b355-e7c6a2e36aca"><Timestamp>2024-07-30 07:12:42</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
