@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
-  <context confirmationNeeded="false" hide="false" name="Default"/>
+  <context confirmationNeeded="false" hide="false" name="Default">
+    <contextParameter comment="" internalId="__gHfcE_nEe-v3IlNzREcZA" name="RepFichierRapport" prompt="RepFichierRapport?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="&quot;C:/Users/hugo.trebaul/OneDrive - TANGUY/Documents/TALEND/MAPPING/&quot;"/>
+    <contextParameter comment="" internalId="__gHfcU_nEe-v3IlNzREcZA" name="SMTP_SERVER" prompt="SMTP_SERVER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="&quot;smtp.tanguy.local&quot;"/>
+    <contextParameter comment="" internalId="__gHfck_nEe-v3IlNzREcZA" name="SMTP_PORT" prompt="SMTP_PORT?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="25"/>
+    <contextParameter comment="" internalId="__gHfc0_nEe-v3IlNzREcZA" name="email_expediteur" prompt="email_expediteur?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="&quot;talenduser@tanguy.fr&quot;"/>
+    <contextParameter comment="" internalId="__gHfdE_nEe-v3IlNzREcZA" name="email_destinataire" prompt="email_destinataire?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="&quot;hugo.trebaul@tanguy.fr&quot;"/>
+  </context>
   <parameters>
     <elementParameter field="CHECK" name="LOG4J_RUN_ACTIVATE" show="false" value="true"/>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
@@ -471,6 +477,156 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="240">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_3"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="MYSQL_8"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;3306&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MySQL"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:+psPy047VNoMrhDg9VoMU8sEnYrCVFsgTb6mhOFN"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;MYREPORT_CONTROLE &quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;with DERNIERE_EXEC&#13;&#10;as&#13;&#10;(&#13;&#10;SELECT DISTINCT &#13;&#10;TableNom&#13;&#10;,TableNbLignes&#13;&#10;,InfoDate&#13;&#10;,InfoHeure&#13;&#10;from  MYREPORT_CONTROLE &#13;&#10;where MYREPORT_CONTROLE.InfoDate = (SELECT MAX(C2.InfoDate) FROM MYREPORT_CONTROLE AS C2)&#13;&#10;)&#13;&#10;,&#13;&#10;AVANT_DERNIERE_EXEC&#13;&#10;as&#13;&#10;(&#13;&#10;SELECT DISTINCT &#13;&#10;TableNom&#13;&#10;,TableNbLignes&#13;&#10;,InfoDate&#13;&#10;,InfoHeure&#13;&#10;from  MYREPORT_CONTROLE &#13;&#10;where MYREPORT_CONTROLE.InfoDate = (SELECT DISTINCT C3.InfoDate FROM MYREPORT_CONTROLE AS C3 ORDER BY C3.InfoDate DESC Limit 1,1)&#13;&#10;)&#13;&#10;SELECT distinct&#13;&#10;MYREPORT_CONTROLE.TableNom&#13;&#10;,DERNIERE_EXEC.InfoDate as DateDerniereExec&#13;&#10;,DERNIERE_EXEC.TableNbLignes as NbLigneDerniereExec&#13;&#10;,AVANT_DERNIERE_EXEC.InfoDate as DateAvantDerniereExec&#13;&#10;,AVANT_DERNIERE_EXEC.TableNbLignes as NbLigneAvantDerniereExec&#13;&#10;,DERNIERE_EXEC.TableNbLignes-AVANT_DERNIERE_EXEC.TableNbLignes as ProgressionLigne&#13;&#10;-- ,TRUNCATE(std(MYREPORT_CONTROLE.TableNbLignes),0) as EcartType30jour&#13;&#10;,TRUNCATE(AVG(MYREPORT_CONTROLE.TableNbLignes),0) as MoyenneNbLigne30Jour&#13;&#10;FROM MYREPORT_CONTROLE&#13;&#10;LEFT JOIN DERNIERE_EXEC ON MYREPORT_CONTROLE.TableNom = DERNIERE_EXEC.TableNom&#13;&#10;LEFT JOIN AVANT_DERNIERE_EXEC ON MYREPORT_CONTROLE.TableNom = AVANT_DERNIERE_EXEC.TableNom&#13;&#10;WHERE   &#13;&#10;MYREPORT_CONTROLE.InfoDate BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE()&#13;&#10;AND coalesce(AVANT_DERNIERE_EXEC.InfoDate,'')&lt;&gt;'' &#13;&#10;AND coalesce(DERNIERE_EXEC.InfoDate,'')&lt;&gt;''&#13;&#10;GROUP BY &#13;&#10;MYREPORT_CONTROLE.TableNom&#13;&#10;,DERNIERE_EXEC.InfoDate &#13;&#10;,DERNIERE_EXEC.TableNbLignes &#13;&#10;,AVANT_DERNIERE_EXEC.InfoDate&#13;&#10;,AVANT_DERNIERE_EXEC.TableNbLignes&#13;&#10;order by DERNIERE_EXEC.TableNbLignes-AVANT_DERNIERE_EXEC.TableNbLignes ASC&#13;&#10;;&#13;&#10;&#13;&#10;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="mysql_id"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;noDatetimeStringSync=true&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="TableNom"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DateDerniereExec"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NbLigneDerniereExec"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DateAvantDerniereExec"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NbLigneAvantDerniereExec"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProgressionLigne"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MoyenneNbLigne30Jour"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_3">
+      <column comment="" key="false" length="-1" name="TableNom" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DateDerniereExec" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="NbLigneDerniereExec" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DateAvantDerniereExec" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="NbLigneAvantDerniereExec" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProgressionLigne" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="MoyenneNbLigne30Jour" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="560" posY="240">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_1"/>
+    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+    <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.RepFichierRapport+globalMap.get(&quot;DateRGDT&quot;)+&quot;_RapportMyRepport.csv&quot;"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" show="false" value="true"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="CHECK" name="APPEND" value="true"/>
+    <elementParameter field="CHECK" name="INCLUDEHEADER" value="true"/>
+    <elementParameter field="CHECK" name="COMPRESS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="SPLIT" value="false"/>
+    <elementParameter field="TEXT" name="SPLIT_EVERY" show="false" value="1000"/>
+    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+    <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="1"/>
+    <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
+    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" show="false" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileOutputDelimited_1">
+      <column comment="" key="false" length="-1" name="TableNom" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DateDerniereExec" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="NbLigneDerniereExec" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DateAvantDerniereExec" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="NbLigneAvantDerniereExec" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProgressionLigne" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="MoyenneNbLigne30Jour" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="360">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSendMail_1"/>
+    <elementParameter field="TEXT" name="TO" value="context.email_destinataire"/>
+    <elementParameter field="TEXT" name="FROM" value="context.email_expediteur"/>
+    <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="false"/>
+    <elementParameter field="TEXT" name="PERSONAL_NAME" show="false" value="&quot;sender&quot;"/>
+    <elementParameter field="TEXT" name="CC" value=""/>
+    <elementParameter field="TEXT" name="BCC" value=""/>
+    <elementParameter field="TEXT" name="SUBJECT" value="&quot;Rapport sur les données MyReport&quot;"/>
+    <elementParameter field="MEMO_MESSAGE" name="MESSAGE" value="&quot;Bonjour, &lt;br&gt; veuillez trouver ci-joint le fichier CSV résumant l'état des données de &lt;span style=\&quot;background:#f2feff\&quot;&gt;&lt;b&gt;MyReport&lt;/b&gt;&lt;/span&gt;&quot;"/>
+    <elementParameter field="CHECK" name="CHECK_ATTACHMENT" value="true"/>
+    <elementParameter field="TABLE" name="ATTACHMENTS">
+      <elementValue elementRef="FILE" value="context.RepFichierRapport+globalMap.get(&quot;DateRGDT&quot;)+&quot;_RapportMyRepport.csv&quot;"/>
+      <elementValue elementRef="CONTENT_TRANSFER_ENCODING" value="DEFAULT"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="HEADERS"/>
+    <elementParameter field="TEXT" name="SMTP_HOST" value="context.SMTP_SERVER"/>
+    <elementParameter field="TEXT" name="SMTP_PORT" value="25"/>
+    <elementParameter field="CHECK" name="SSL" value="false"/>
+    <elementParameter field="CHECK" name="STARTTLS" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="IMPORTANCE" value="Normal"/>
+    <elementParameter field="CLOSED_LIST" name="AUTH_MODE" value="NO_AUTH"/>
+    <elementParameter field="TEXT" name="AUTH_USERNAME" show="false" value="&quot;username&quot;"/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="enc:system.encryption.key.v1:D81D3eRtSxHWbsVAeiSvsRh0LOflHzSZWdDi420BPTSPg1nRrKI="/>
+    <elementParameter field="PASSWORD" name="TOKEN" show="false" value="enc:system.encryption.key.v1:Oepa4eh2SRI2iVz9kNOn7Q2O8bRNKf5XIZz2oKSMRa3CTaogO+o="/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="TEXT_SUBTYPE" value="html"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="SET_LOCALHOST" value="false"/>
+    <elementParameter field="TEXT" name="LOCALHOST" show="false" value="&quot;localhost&quot;"/>
+    <elementParameter field="CHECK" name="USE_TWO_LINE_TOKEN" show="false" value="false"/>
+    <elementParameter field="TABLE" name="CONFIGS"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSendMail_1">
+      <column comment="" key="false" length="-1" name="NomTable" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Nb_Enreg_Core" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Nb_Enreg_DataLakeM3" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Nb_Enreg_MariaDB" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="Divergence_Core_JDBC" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="Divergence_JDBC_MariaDB" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="Avertissement" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="NbDoublonJDBC" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFileDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="560" posY="360">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileDelete_1"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.RepFichierRapport+globalMap.get(&quot;DateRGDT&quot;)+&quot;_RapportMyRepport.csv&quot;"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" show="false" value="&quot;C:/Users/hugo.trebaul/workspace/delete_folder&quot;"/>
+    <elementParameter field="TEXT" name="PATH" show="false" value="&quot;C:/Users/hugo.trebaul/workspace/delete_folder or delete_file&quot;"/>
+    <elementParameter field="CHECK" name="FAILON" value="true"/>
+    <elementParameter field="CHECK" name="FOLDER" value="false"/>
+    <elementParameter field="CHECK" name="FOLDER_FILE" value="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note &quot;CURRENT_STATUS&quot; including:&#10;&quot;File (or path) deleted.&quot;&#10;&quot;No file (or path) deleted.&quot;&#10;&quot;File (or path) does not exist or is invalid.&quot;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileDelete_1"/>
+  </node>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tDBConnection_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
@@ -539,6 +695,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBInput_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
+  </connection>
   <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tReplicate_1" offsetLabelX="0" offsetLabelY="0" source="tReplicate_1" target="tFlowToIterate_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
@@ -573,6 +732,16 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
   </connection>
+  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tFileOutputDelimited_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tSendMail_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk4"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSendMail_1" offsetLabelX="0" offsetLabelY="0" source="tSendMail_1" target="tFileDelete_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk2"/>
+  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBConnection_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
@@ -593,13 +762,28 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_026489ee-84cb-45da-98e4-73c04459122d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FHi464AA23gTIkIYlDWY5gVGU8vHJKEB3NKRmwiT5sG7J06MqkzoEAsodSDT8Ua9hjFCAIDdTKfy&#13;
-3rW6JicZxQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b0672004-b1a7-4ff8-b928-6bc841ce8eab"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>arWq4f23lHNGw6FVlZw4herIsgmwGiUJccErJXrpMObYoz6N6xFazJ+nYKtnCgeq/OsF+CIbmTOk&#13;
-reUkpRYuEg==</DigestValue></Reference></SignedInfo><SignatureValue>Wy9Rg30B08lmKrIofjAYU9/WYY1Hik0qxiKuF83XK5wWxpry4B6yL4fDlQxYb6m1oerGv84ZgBxg&#13;
-ah3MKuhdIpkzqV/kiHQoN0Bkt/vVwXTLWP6EuQkdJLd9ZPNieYZppQc0inCQlZRpWCSrg8pceouf&#13;
-80XsJ7FRvgRCBrtBNodp7X4XqxSWdNWo48YifmbdXUAP0zwWKjibVZiB/dvjzojlLtGGHUelnXpu&#13;
-SJfVk3pbkJQQMsTkgKSqud7AAZz6ZmpSIximhPxHMSURhSYGZjiGj74rH7p2Yw/Vy9KlrNKxzuzP&#13;
-Y/L7zeytPKq9sQgJwjyorrylxdb/ta7P3v8BAw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSendMail_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileDelete_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_234371d4-77ba-4722-b733-7b3e54285078"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>J78jUvJ3zasoMiPp+XrK+bqpXhvGTv16KzfUO8/maB04HJc8+wCK00jNDlibuk7dG+MB+cU2Iksv&#13;
+zkW+EQpzsQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c8da708c-d14e-4d46-932e-1f24d8a5057e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pwm/VQ7uStu1lUfD1EN2hqveKpmq94rBcK0U5qNfYRyQHUqzYbluvcHejEuNHzYvKE/kB6sJiygT&#13;
+wKbRVc73cA==</DigestValue></Reference></SignedInfo><SignatureValue>Dq8uFraucw0z3OJDjut0laeX7Z0kiI0uOXu2jsq0VfALWMDt+OQKz4TdNQgpndm6wML76wlLYEcS&#13;
+mTLu8nwuQLX5kRw7ubWau9otWcPwKdvQKP6B4FRbEKZc1GkZNKPBOVpIt479h9Kmh2sH3s9BPTMu&#13;
+LWrghTxxgk4p98J7F1wrjOCTLSjTIv9kLjD6Bh2onWfyX+Qnv7wn8tkL9wTyv3RT+SyJQVJC+pA8&#13;
+RObi8dzmudno8jdcA/PgY3ZXHfIF0Ocyx9rl4UB8KyDsBqIFLXIGoPNoA5CxHdqu/nzZA3SGgrVL&#13;
+ZqQKUFmPC7AnU1OdM1NkeJfxbF6jm63yU8Vfow==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -621,4 +805,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b0672004-b1a7-4ff8-b928-6bc841ce8eab" Target="#_026489ee-84cb-45da-98e4-73c04459122d"><Timestamp>2024-07-31 06:43:33</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c8da708c-d14e-4d46-932e-1f24d8a5057e" Target="#_234371d4-77ba-4722-b733-7b3e54285078"><Timestamp>2024-08-01 09:34:21</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
