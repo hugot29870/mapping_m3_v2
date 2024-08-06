@@ -370,8 +370,6 @@
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1480" posY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="CHECK" name="DUMMY" show="false" value="true"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
@@ -414,7 +412,7 @@
     <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;TALEND_INTERFACES&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;service.talend&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:y2zLnp0MQs/796ciUdL7OEHSuYat78rLL59WtBY2j7lF2bgVko7vfQ=="/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;MYREPORT_CONTROLE&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;CONTROL_MYREPORT&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -493,7 +491,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;with DERNIERE_EXEC&#13;&#10;as&#13;&#10;(&#13;&#10;SELECT DISTINCT &#13;&#10;TableNom&#13;&#10;,TableNbLignes&#13;&#10;,InfoDate&#13;&#10;,InfoHeure&#13;&#10;from  MYREPORT_CONTROLE &#13;&#10;where MYREPORT_CONTROLE.InfoDate = (SELECT MAX(C2.InfoDate) FROM MYREPORT_CONTROLE AS C2)&#13;&#10;)&#13;&#10;,&#13;&#10;AVANT_DERNIERE_EXEC&#13;&#10;as&#13;&#10;(&#13;&#10;SELECT DISTINCT &#13;&#10;TableNom&#13;&#10;,TableNbLignes&#13;&#10;,InfoDate&#13;&#10;,InfoHeure&#13;&#10;from  MYREPORT_CONTROLE &#13;&#10;where MYREPORT_CONTROLE.InfoDate = (SELECT DISTINCT C3.InfoDate FROM MYREPORT_CONTROLE AS C3 ORDER BY C3.InfoDate DESC Limit 1,1)&#13;&#10;)&#13;&#10;SELECT distinct&#13;&#10;MYREPORT_CONTROLE.TableNom&#13;&#10;,DERNIERE_EXEC.InfoDate as DateDerniereExec&#13;&#10;,DERNIERE_EXEC.TableNbLignes as NbLigneDerniereExec&#13;&#10;,AVANT_DERNIERE_EXEC.InfoDate as DateAvantDerniereExec&#13;&#10;,AVANT_DERNIERE_EXEC.TableNbLignes as NbLigneAvantDerniereExec&#13;&#10;,DERNIERE_EXEC.TableNbLignes-AVANT_DERNIERE_EXEC.TableNbLignes as ProgressionLigne&#13;&#10;-- ,TRUNCATE(std(MYREPORT_CONTROLE.TableNbLignes),0) as EcartType30jour&#13;&#10;,TRUNCATE(AVG(MYREPORT_CONTROLE.TableNbLignes),0) as MoyenneNbLigne30Jour&#13;&#10;FROM MYREPORT_CONTROLE&#13;&#10;LEFT JOIN DERNIERE_EXEC ON MYREPORT_CONTROLE.TableNom = DERNIERE_EXEC.TableNom&#13;&#10;LEFT JOIN AVANT_DERNIERE_EXEC ON MYREPORT_CONTROLE.TableNom = AVANT_DERNIERE_EXEC.TableNom&#13;&#10;WHERE   &#13;&#10;MYREPORT_CONTROLE.InfoDate BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE()&#13;&#10;AND coalesce(AVANT_DERNIERE_EXEC.InfoDate,'')&lt;&gt;'' &#13;&#10;AND coalesce(DERNIERE_EXEC.InfoDate,'')&lt;&gt;''&#13;&#10;GROUP BY &#13;&#10;MYREPORT_CONTROLE.TableNom&#13;&#10;,DERNIERE_EXEC.InfoDate &#13;&#10;,DERNIERE_EXEC.TableNbLignes &#13;&#10;,AVANT_DERNIERE_EXEC.InfoDate&#13;&#10;,AVANT_DERNIERE_EXEC.TableNbLignes&#13;&#10;order by DERNIERE_EXEC.TableNbLignes-AVANT_DERNIERE_EXEC.TableNbLignes ASC&#13;&#10;;&#13;&#10;&#13;&#10;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;&#13;&#10;with DERNIERE_EXEC&#13;&#10;as&#13;&#10;(&#13;&#10;SELECT DISTINCT &#13;&#10;TableNom&#13;&#10;,TableNbLignes&#13;&#10;,InfoDate&#13;&#10;,InfoHeure&#13;&#10;from  TALEND_INTERFACES.CONTROL_MYREPORT &#13;&#10;where TALEND_INTERFACES.CONTROL_MYREPORT.InfoDate = (SELECT MAX(C2.InfoDate) FROM TALEND_INTERFACES.CONTROL_MYREPORT AS C2)&#13;&#10;)&#13;&#10;,&#13;&#10;AVANT_DERNIERE_EXEC&#13;&#10;as&#13;&#10;(&#13;&#10;SELECT DISTINCT &#13;&#10;TableNom&#13;&#10;,TableNbLignes&#13;&#10;,InfoDate&#13;&#10;,InfoHeure&#13;&#10;from  TALEND_INTERFACES.CONTROL_MYREPORT &#13;&#10;where TALEND_INTERFACES.CONTROL_MYREPORT.InfoDate = (SELECT DISTINCT C3.InfoDate FROM TALEND_INTERFACES.CONTROL_MYREPORT AS C3 ORDER BY C3.InfoDate DESC Limit 1,1)&#13;&#10;)&#13;&#10;SELECT distinct&#13;&#10;TALEND_INTERFACES.CONTROL_MYREPORT.TableNom&#13;&#10;,DERNIERE_EXEC.InfoDate as DateDerniereExec&#13;&#10;,DERNIERE_EXEC.TableNbLignes as NbLigneDerniereExec&#13;&#10;,AVANT_DERNIERE_EXEC.InfoDate as DateAvantDerniereExec&#13;&#10;,AVANT_DERNIERE_EXEC.TableNbLignes as NbLigneAvantDerniereExec&#13;&#10;,DERNIERE_EXEC.TableNbLignes-AVANT_DERNIERE_EXEC.TableNbLignes as ProgressionLigne&#13;&#10;-- ,TRUNCATE(std(MYREPORT_CONTROLE.TableNbLignes),0) as EcartType30jour&#13;&#10;,TRUNCATE(AVG(TALEND_INTERFACES.CONTROL_MYREPORT.TableNbLignes),0) as MoyenneNbLigne30Jour&#13;&#10;FROM TALEND_INTERFACES.CONTROL_MYREPORT&#13;&#10;LEFT JOIN DERNIERE_EXEC ON TALEND_INTERFACES.CONTROL_MYREPORT.TableNom = DERNIERE_EXEC.TableNom&#13;&#10;LEFT JOIN AVANT_DERNIERE_EXEC ON TALEND_INTERFACES.CONTROL_MYREPORT.TableNom = AVANT_DERNIERE_EXEC.TableNom&#13;&#10;WHERE   &#13;&#10;TALEND_INTERFACES.CONTROL_MYREPORT.InfoDate BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE()&#13;&#10;AND coalesce(AVANT_DERNIERE_EXEC.InfoDate,'')&lt;&gt;'' &#13;&#10;AND coalesce(DERNIERE_EXEC.InfoDate,'')&lt;&gt;''&#13;&#10;GROUP BY &#13;&#10;TALEND_INTERFACES.CONTROL_MYREPORT.TableNom&#13;&#10;,DERNIERE_EXEC.InfoDate &#13;&#10;,DERNIERE_EXEC.TableNbLignes &#13;&#10;,AVANT_DERNIERE_EXEC.InfoDate&#13;&#10;,AVANT_DERNIERE_EXEC.TableNbLignes&#13;&#10;order by DERNIERE_EXEC.TableNbLignes-AVANT_DERNIERE_EXEC.TableNbLignes ASC&#13;&#10;;&#13;&#10;&#13;&#10;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -568,6 +566,101 @@
       <column comment="" key="false" length="-1" name="NbLigneAvantDerniereExec" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ProgressionLigne" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="MoyenneNbLigne30Jour" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="920" posY="240">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_2"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="MARIADB"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MySQL"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;dtw.tanguy.local&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;3306&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;TALEND_INTERFACES&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;service.talend&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:wWshcbGKXnHO/pN4OTi7PjdV+IEjFBIRvjVAemhOpNfaqkHFVZd9ig=="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;CONTROL_MYREPORT_STAT&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="mysql_id"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;noDatetimeStringSync=true&quot;"/>
+    <elementParameter field="CHECK" name="EXTENDINSERT" value="true"/>
+    <elementParameter field="LABEL" name="NOTE" value="(Not compatible with reject links)"/>
+    <elementParameter field="TEXT" name="NB_ROWS_PER_INSERT" value="100"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" show="false" value="1"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" show="false" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="TableNom"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DateDerniereExec"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NbLigneDerniereExec"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DateAvantDerniereExec"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NbLigneAvantDerniereExec"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ProgressionLigne"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MoyenneNbLigne30Jour"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="true"/>
+    <elementParameter field="CHECK" name="ON_DUPLICATE_KEY_UPDATE" value="false"/>
+    <elementParameter field="TABLE" name="DUPLICATED_KEYS" show="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBOutput_2">
+      <column comment="" key="false" length="-1" name="TableNom" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DateDerniereExec" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="NbLigneDerniereExec" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DateAvantDerniereExec" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="NbLigneAvantDerniereExec" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProgressionLigne" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="MoyenneNbLigne30Jour" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="TableNom" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DateDerniereExec" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="NbLigneDerniereExec" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DateAvantDerniereExec" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="NbLigneAvantDerniereExec" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ProgressionLigne" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="MoyenneNbLigne30Jour" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="360">
@@ -739,6 +832,10 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tSendMail_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk4"/>
   </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tFileOutputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileOutputDelimited_1" target="tDBOutput_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
+  </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSendMail_1" offsetLabelX="0" offsetLabelY="0" source="tSendMail_1" target="tFileDelete_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk2"/>
   </connection>
@@ -777,13 +874,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_234371d4-77ba-4722-b733-7b3e54285078"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>J78jUvJ3zasoMiPp+XrK+bqpXhvGTv16KzfUO8/maB04HJc8+wCK00jNDlibuk7dG+MB+cU2Iksv&#13;
-zkW+EQpzsQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c8da708c-d14e-4d46-932e-1f24d8a5057e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pwm/VQ7uStu1lUfD1EN2hqveKpmq94rBcK0U5qNfYRyQHUqzYbluvcHejEuNHzYvKE/kB6sJiygT&#13;
-wKbRVc73cA==</DigestValue></Reference></SignedInfo><SignatureValue>Dq8uFraucw0z3OJDjut0laeX7Z0kiI0uOXu2jsq0VfALWMDt+OQKz4TdNQgpndm6wML76wlLYEcS&#13;
-mTLu8nwuQLX5kRw7ubWau9otWcPwKdvQKP6B4FRbEKZc1GkZNKPBOVpIt479h9Kmh2sH3s9BPTMu&#13;
-LWrghTxxgk4p98J7F1wrjOCTLSjTIv9kLjD6Bh2onWfyX+Qnv7wn8tkL9wTyv3RT+SyJQVJC+pA8&#13;
-RObi8dzmudno8jdcA/PgY3ZXHfIF0Ocyx9rl4UB8KyDsBqIFLXIGoPNoA5CxHdqu/nzZA3SGgrVL&#13;
-ZqQKUFmPC7AnU1OdM1NkeJfxbF6jm63yU8Vfow==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ee574ff4-e0e9-482f-9892-7c8d42d88d9e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>I8vPE7Hk0haZzW0kjUJKdccodNlX4LLy0ChrBhCS/pESVYWQcKywl62kO92L6j+zASBD+4W7vWod&#13;
+Gcnh2X9jgg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f55b4811-6be2-4291-bfbc-303450edeb46"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+dnKcDpfPrzFxm6iDPzOiA0zzIba8PQKgaJLRIkudXvMP+7BmtVpyH/2KgmaGl6n6MgKCRlixWRr&#13;
+P2avK76L3w==</DigestValue></Reference></SignedInfo><SignatureValue>hUomzlvB5llH4tKZGMT/dqDzUqILSX2T+70ioMFz9wjHgqMSPE6oO3MrrKleOb5zoo0HMGwa7XUO&#13;
+MeC8td/9LC006n7Is7nVz4UpIdL1nNV7++0aVbWamGUbVrbZ5IjGqwoNLkMch6dnVvhvh106KQJR&#13;
+fdylYQCXQebTPwVvw3g0xoAffMIzd063lZmzMkpqQwAQJuY3U8dJHL5CWPoqw7mqXE+EYev0xZlO&#13;
+6ohU6Rvm+1Se6GbbPi9vDRaJq62L1Vc9242qvot0aFPMB64fS+thBtX+IGffbO9OX1NKxLCLE+Ry&#13;
+gEKhRLnfEsAMpG3h7LKhTPktpVEExiKwTc5cDg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -805,4 +902,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c8da708c-d14e-4d46-932e-1f24d8a5057e" Target="#_234371d4-77ba-4722-b733-7b3e54285078"><Timestamp>2024-08-01 09:34:21</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f55b4811-6be2-4291-bfbc-303450edeb46" Target="#_ee574ff4-e0e9-482f-9892-7c8d42d88d9e"><Timestamp>2024-08-02 12:04:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
