@@ -1,0 +1,108 @@
+package routines;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+/*
+ * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
+ * it must be before the "{talendTypes}" key.
+ * 
+ * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
+ * long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
+ * Short
+ * 
+ * 3. {Category} define a category for the Function. it is required. its value is user-defined .
+ * 
+ * 4. {param} 's format is: {param} <type>[(<default value or closed list values>)] <name>[ : <comment>]
+ * 
+ * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
+ * Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
+ * added. you can have many parameters for the Function.
+ * 
+ * 5. {example} gives a example for the Function. it is optional.
+ */
+public class ReplicaToDataLakeTanguy {
+	public static void syncTableBatch(
+	        String tableName,
+	        int batchSize,
+	        String prefixTable,
+	        java.sql.Connection IN_replicaConnexion,
+	        java.sql.Connection OUT_DatalakeTanguyConnexion
+	) throws SQLException {
+
+	    IN_replicaConnexion.setAutoCommit(false);
+	    OUT_DatalakeTanguyConnexion.setAutoCommit(false);
+
+	    String selectSql = "SELECT * FROM " + tableName;
+	    String targetTable = tableName + prefixTable;
+
+	    try (
+	        PreparedStatement selectStmt = IN_replicaConnexion.prepareStatement(
+	            selectSql,
+	            ResultSet.TYPE_FORWARD_ONLY,
+	            ResultSet.CONCUR_READ_ONLY
+	        )
+	    ) {
+	        // Pour MySQL : lecture en streaming
+	        //selectStmt.setFetchSize(Integer.MIN_VALUE);
+
+            // fetch par blocs
+	    	selectStmt.setFetchSize(1000);
+
+	        try (ResultSet rs = selectStmt.executeQuery()) {
+
+	            ResultSetMetaData meta = rs.getMetaData();
+	            int colCount = meta.getColumnCount();
+
+	            List<String> columnNames = new ArrayList<>(colCount);
+	            for (int i = 1; i <= colCount; i++) {
+	                columnNames.add(meta.getColumnName(i));
+	            }
+
+	            String columns = String.join(", ", columnNames);
+	            String placeholders = columnNames.stream()
+	                    .map(col -> "?")
+	                    .collect(Collectors.joining(", "));
+
+	            String updateClause = columnNames.stream()
+	                    .map(col -> col + " = VALUES(" + col + ")")
+	                    .collect(Collectors.joining(", "));
+
+	            String insertSql = "INSERT INTO " + targetTable + " (" + columns + ") VALUES (" + placeholders + ") "
+	                    + "ON DUPLICATE KEY UPDATE " + updateClause;
+
+	            try (PreparedStatement ps = OUT_DatalakeTanguyConnexion.prepareStatement(insertSql)) {
+	                int count = 0;
+
+	                while (rs.next()) {
+	                    for (int i = 1; i <= colCount; i++) {
+	                        ps.setObject(i, rs.getObject(i));
+	                    }
+
+	                    ps.addBatch();
+	                    count++;
+
+	                    if (count % batchSize == 0) {
+	                        ps.executeBatch();
+	                        OUT_DatalakeTanguyConnexion.commit();
+	                        ps.clearBatch();
+	                        //logger.debug(">>> Batch executed: {}", count);
+	                    }
+	                }
+
+	                ps.executeBatch();
+	                OUT_DatalakeTanguyConnexion.commit();
+	                ps.clearBatch();
+	            }
+	        }
+	    } catch (SQLException e) {
+	        OUT_DatalakeTanguyConnexion.rollback();
+	        throw e;
+	    }
+	}
+	}
